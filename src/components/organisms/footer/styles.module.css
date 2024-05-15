@@ -1,0 +1,29 @@
+.wrapper {
+  background: var(--c-dark);
+  font-weight: 300;
+  color: #fff;
+}
+.inner {
+}
+.top {
+  padding: 50px 0;
+  display: flex;
+  column-gap: 60px;
+}
+.footerLogo {
+  margin-bottom: 5px;
+}
+.copyright {
+  opacity: 0.4;
+  font-weight: 300;
+  font-size: 0.875rem;
+}
+.title {
+  margin-bottom: 15px;
+  opacity: 0.5;
+}
+.text {
+}
+.link svg {
+  fill: #fff;
+}

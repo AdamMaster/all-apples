@@ -1,0 +1,35 @@
+.wrapper {
+}
+.inner {
+}
+.grid {
+  display: grid;
+  grid-template-columns: 500px 1fr;
+  gap: 15px;
+  color: #fff;
+}
+.gallery {
+  overflow: hidden;
+  border-radius: var(--radius-2);
+}
+.content {
+  padding: 40px 50px;
+  background: var(--c-dark);
+  border-radius: var(--radius-2);
+}
+.title {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+.gallery {
+}
+.galleryItem {
+  position: relative;
+}
+.advantages {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 15px;
+}

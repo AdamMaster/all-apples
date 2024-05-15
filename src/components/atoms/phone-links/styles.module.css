@@ -1,0 +1,22 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: color .1s;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--c-white);
+}
+.link:hover {
+  color: var(--c-yellow);
+}
+.devider {
+  width: 1px;
+  height: 15px;
+  background: var(--c-white);
+}

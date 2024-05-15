@@ -1,0 +1,26 @@
+.wrapper {
+}
+.inner {
+  padding: 40px 50px;
+  border-radius: var(--radius-2);
+  background: var(--c-grey);
+}
+.grid {
+  display: grid;
+  grid-template-columns: 500px 1fr;
+  gap: 30px;
+  align-items: center;
+}
+.content {
+}
+.title {
+  margin-bottom: 30px;
+}
+.description {
+  line-height: 1.3;
+}
+.button {
+  margin-top: 30px;
+}
+.illustration {
+}

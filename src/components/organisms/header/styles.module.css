@@ -1,0 +1,37 @@
+.wrapper {
+  position: relative;
+  z-index: 100;
+  background: var(--c-white);
+  border-bottom: 1px solid var(--c-grey);
+}
+
+.top {
+  background: var(--c-dark);
+}
+
+.topInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+
+.bottomInner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+  column-gap: 30px;
+}
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.navbar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}

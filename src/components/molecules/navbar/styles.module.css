@@ -1,0 +1,27 @@
+.wrapper {
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.item {
+}
+
+.link {
+  display: block;
+  padding: 10px 15px;
+  transition: 0.1s;
+  font-weight: 500;
+  border-radius: 50px;
+}
+
+.link:hover {
+  background: var(--c-grey);
+}
+
+.link.active {
+  background: var(--c-grey);
+}

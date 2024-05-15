@@ -1,0 +1,22 @@
+.wrapper {
+}
+.head {
+  margin-bottom: 30px;
+}
+.title {
+}
+.list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 25px;
+}
+.filter {
+}
+.panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  margin-bottom: 30px;
+}
