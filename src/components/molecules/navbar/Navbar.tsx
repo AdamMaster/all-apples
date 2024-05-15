@@ -2,6 +2,7 @@
 import Link from 'next/link'
 import s from './styles.module.css'
 import { usePathname } from 'next/navigation'
+import { FC } from 'react'
 
 interface Props {
   className?: string
