@@ -18,9 +18,9 @@ export const SearchBar: FC<Props> = ({ className, value, setValue }) => {
       onBlur={() => setIsActive(false)}
     >
       <div className={s.button}>
-        <Icon className={s.icon} id='search' />
+        <Icon className={s.icon} id={'search'} />
       </div>
-      <input className={s.input} value={value} type='text' onChange={e => setValue(e.target.value)} />
+      <input className={s.input} value={value} type={'text'} onChange={e => setValue(e.target.value)} />
     </div>
   )
 }

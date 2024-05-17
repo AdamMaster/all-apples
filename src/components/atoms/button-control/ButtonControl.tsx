@@ -9,7 +9,7 @@ interface Props {
   onClick?: () => void
 }
 
-export const ButtonControl: FC<Props> = ({ id, children, className, isActive, onClick }) => {
+export const ButtonControl: FC<Props> = ({ children, className, isActive, onClick }) => {
   return (
     <button className={`${s.wrapper} ${className ? className : ''} ${isActive ? s.active : ''}`} onClick={onClick}>
       {children}

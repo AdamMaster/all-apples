@@ -11,7 +11,7 @@ interface Props {
 export const Advantage: FC<Props> = ({ title, text, className }) => {
   return (
     <div className={`${s.wrapper} ${className ? className : ''}`}>
-      <Heading className={s.title} level='h6'>
+      <Heading className={s.title} level={'h6'}>
         {title}
       </Heading>
       <div className={s.line}></div>

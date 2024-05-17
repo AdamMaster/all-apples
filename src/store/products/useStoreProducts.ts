@@ -10,7 +10,7 @@ interface State {
 export const useStoreProducts = create<State>(set => ({
   products: data,
   setFilter: (category: string) =>
-    set(state => {
+    set(() => {
       const filteredProducts = data.filter(item => item.category === category)
       return {
         products: filteredProducts.length ? filteredProducts : data

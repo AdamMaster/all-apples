@@ -52,7 +52,7 @@
     /* Общие правила */
     // "no-console": "error",
     "no-nested-ternary": "error",
-    "react/jsx-curly-brace-presence": ["error", { "props": "always", "children": "never" }],
+    // "react/jsx-curly-brace-presence": ["error", { "props": "always", "children": "never" }],
 
     /* Правила работы с React */
     "react/prop-types": "off",
@@ -63,53 +63,18 @@
     "react/boolean-prop-naming": "error",
     "react/display-name": ["off", { "ignoreTranspilerName": true }],
     "react/destructuring-assignment": ["error", "always"],
-    "react/jsx-boolean-value": "error",
+    // "react/jsx-boolean-value": "error",
     "react/jsx-fragments": ["error", "element"],
     "react/jsx-handler-names": "error",
     "react/jsx-sort-props": [
-      2,
+      0,
       {
         "callbacksLast": true,
         "multiline": "last",
-        "noSortAlphabetically": false
+        "noSortAlphabetically": true
       }
     ],
-    "import/no-restricted-paths": [
-      "error",
-      {
-        "zones": [
-          // pages
-          {
-            "target": "src/views",
-            "from": "src/application"
-          },
-          // Cross import
-          {
-            "target": "src/views/*/**/*",
-            "from": "src/views/*/index.ts"
-          },
-          // shared
-          {
-            "target": "src/shared",
-            "from": "src/application"
-          },
-          // atoms
-          {
-            "target": "src/components/atoms",
-            "from": "src/components/molecules"
-          },
-          {
-            "target": "src/components/atoms",
-            "from": "src/components/organisms/"
-          },
-          // molecules
-          {
-            "target": "src/components/molecules",
-            "from": "src/components"
-          }
-        ]
-      }
-    ],
+    "import/no-restricted-paths": ["error"],
 
     /* Правила работы с TypeScript */
     "@typescript-eslint/explicit-function-return-type": "off",

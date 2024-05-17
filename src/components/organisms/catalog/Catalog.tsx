@@ -2,7 +2,7 @@
 import s from './styles.module.css'
 import { FC, useState } from 'react'
 import { SearchBar } from '@/components/atoms'
-import { Filter, ProductCard, ProductCardType } from '@/components/molecules'
+import { Filter, ProductCard } from '@/components/molecules'
 import { useStoreProducts } from '@/store/products/useStoreProducts'
 
 interface Props {
@@ -15,7 +15,7 @@ export const Catalog: FC<Props> = ({ className }) => {
 
   return (
     <section className={`${s.wrapper} ${className ? className : ''}`}>
-      <div className='container'>
+      <div className={'container'}>
         <div className={s.inner}>
           <div className={s.head}>
             <h2 className={s.title}>Каталог продуктов</h2>

@@ -1,11 +1,11 @@
 'use client'
+import { HomePage } from '@/components/screens/home'
 import styles from './page.module.css'
-import { Router } from '@/components/pages/router'
 
 export default function Home() {
   return (
     <main className={styles.wrapper}>
-      <Router />
+      <HomePage />
     </main>
   )
 }

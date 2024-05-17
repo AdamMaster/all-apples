@@ -4,7 +4,7 @@ import s from './styles.module.css'
 import { ProductCardType } from './types/types'
 import { Button } from '@/components/atoms'
 
-export const ProductCard: FC<ProductCardType> = ({ id, category, type, sort, month, imgUrl }) => {
+export const ProductCard: FC<ProductCardType> = ({ type, sort, imgUrl }) => {
   return (
     <div className={s.wrapper}>
       <div className={s.head}>

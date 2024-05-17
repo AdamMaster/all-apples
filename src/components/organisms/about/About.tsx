@@ -39,7 +39,7 @@ export const About: FC<Props> = ({ className }) => {
 
   return (
     <div className={`${s.wrapper} ${className ? className : ''}`}>
-      <div className='container'>
+      <div className={'container'}>
         <div className={s.inner}>
           <div className={s.grid}>
             <div className={s.gallery}>
@@ -58,14 +58,14 @@ export const About: FC<Props> = ({ className }) => {
               >
                 {galleryItems.map(galleryItem => (
                   <SwiperSlide className={s.galleryItem} key={galleryItem.id}>
-                    <Image src={galleryItem.src} layout='fill' objectFit='cover' alt='about-photo' />
+                    <Image src={galleryItem.src} layout={'fill'} objectFit={'cover'} alt={'about-photo'} />
                   </SwiperSlide>
                 ))}
               </Swiper>
             </div>
             <div className={s.content}>
-              <Heading className={s.title} level='h2'>
-                <Image src={'/images/logo-circle.svg'} width={30} height={40} alt='logo' /> нас
+              <Heading className={s.title} level={'h2'}>
+                <Image src={'/images/logo-circle.svg'} width={30} height={40} alt={'logo'} /> нас
               </Heading>
               <div className={s.description}>
                 <p>

@@ -4,7 +4,7 @@ import { Catalog } from '@/components/organisms/catalog'
 import { DeliveryScreen } from '@/components/organisms/delivery-screen'
 import { PromoScreen } from '@/components/organisms/promo-screen'
 
-export const Home = () => {
+export const HomePage = () => {
   return (
     <div className={s.wrapper}>
       <PromoScreen className={s.promo} />

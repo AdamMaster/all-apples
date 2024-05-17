@@ -10,11 +10,11 @@ interface Props {
 export const DeliveryScreen: FC<Props> = ({ className }) => {
   return (
     <section className={`${s.wrapper} ${className ? className : ''}`}>
-      <div className='container'>
+      <div className={'container'}>
         <div className={s.inner}>
           <div className={s.grid}>
             <div className={s.content}>
-              <Heading className={s.title} level='h2'>
+              <Heading className={s.title} level={'h2'}>
                 Доставка по всей стране
               </Heading>
               <div className={s.description}>
@@ -23,23 +23,23 @@ export const DeliveryScreen: FC<Props> = ({ className }) => {
                   этом - мы доставим их в любой уголок нашей страны!
                 </p>
                 <p>
-                  Компания "ОптРынок" работает напрямую с надежными производителями, что позволяет нам обеспечить
-                  быструю и эффективную доставку. Будь вы в Москве, Сибири или за Уралом, мы гарантируем, что наши овощи
-                  и фрукты будут доставлены вам в самом лучшем виде.
+                  Компания ОптРынок работает напрямую с надежными производителями, что позволяет нам обеспечить быструю
+                  и эффективную доставку. Будь вы в Москве, Сибири или за Уралом, мы гарантируем, что наши овощи и
+                  фрукты будут доставлены вам в самом лучшем виде.
                 </p>
               </div>
-              <Button className={s.button} color='black'>
+              <Button className={s.button} color={'black'}>
                 Подробнее
               </Button>
             </div>
             <div className={s.illustration}>
               <Image
+                alt={'promo-bg'}
                 className={s.bg}
-                alt='promo-bg'
-                src={'/images/truck-in-map-2.png'}
-                layout='responsive'
-                width={100}
                 height={100}
+                layout={'responsive'}
+                src={'/images/truck-in-map-2.png'}
+                width={100}
               />
             </div>
           </div>
