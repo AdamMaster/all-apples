@@ -11,6 +11,7 @@ export const HomePage = () => {
       <Catalog className={s.catalog} />
       <About className={s.about} />
       <DeliveryScreen className={s.delivery} />
+      Привет
     </div>
   )
 }
