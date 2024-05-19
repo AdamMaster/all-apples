@@ -53,8 +53,6 @@ export const About: FC<Props> = ({ className }) => {
                 loop={true}
                 spaceBetween={0}
                 slidesPerView={1}
-                onSlideChange={() => console.log('slide change')}
-                onSwiper={swiper => console.log(swiper)}
               >
                 {galleryItems.map(galleryItem => (
                   <SwiperSlide className={s.galleryItem} key={galleryItem.id}>

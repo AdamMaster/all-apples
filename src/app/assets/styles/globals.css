@@ -9,6 +9,7 @@
   --radius-1: 12px;
   --radius-2: 22px;
   --radius-3: 36px;
+  --transition: 0.2s;
   scroll-behavior: smooth;
 }
 html,
@@ -37,6 +38,10 @@ li {
 
 button {
   cursor: pointer;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
   font-family: inherit;
 }
 
@@ -57,6 +62,10 @@ h2 {
   font-size: 2.4rem;
   font-weight: 700;
 }
+h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
 h5 {
   font-size: 1.25rem;
   font-weight: 500;
@@ -66,10 +75,19 @@ h6 {
   font-weight: 500;
 }
 input {
+  background: transparent;
+  border: 0;
   font-size: 1rem;
+}
+.input::placeholder {
+  opacity: 0.6;
 }
 input:focus {
   outline: none;
+  border-color: var(--c-dark);
+}
+input.not-valid {
+  border-color: var(--c-red);
 }
 * {
   box-sizing: border-box;
@@ -97,4 +115,9 @@ p:last-child {
 }
 .swiper-slide {
   height: 100%;
+}
+.fields {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
