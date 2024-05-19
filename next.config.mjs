@@ -9,9 +9,9 @@ const nextConfig = {
 	reactStrictMode: true,
 
 	// Настройки для обработки изображений (если вы используете встроенную оптимизацию изображений Next.js)
-	images: {
-		domains: ['adammaster-opt-rinok-bb8c.twc1.net'], // Замените 'example.com' на ваш домен
-	},
+	// images: {
+	// 	domains: ['adammaster-opt-rinok-bb8c.twc1.net'], // Замените 'example.com' на ваш домен
+	// },
 
 	// Настройки для развертывания на контейнере
 	output: 'standalone',
