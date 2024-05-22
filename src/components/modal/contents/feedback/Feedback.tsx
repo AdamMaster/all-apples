@@ -1,6 +1,8 @@
+'use client'
 import { Button, Field, Heading } from '@/components/atoms'
 import s from './styles.module.css'
 import { SubmitHandler, useForm } from 'react-hook-form'
+import { fetchFeedback } from '@/shared/api/fetchFeedback'
 
 interface FormProps {
   name: string
@@ -9,9 +11,29 @@ interface FormProps {
 
 export const Feedback = () => {
   const { register, setValue, formState, handleSubmit } = useForm<FormProps>({ defaultValues: {} })
-  const { errors } = formState
-  const submit: SubmitHandler<FormProps> = data => {
-    console.log(data)
+  const { errors, isLoading } = formState
+  const submit: SubmitHandler<FormProps> = async data => {
+    fetchFeedback(data).then(response => {
+      console.log(data)
+    })
+    // try {
+    //   const response = await fetch('/api/emails/route', {
+    //     method: 'POST',
+    //     headers: {
+    //       'Content-Type': 'application/json'
+    //     },
+    //     body: JSON.stringify(data)
+    //   })
+
+    //   if (!response.ok) {
+    //     throw new Error('Network response was not ok')
+    //   }
+
+    //   const result = await response.json()
+    //   console.log('Success:', result)
+    // } catch (error) {
+    //   console.error('Errorы:', error)
+    // }
   }
 
   return (

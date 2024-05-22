@@ -3,7 +3,7 @@ import s from './styles.module.css'
 import { Button } from '@/components/atoms'
 import { FC } from 'react'
 import { useStoreModal } from '@/store'
-import { Feedback } from '@/components/modal/containers'
+import { Feedback } from '@/components/modal/contents'
 
 interface Props {
   className?: string

@@ -13,7 +13,7 @@ export const Header = () => {
             <Navbar className={s.navbar} />
             <div className={s.links}>
               <ContactLink text={phoneNumbers[0]} link={`tel:${phoneNumbers[0]}`} />
-              <ContactLink link={mail} text={mail} />
+              <ContactLink link={`mailto:${mail}`} text={mail} />
             </div>
           </div>
         </div>

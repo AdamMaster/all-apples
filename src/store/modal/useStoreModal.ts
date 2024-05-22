@@ -11,10 +11,11 @@ interface State {
 export const useStoreModal = create<State>(set => ({
   isOpen: false,
   children: null,
-  setOpen: (children: ReactNode) =>
-    set(() => ({
-      isOpen: true,
-      children: children
-    })),
-  setClose: () => set(() => ({ isOpen: false }))
+  setOpen: (children: ReactNode) => set(() => ({ isOpen: true, children: children })),
+  setClose: () => {
+    set(() => ({ isOpen: false }))
+    setTimeout(() => {
+      set(() => ({ children: null }))
+    }, 200)
+  }
 }))
