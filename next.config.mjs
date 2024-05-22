@@ -17,9 +17,9 @@ const nextConfig = {
 	output: 'standalone',
 
 	// Настройки для окружения
-	// env: {
-	// 	CUSTOM_VAR: process.env.CUSTOM_VAR, // Добавьте любые пользовательские переменные окружения
-	// },
+	env: {
+		CUSTOM_VAR: process.env.CUSTOM_VAR, // Добавьте любые пользовательские переменные окружения
+	},
 
 	// Другие пользовательские настройки
 	// webpack(config, { buildId, dev, isServer, defaultLoaders, webpack }) {
