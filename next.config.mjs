@@ -6,7 +6,7 @@
 // next.config.mjs
 const nextConfig = {
 	// Включение режима строгой проверки типов
-	reactStrictMode: true,
+	// reactStrictMode: true,
 
 	// Настройки для обработки изображений (если вы используете встроенную оптимизацию изображений Next.js)
 	// images: {
@@ -17,9 +17,9 @@ const nextConfig = {
 	output: 'standalone',
 
 	// Настройки для окружения
-	env: {
-		CUSTOM_VAR: process.env.CUSTOM_VAR, // Добавьте любые пользовательские переменные окружения
-	},
+	// env: {
+	// 	CUSTOM_VAR: process.env.CUSTOM_VAR, // Добавьте любые пользовательские переменные окружения
+	// },
 
 	// Другие пользовательские настройки
 	// webpack(config, { buildId, dev, isServer, defaultLoaders, webpack }) {
