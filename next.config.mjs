@@ -14,7 +14,7 @@ const nextConfig = {
 	// },
 
 	// Настройки для развертывания на контейнере
-	output: 'standalone',
+	// output: 'standalone',
 
 	// Настройки для окружения
 	// env: {
