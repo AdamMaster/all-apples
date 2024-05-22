@@ -6,7 +6,7 @@
 // next.config.mjs
 const nextConfig = {
 	// Включение режима строгой проверки типов
-	// reactStrictMode: true,
+	reactStrictMode: true,
 
 	// Настройки для обработки изображений (если вы используете встроенную оптимизацию изображений Next.js)
 	// images: {
@@ -22,10 +22,10 @@ const nextConfig = {
 	// },
 
 	// Другие пользовательские настройки
-	// webpack(config, { buildId, dev, isServer, defaultLoaders, webpack }) {
-	//   // Измените webpack-конфигурацию по мере необходимости
-	//   return config;
-	// },
+	webpack(config, { buildId, dev, isServer, defaultLoaders, webpack }) {
+		// Измените webpack-конфигурацию по мере необходимости
+		return config;
+	},
 };
 
 export default nextConfig;
