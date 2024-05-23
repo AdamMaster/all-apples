@@ -1,9 +1,12 @@
 import { NextApiRequest, NextApiResponse } from 'next'
-import { sendEmail } from '@/utils/mail.utils'
+import { sendEmail, initializeTransporter } from '@/utils/mail.utils'
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
     try {
+      // Инициализация транспортера при каждом запросе на сервер
+      initializeTransporter()
+
       const { name, email, subject, message } = req.body
 
       const sender = {
