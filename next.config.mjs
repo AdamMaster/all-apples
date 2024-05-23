@@ -1,16 +1,24 @@
-// /** @type {import('next').NextConfig} */
-
+// next.config.js или next.config.mjs
 const nextConfig = {
-	reactStrictMode: true,
-	webpack(config, { isServer }) {
+	webpack: (config, { isServer }) => {
+		// Настройка внешних модулей для серверной части
 		if (isServer) {
-			// Игнорировать модули, которые не поддерживаются браузером
 			config.externals.push(
-				'fs',
-				'net',
-				'dns'
-			)
+				(context, request, callback) => {
+					if (/^fs$/.test(request)) {
+						return callback(null, false);
+					}
+					if (/^dns$/.test(request)) {
+						return callback(null, false);
+					}
+					if (/^net$/.test(request)) {
+						return callback(null, false);
+					}
+					return callback();
+				}
+			);
 		}
+
 		return config;
 	},
 };
