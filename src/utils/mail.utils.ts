@@ -1,14 +1,19 @@
 import nodemailer from 'nodemailer'
 import Mail from 'nodemailer/lib/mailer'
 import SMTPTransport from 'nodemailer/lib/smtp-transport'
+import dotenv from 'dotenv'
+
+// Загружаем переменные окружения из .env файла
+dotenv.config()
 
 let transporter: Mail
 
 export const initializeTransporter = () => {
   transporter = nodemailer.createTransport({
     host: process.env.MAIL_HOST,
-    port: process.env.MAIL_PORT,
-    secure: process.env.NODE_ENV !== 'development', // true
+    port: Number(process.env.MAIL_PORT),
+    // secure: process.env.NODE_ENV !== 'development', // true
+    secure: process.env.MAIL_SECURE === 'true',
     auth: {
       user: process.env.MAIL_USER,
       pass: process.env.MAIL_PASSWORD
