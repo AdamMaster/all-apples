@@ -6,7 +6,7 @@ export async function POST() {
     address: 'no-reply@example.com'
   }
 
-  const receipients = [
+  const recipients = [
     {
       name: 'John Doe',
       address: 'john.doe@example.com'
@@ -16,7 +16,7 @@ export async function POST() {
   try {
     const result = await sendEmail({
       sender,
-      receipients,
+      recipients,
       subject: 'Welcome to our websites!',
       message: 'Your are welcome to our platform'
     })
