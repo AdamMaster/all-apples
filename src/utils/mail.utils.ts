@@ -14,16 +14,16 @@ const transport = nodemailer.createTransport({
 
 type SendEmailDto = {
   sender: Mail.Address
-  receipients: Mail.Address[]
+  recipients: Mail.Address[]
   subject: string
   message: string
 }
 export const sendEmail = async (dto: SendEmailDto) => {
-  const { sender, receipients, subject, message } = dto
+  const { sender, recipients, subject, message } = dto
 
   return await transport.sendMail({
     from: sender,
-    to: receipients,
+    to: recipients,
     subject,
     html: message,
     text: message

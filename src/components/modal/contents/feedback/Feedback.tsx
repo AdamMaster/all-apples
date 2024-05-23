@@ -16,24 +16,6 @@ export const Feedback = () => {
     fetchFeedback(data).then(response => {
       console.log(data)
     })
-    // try {
-    //   const response = await fetch('/api/emails/route', {
-    //     method: 'POST',
-    //     headers: {
-    //       'Content-Type': 'application/json'
-    //     },
-    //     body: JSON.stringify(data)
-    //   })
-
-    //   if (!response.ok) {
-    //     throw new Error('Network response was not ok')
-    //   }
-
-    //   const result = await response.json()
-    //   console.log('Success:', result)
-    // } catch (error) {
-    //   console.error('Errorы:', error)
-    // }
   }
 
   return (

@@ -7,20 +7,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const { name, email, subject, message } = req.body
 
       const sender = {
-        name: 'My App',
-        address: 'no-reply@example.com'
+        name: 'OptMarket',
+        address: 'lampezhev86@gmail.com'
       }
 
-      const receipients = [
+      const recipients = [
         {
           name: name || 'Recipient',
-          address: email // Ваша действительная почта здесь
+          address: email
         }
       ]
 
       const result = await sendEmail({
         sender,
-        receipients,
+        recipients,
         subject: subject || 'Welcome to our website!',
         message: message || 'You are welcome to our platform'
       })
