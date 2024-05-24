@@ -3,6 +3,10 @@ import { Button, Field, Heading } from '@/components/atoms'
 import s from './styles.module.css'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { fetchFeedback } from '@/shared/api/fetchFeedback'
+import { useStoreModal } from '@/store'
+import { useEffect, useState } from 'react'
+import Image from 'next/image'
+import { Thanks } from '../thanks/Thanks'
 
 interface FormProps {
   name: string
@@ -10,11 +14,18 @@ interface FormProps {
 }
 
 export const Feedback = () => {
+  const { setOpen, setClose } = useStoreModal()
   const { register, setValue, formState, handleSubmit } = useForm<FormProps>({ defaultValues: {} })
-  const { errors, isLoading } = formState
+  const { errors } = formState
+  const [isLoading, setIsLoading] = useState(false)
   const submit: SubmitHandler<FormProps> = async data => {
-    fetchFeedback(data).then(response => {
-      console.log(data)
+    setIsLoading(true)
+    fetchFeedback(data).then(() => {
+      setIsLoading(false)
+      setOpen(<Thanks />)
+      setTimeout(() => {
+        setClose()
+      }, 2000)
     })
   }
 
@@ -55,7 +66,7 @@ export const Feedback = () => {
             }}
           />
         </div>
-        <Button className={s.button} type='submit'>
+        <Button className={s.button} type='submit' disabled={isLoading} isLoading={isLoading}>
           Отправить
         </Button>
       </form>

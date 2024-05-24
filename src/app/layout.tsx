@@ -31,7 +31,8 @@ const mazzard = localFont({
 
 export const metadata: Metadata = {
   title: 'Опт-Рынок',
-  description: 'Оптовая продажа овощей и фруктов'
+  description: 'Оптовая продажа овощей и фруктов',
+  icons: [{ rel: 'icon', url: '/images/favicon.ico' }]
 }
 
 export default function RootLayout({

@@ -2,8 +2,10 @@
 import { Button, Field, Heading } from '@/components/atoms'
 import s from './styles.module.css'
 import { SubmitHandler, useForm } from 'react-hook-form'
-import { FC, useEffect } from 'react'
+import { FC, useEffect, useState } from 'react'
 import { useStoreModal } from '@/store'
+import { fetchOrder } from '@/shared/api/fetchOrder'
+import { Thanks } from '../thanks/Thanks'
 
 interface FormProps {
   name?: string
@@ -17,15 +19,23 @@ interface Props {
 }
 
 export const Order: FC<Props> = ({ productFullName }) => {
-  const { isOpen } = useStoreModal()
+  const { setOpen, setClose } = useStoreModal()
   const { register, setValue, formState, handleSubmit } = useForm<FormProps>({
     defaultValues: {
       productName: productFullName
     }
   })
   const { errors } = formState
-  const submit: SubmitHandler<FormProps> = data => {
-    console.log(data)
+  const [isLoading, setIsLoading] = useState(false)
+  const submit: SubmitHandler<FormProps> = async data => {
+    setIsLoading(true)
+    fetchOrder(data).then(() => {
+      setIsLoading(false)
+      setOpen(<Thanks />)
+      setTimeout(() => {
+        setClose()
+      }, 2000)
+    })
   }
 
   return (
@@ -86,7 +96,7 @@ export const Order: FC<Props> = ({ productFullName }) => {
             readOnly
           />
         </div>
-        <Button className={s.button} type='submit'>
+        <Button className={s.button} type='submit' isLoading={isLoading}>
           Отправить
         </Button>
       </form>
