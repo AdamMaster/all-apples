@@ -4,8 +4,7 @@ import s from './styles.module.css'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { fetchFeedback } from '@/shared/api/fetchFeedback'
 import { useStoreModal } from '@/store'
-import { useEffect, useState } from 'react'
-import Image from 'next/image'
+import { useState } from 'react'
 import { Thanks } from '../thanks/Thanks'
 
 interface FormProps {
