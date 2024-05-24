@@ -9,7 +9,8 @@ WORKDIR /app
 COPY package.json package-lock.json ./
 
 # Устанавливаем зависимости
-RUN npm ci
+
+RUN npm ci && npm cache clean --force
 
 # Копируем исходный код
 COPY . .
