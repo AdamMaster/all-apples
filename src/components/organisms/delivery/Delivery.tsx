@@ -7,7 +7,7 @@ interface Props {
   className?: string
 }
 
-export const DeliveryScreen: FC<Props> = ({ className }) => {
+export const Delivery: FC<Props> = ({ className }) => {
   return (
     <section className={`${s.wrapper} ${className ? className : ''}`}>
       <div className={'container'}>

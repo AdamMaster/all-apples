@@ -17,9 +17,9 @@ export default async function handler(request: NextApiRequest, response: NextApi
       })
 
       const mailOptions = {
-        from: 'Опт-Рынок',
+        from: '"Опт-Рынок" <no-reply@yourdomain.com>',
         to: process.env.EMAIL,
-        subject: 'Обратный звонок',
+        subject: subject,
         html: message
       }
 

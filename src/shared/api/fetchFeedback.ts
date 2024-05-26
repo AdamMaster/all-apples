@@ -5,8 +5,8 @@ interface FormData {
 
 export const fetchFeedback = async (data: FormData) => {
   const message = `
-      Имя: <b>${data.name}</b> <br>
-      Телефон: <b>${data.phone}</b>
+      Имя: ${data.name} <br>
+      Телефон: ${data.phone}
     `
   const response = await fetch('/api/feedback/route', {
     method: 'POST',
@@ -14,6 +14,7 @@ export const fetchFeedback = async (data: FormData) => {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({
+      subject: 'Обратный звонок',
       message: message
     })
   })

@@ -3,6 +3,9 @@ const nextConfig = {
 	// Включение режима строгой проверки типов
 	reactStrictMode: true,
 
+	// Настройка для экспорта статического сайта
+	output: 'export',
+
 	// Настройки для обработки изображений (если вы используете встроенную оптимизацию изображений Next.js)
 	// images: {
 	// 	domains: ['adammaster-opt-rinok-bb8c.twc1.net'], // Замените 'example.com' на ваш домен

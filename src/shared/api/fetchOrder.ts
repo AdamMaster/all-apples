@@ -7,10 +7,10 @@ interface FormData {
 
 export const fetchOrder = async (data: FormData) => {
   const message = `
-      Имя: <b>${data.name}</b> <br>
-      Телефон: <b>${data.phone}</b><br>
-      Город: <b>${data.city}</b> <br>
-      Наименование товара: <b>${data.productName}</b> <br>
+      Имя: ${data.name} <br>
+      Телефон: ${data.phone}<br>
+      Город: ${data.city}<br>
+      Наименование товара: ${data.productName}
     `
   const response = await fetch('/api/order/route', {
     method: 'POST',

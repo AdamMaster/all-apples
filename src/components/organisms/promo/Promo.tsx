@@ -9,7 +9,7 @@ interface Props {
   className?: string
 }
 
-export const PromoScreen: FC<Props> = ({ className }) => {
+export const Promo: FC<Props> = ({ className }) => {
   const { setOpen } = useStoreModal()
   const handleClickButton = () => {
     setOpen(<Feedback />)
