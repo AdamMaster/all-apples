@@ -12,6 +12,15 @@ interface Props {
 export const Catalog: FC<Props> = ({ className }) => {
   const { products, setFilter } = useStoreProducts()
   const [searchBarValue, setSearchBarValue] = useState<string>('')
+  const sortProducts = products.sort((a, b) => {
+    if (a.type < b.type) {
+      return -1
+    }
+    if (a.type > b.type) {
+      return 1
+    }
+    return 0
+  })
 
   return (
     <section className={`${s.wrapper} ${className ? className : ''}`}>
@@ -30,7 +39,7 @@ export const Catalog: FC<Props> = ({ className }) => {
             />
           </div>
           <div className={s.list}>
-            {products
+            {sortProducts
               .filter(
                 product =>
                   product.type.toLowerCase().includes(searchBarValue.toLowerCase()) ||

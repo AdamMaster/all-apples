@@ -12,7 +12,7 @@ export const Filter: FC<Props> = ({ className, onClick }) => {
   const buttons = [
     { id: 'all', name: 'Весь каталог' },
     { id: 'vegetables', name: 'Овощи' },
-    { id: 'Fruits', name: 'Фрукты' }
+    { id: 'fruits', name: 'Фрукты' }
   ]
   const [activeClass, setActiveClass] = useState('all')
 
