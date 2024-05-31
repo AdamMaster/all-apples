@@ -8,7 +8,7 @@ export const fetchFeedback = async (data: FormData) => {
       Имя: ${data.name} <br>
       Телефон: ${data.phone}
     `
-  const response = await fetch('/api/feedback/route', {
+  const response = await fetch('/api/feedback', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
