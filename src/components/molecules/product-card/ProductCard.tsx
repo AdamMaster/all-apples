@@ -21,7 +21,7 @@ export const ProductCard: FC<ProductCardType> = ({ type, sort, imgUrl }) => {
         <div className={s.category}>{type}</div>
         <div className={s.sort}>{sort}</div>
         <Button className={s.button} onClick={() => onClickButton()}>
-          Узнать цену
+          Заказать
         </Button>
       </div>
     </div>
