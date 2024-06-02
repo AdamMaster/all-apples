@@ -13,10 +13,14 @@ interface Props {
 
 export const About: FC<Props> = ({ className }) => {
   const galleryItems = [
-    { id: '1', src: '/images/about-gallery/1.jpg' },
+    { id: '1', src: '/images/about-gallery/5.jpg' },
     { id: '2', src: '/images/about-gallery/2.jpg' },
     { id: '3', src: '/images/about-gallery/3.jpg' },
-    { id: '4', src: '/images/about-gallery/4.jpg' }
+    { id: '4', src: '/images/about-gallery/4.jpg' },
+    { id: '6', src: '/images/about-gallery/12.jpg' },
+    { id: '7', src: '/images/about-gallery/13.jpg' },
+    { id: '8', src: '/images/about-gallery/14.jpg' },
+    { id: '9', src: '/images/about-gallery/10.jpg' }
   ]
 
   const advantageItems = [

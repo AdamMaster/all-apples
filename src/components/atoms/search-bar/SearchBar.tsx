@@ -8,7 +8,7 @@ interface Props extends InputHTMLAttributes<HTMLInputElement> {
   setValue: (value: string) => void
 }
 
-export const SearchBar: FC<Props> = ({ className, value, setValue }) => {
+export const SearchBar: FC<Props> = ({ className, value, setValue, placeholder }) => {
   const [isActive, setIsActive] = useState<boolean>(false)
 
   return (
@@ -20,7 +20,13 @@ export const SearchBar: FC<Props> = ({ className, value, setValue }) => {
       <div className={s.button}>
         <Icon className={s.icon} id={'search'} />
       </div>
-      <input className={s.input} value={value} type={'text'} onChange={e => setValue(e.target.value)} />
+      <input
+        className={s.input}
+        value={value}
+        type={'text'}
+        placeholder={placeholder}
+        onChange={e => setValue(e.target.value)}
+      />
     </div>
   )
 }

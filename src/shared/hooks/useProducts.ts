@@ -4,6 +4,6 @@ import { fetchProducts } from '../api/fetchProducts'
 export const useProducts = () => {
   return useQuery({
     queryKey: ['products'],
-    queryFn: () => fetchProducts.getAll()
+    queryFn: () => fetchProducts()
   })
 }

@@ -1,7 +1,3 @@
-export const fetchProducts = {
-  url: '../../app/products.json',
-
-  async getAll() {
-    return fetch(this.url); 
-  }
+export const fetchProducts = () => {
+  return fetch('/api/products').then(response => response.json())
 }
