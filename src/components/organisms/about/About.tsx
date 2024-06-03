@@ -87,11 +87,11 @@ export const About: FC<Props> = ({ className }) => {
               </div>
             </div>
           </div>
-          <div className={s.advantages}>
+          {/* <div className={s.advantages}>
             {advantageItems.map(advantageItem => (
               <Advantage title={advantageItem.title} text={advantageItem.text} key={advantageItem.id} />
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

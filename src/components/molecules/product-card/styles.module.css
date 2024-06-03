@@ -6,7 +6,7 @@
 }
 .head {
   position: relative;
-  height: 160px;
+  aspect-ratio: 1.4;
 }
 .img {
   position: absolute;
