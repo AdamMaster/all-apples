@@ -14,7 +14,7 @@
   border-radius: var(--radius-2);
 }
 .content {
-  padding: 40px 50px;
+  padding: 80px 50px;
 }
 .title {
   display: flex;
@@ -24,6 +24,7 @@
 .description {
   font-size: 1.125rem;
   line-height: 1.5;
+  font-style: italic;
 }
 .gallery {
 }

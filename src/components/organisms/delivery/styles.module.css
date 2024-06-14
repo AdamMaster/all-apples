@@ -30,7 +30,7 @@
 }
 @media (max-width: 1199px) {
   .grid {
-    grid-template-columns: 1fr 450px;
+    grid-template-columns: 1fr 340px;
   }
 }
 @media (max-width: 991px) {

@@ -48,7 +48,7 @@ export const About: FC<Props> = ({ className }) => {
           <div className={s.grid}>
             <div className={s.content}>
               <Heading className={s.title} level={'h2'}>
-                <Image src={'/images/logo-circle.svg'} width={30} height={40} alt={'logo'} /> нас
+                {`${'ООО "Адамово яблоко"'}`}
               </Heading>
               <div className={s.description}>
                 <p>

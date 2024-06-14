@@ -29,7 +29,7 @@ export const Catalog: FC<Props> = ({ className }) => {
           {/* <div className={s.head}>
             <h2 className={s.title}>Каталог продуктов</h2>
           </div> */}
-          <div className={s.panel}>
+          {/* <div className={s.panel}>
             <Filter className={s.filter} onClick={setFilter} />
             <SearchBar
               placeholder='Введите название'
@@ -39,7 +39,7 @@ export const Catalog: FC<Props> = ({ className }) => {
                 setSearchBarValue(value)
               }}
             />
-          </div>
+          </div> */}
           <div className={s.list}>
             {sortProducts
               .filter(
