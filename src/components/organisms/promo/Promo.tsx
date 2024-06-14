@@ -20,11 +20,11 @@ export const Promo: FC<Props> = ({ className }) => {
       <Image className={s.bg} alt={'promo-bg'} src={'/images/promo-bg.jpg'} layout={'fill'} objectFit={'cover'} />
       <div className={'container'}>
         <div className={s.inner}>
-          <h1 className={s.title}>
-            Яблоки оптом <br /> разных сортов и калибров
-          </h1>
-          <div className={s.subtitle}>От надежных производителей по всей стране</div>
-          <div className={s.subtitle}>
+          <h1 className={s.title}>Яблоки оптом</h1>
+          <div className={s.subtitle}>разных соротов и калибров</div>
+          <div className={s.devider}></div>
+          <div className={s.otherTitle}>От надежных производителей по всей стране</div>
+          <div className={s.otherTitle}>
             Заказы принимаются <span className={'highlight'}>от 20 тон</span>
           </div>
           {/* <Button className={s.button} color={'white'} onClick={() => handleClickButton()}>

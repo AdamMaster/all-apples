@@ -5,8 +5,8 @@
   --c-grey: #f7f7f7;
   --c-red: #f15a24;
   --c-yellow: #ffcb1a;
-  --c-green: #88c540;
-  --c-green-hover: #9ada52;
+  --c-green: #9ada52;
+  --c-green-hover: #b2f16a;
   --radius-1: 12px;
   --radius-2: 22px;
   --radius-3: 36px;
@@ -57,7 +57,8 @@ h6 {
   font-family: inherit;
 }
 h1 {
-  font-size: 4rem;
+  font-size: 4.3rem;
+  text-transform: uppercase;
 }
 h2 {
   font-size: 2.4rem;
