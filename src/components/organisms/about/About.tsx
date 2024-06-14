@@ -42,10 +42,27 @@ export const About: FC<Props> = ({ className }) => {
   ]
 
   return (
-    <div className={`${s.wrapper} ${className ? className : ''}`}>
+    <div className={`${s.wrapper} ${className ? className : ''}`} id='about'>
       <div className={'container'}>
         <div className={s.inner}>
           <div className={s.grid}>
+            <div className={s.content}>
+              <Heading className={s.title} level={'h2'}>
+                <Image src={'/images/logo-circle.svg'} width={30} height={40} alt={'logo'} /> нас
+              </Heading>
+              <div className={s.description}>
+                <p>
+                  Мы - ведущая компания в сфере поставок свежих, сочных яблок, расположенная в живописной
+                  Кабардино-Балкарской Республике. Этот регион славится своими превосходными садами, где растут лучшие
+                  яблоки благодаря уникально плодородной земле, идеальной для выращивания фруктов.
+                </p>
+                <p>
+                  Наша компания устанавливает прямые связи с более чем 40 производителями, что позволяет нам предложить
+                  широкий ассортимент товаров в различных ценовых категориях. <br /> Мы гарантируем качественную
+                  переработку, индивидуальную фасовку, упаковку, а также калибровку продукции по весу и размеру.
+                </p>
+              </div>
+            </div>
             <div className={s.gallery}>
               <Swiper
                 modules={[Autoplay]}
@@ -57,6 +74,16 @@ export const About: FC<Props> = ({ className }) => {
                 loop={true}
                 spaceBetween={0}
                 slidesPerView={1}
+                breakpoints={{
+                  576: {
+                    slidesPerView: 3,
+                    spaceBetween: 15
+                  },
+                  1200: {
+                    slidesPerView: 1,
+                    spaceBetween: 0
+                  }
+                }}
               >
                 {galleryItems.map(galleryItem => (
                   <SwiperSlide className={s.galleryItem} key={galleryItem.id}>
@@ -64,27 +91,6 @@ export const About: FC<Props> = ({ className }) => {
                   </SwiperSlide>
                 ))}
               </Swiper>
-            </div>
-            <div className={s.content}>
-              <Heading className={s.title} level={'h2'}>
-                <Image src={'/images/logo-circle.svg'} width={30} height={40} alt={'logo'} /> нас
-              </Heading>
-              <div className={s.description}>
-                <p>
-                  Мы специализируемся на оптовой торговле свежими овощами и фруктами, предоставляя полный цикл
-                  обслуживания от подбора продукции до ее доставки в оптимальном состоянии.
-                </p>
-                <p>
-                  Наша компания устанавливает прямые связи с более чем 40 производителями, что позволяет нам предложить
-                  широкий ассортимент товаров в различных ценовых категориях. Мы гарантируем качественную переработку,
-                  индивидуальную фасовку, упаковку, а также калибровку продукции по весу и размеру.
-                </p>
-                <p>
-                  Наша команда готова обсудить любые разумные требования клиента, гарантируя доставку товара в требуемом
-                  виде и в удобное для заказчика время. Не стесняйтесь связаться с нами – мы готовы предоставить вам
-                  лучшие условия сотрудничества!
-                </p>
-              </div>
             </div>
           </div>
           {/* <div className={s.advantages}>

@@ -9,7 +9,7 @@ export const Header = () => {
       <div className={s.bottom}>
         <div className={'container'}>
           <div className={s.bottomInner}>
-            <Logo className={s.logo} color={'black'} />
+            <Logo className={s.logo} color={'default'} />
             <Navbar className={s.navbar} />
             <div className={s.links}>
               <ContactLink text={phoneNumbers[0]} link={`tel:${phoneNumbers[0]}`} />

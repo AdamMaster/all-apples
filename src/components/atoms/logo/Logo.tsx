@@ -4,13 +4,13 @@ import { FC } from 'react'
 import Link from 'next/link'
 
 interface Props {
-  color: 'black' | 'white'
+  color: 'default' | 'white'
   className?: string
 }
 
 export const Logo: FC<Props> = ({ color, className }) => {
   const colors = {
-    black: 'logo.svg',
+    default: 'logo-3.svg',
     white: 'logo-white.svg'
   }[color]
 

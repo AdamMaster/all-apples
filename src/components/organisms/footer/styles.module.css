@@ -27,3 +27,8 @@
 .link svg {
   fill: #fff;
 }
+@media (max-width: 991px) {
+  .top {
+    gap: 20px;
+  }
+}

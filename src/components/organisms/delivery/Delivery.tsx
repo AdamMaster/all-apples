@@ -28,19 +28,9 @@ export const Delivery: FC<Props> = ({ className }) => {
                   фрукты будут доставлены вам в самом лучшем виде.
                 </p>
               </div>
-              <Button className={s.button} color={'black'}>
-                Подробнее
-              </Button>
             </div>
             <div className={s.illustration}>
-              <Image
-                alt={'promo-bg'}
-                className={s.bg}
-                height={100}
-                layout={'responsive'}
-                src={'/images/truck-in-map-2.png'}
-                width={100}
-              />
+              <Image alt={'promo-bg'} className={s.bg} height={100} width={100} src={'/images/truck-in-map-2.png'} />
             </div>
           </div>
         </div>

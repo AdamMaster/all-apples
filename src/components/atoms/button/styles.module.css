@@ -11,13 +11,13 @@
   transition: 0.1s;
   font-size: 1rem;
   font-weight: 500;
+  color: var(--c-dark);
 }
-.wrapper.orange {
-  background: var(--c-yellow);
+.wrapper.green {
+  background: var(--c-green);
 }
-.wrapper.orange:hover {
-  background: var(--c-black);
-  color: var(--c-white);
+.wrapper.green:hover {
+  background: var(--c-green-hover);
 }
 .wrapper.white {
   background: #fff;

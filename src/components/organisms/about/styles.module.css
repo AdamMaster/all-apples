@@ -4,9 +4,10 @@
 }
 .grid {
   display: grid;
-  grid-template-columns: 500px 1fr;
+  grid-template-columns: 1fr 500px;
   gap: 15px;
-  color: #fff;
+  background: var(--c-grey);
+  border-radius: var(--radius-2);
 }
 .gallery {
   overflow: hidden;
@@ -14,13 +15,15 @@
 }
 .content {
   padding: 40px 50px;
-  background: var(--c-dark);
-  border-radius: var(--radius-2);
 }
 .title {
   display: flex;
   gap: 12px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
+}
+.description {
+  font-size: 1.125rem;
+  line-height: 1.5;
 }
 .gallery {
 }
@@ -39,6 +42,11 @@
   }
   .gallery {
     grid-row: 2;
-    aspect-ratio: 2;
+    aspect-ratio: 0;
+  }
+  .galleryItem {
+    overflow: hidden;
+    border-radius: var(--radius-2);
+    aspect-ratio: 1.3;
   }
 }

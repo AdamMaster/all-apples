@@ -11,9 +11,8 @@ interface Props {
 export const Navbar: FC<Props> = ({ className }) => {
   const pathName = usePathname()
   const links = [
-    { id: 'home', text: 'Главная', href: '/' },
-    { id: 'about', text: 'О нас', href: '#' },
-    { id: 'contacts', text: 'Контакты', href: '#' }
+    { id: 'catalog', text: 'Каталог', href: '#catalog' },
+    { id: 'about', text: 'О нас', href: '#about' }
   ]
 
   return (

@@ -13,25 +13,27 @@ export const Catalog: FC<Props> = ({ className }) => {
   const { products, setFilter } = useStoreProducts()
   const [searchBarValue, setSearchBarValue] = useState<string>('')
   const sortProducts = products.sort((a, b) => {
-    if (a.type < b.type) {
+    if (a.sort < b.sort) {
       return -1
     }
-    if (a.type > b.type) {
+    if (a.sort > b.sort) {
       return 1
     }
     return 0
   })
 
   return (
-    <section className={`${s.wrapper} ${className ? className : ''}`}>
+    <section className={`${s.wrapper} ${className ? className : ''}`} id='catalog'>
       <div className={'container'}>
         <div className={s.inner}>
-          <div className={s.head}>
+          {/* <div className={s.head}>
             <h2 className={s.title}>Каталог продуктов</h2>
-          </div>
+          </div> */}
           <div className={s.panel}>
             <Filter className={s.filter} onClick={setFilter} />
             <SearchBar
+              placeholder='Введите название'
+              className={s.searchBar}
               value={searchBarValue}
               setValue={(value: string) => {
                 setSearchBarValue(value)
