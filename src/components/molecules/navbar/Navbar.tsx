@@ -12,7 +12,8 @@ export const Navbar: FC<Props> = ({ className }) => {
   const pathName = usePathname()
   const links = [
     { id: 'catalog', text: 'Каталог', href: '#catalog' },
-    { id: 'about', text: 'О нас', href: '#about' }
+    { id: 'about', text: 'О нас', href: '#about' },
+    { id: 'contact', text: 'Контакты', href: '#contacts' }
   ]
 
   return (

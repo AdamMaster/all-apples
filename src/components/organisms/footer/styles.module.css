@@ -32,3 +32,34 @@
     gap: 20px;
   }
 }
+@media (max-width: 767px) {
+  .top {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 30px;
+  }
+  .topCol:nth-child(1) {
+    grid-column: 2 span;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .footerLogo {
+    padding-right: 15px;
+    margin-bottom: 0;
+    margin-right: 15px;
+    border-right: 1px solid #ffffff1a;
+  }
+}
+
+@media (max-width: 575px) {
+  .top {
+    row-gap: 40px;
+  }
+  .topCol:nth-child(1) {
+    margin-bottom: 0;
+  }
+  .topCol {
+    grid-column: 2 span;
+  }
+}

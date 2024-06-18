@@ -1,6 +1,6 @@
 import s from './styles.module.css'
 import { mail, phoneNumbers } from '@/shared/constants/constants'
-import { Logo, ContactLink } from '@/components/atoms'
+import { Logo, ContactLink, Burger } from '@/components/atoms'
 import { Navbar } from '@/components/molecules'
 
 export const Header = () => {
@@ -15,6 +15,7 @@ export const Header = () => {
               <ContactLink text={phoneNumbers[0]} link={`tel:${phoneNumbers[0]}`} />
               <ContactLink link={`mailto:${mail}`} text={mail} />
             </div>
+            <Burger className={s.burger} />
           </div>
         </div>
       </div>

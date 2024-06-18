@@ -10,4 +10,11 @@
   margin-bottom: 80px;
 }
 .delivery {
+  margin-bottom: 80px;
+}
+
+@media (max-width: 575px) {
+  .catalog {
+    padding-top: 50px;
+  }
 }

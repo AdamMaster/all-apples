@@ -2,7 +2,7 @@
   --c-black: #000;
   --c-dark: #1f1f1f;
   --c-white: #fff;
-  --c-grey: #f7f7f7;
+  --c-grey: #fafafa;
   --c-red: #f15a24;
   --c-yellow: #ffcb1a;
   --c-green: #9ada52;
@@ -12,6 +12,7 @@
   --radius-3: 36px;
   --transition: 0.2s;
   scroll-behavior: smooth;
+  scroll-margin-top: 30px;
 }
 html,
 body {
@@ -63,6 +64,7 @@ h1 {
 h2 {
   font-size: 2.4rem;
   font-weight: 600;
+  line-height: 1;
 }
 h3 {
   font-size: 1.5rem;
@@ -129,5 +131,10 @@ p:last-child {
 @media (max-width: 767px) {
   h2 {
     font-size: 2.2rem;
+  }
+}
+@media (max-width: 575px) {
+  h2 {
+    font-size: 1.8rem;
   }
 }

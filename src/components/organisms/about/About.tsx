@@ -13,14 +13,14 @@ interface Props {
 
 export const About: FC<Props> = ({ className }) => {
   const galleryItems = [
-    { id: '1', src: '/images/about-gallery/5.jpg' },
+    { id: '1', src: '/images/about-gallery/1.jpg' },
     { id: '2', src: '/images/about-gallery/2.jpg' },
     { id: '3', src: '/images/about-gallery/3.jpg' },
     { id: '4', src: '/images/about-gallery/4.jpg' },
-    { id: '6', src: '/images/about-gallery/12.jpg' },
-    { id: '7', src: '/images/about-gallery/13.jpg' },
-    { id: '8', src: '/images/about-gallery/14.jpg' },
-    { id: '9', src: '/images/about-gallery/10.jpg' }
+    { id: '6', src: '/images/about-gallery/5.jpg' },
+    { id: '7', src: '/images/about-gallery/6.jpg' },
+    { id: '8', src: '/images/about-gallery/7.jpg' },
+    { id: '9', src: '/images/about-gallery/8.jpg' }
   ]
 
   const advantageItems = [
@@ -48,7 +48,7 @@ export const About: FC<Props> = ({ className }) => {
           <div className={s.grid}>
             <div className={s.content}>
               <Heading className={s.title} level={'h2'}>
-                {`${'ООО "Адамово яблоко"'}`}
+                О нас
               </Heading>
               <div className={s.description}>
                 <p>
@@ -58,8 +58,8 @@ export const About: FC<Props> = ({ className }) => {
                 </p>
                 <p>
                   Наша компания устанавливает прямые связи с более чем 40 производителями, что позволяет нам предложить
-                  широкий ассортимент товаров в различных ценовых категориях. <br /> Мы гарантируем качественную
-                  переработку, индивидуальную фасовку, упаковку, а также калибровку продукции по весу и размеру.
+                  широкий ассортимент товаров в различных ценовых категориях. Мы гарантируем качественную переработку,
+                  индивидуальную фасовку, упаковку, а также калибровку продукции по весу и размеру.
                 </p>
               </div>
             </div>
@@ -75,13 +75,25 @@ export const About: FC<Props> = ({ className }) => {
                 spaceBetween={0}
                 slidesPerView={1}
                 breakpoints={{
+                  320: {
+                    slidesPerView: 2,
+                    spaceBetween: 10
+                  },
                   576: {
                     slidesPerView: 3,
-                    spaceBetween: 15
+                    spaceBetween: 10
+                  },
+                  768: {
+                    slidesPerView: 3.5,
+                    spaceBetween: 10
+                  },
+                  992: {
+                    slidesPerView: 4,
+                    spaceBetween: 10
                   },
                   1200: {
-                    slidesPerView: 1,
-                    spaceBetween: 0
+                    slidesPerView: 4.5,
+                    spaceBetween: 10
                   }
                 }}
               >

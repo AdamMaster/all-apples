@@ -15,7 +15,7 @@ export const Footer = () => {
             <div className={s.topCol}>
               <div className={s.title}>Адрес:</div>
               <div className={s.text}>
-                Кабардино-Балкарская республика, <br /> г. Баксан, ул. Гагарина 2/7, дом 15
+                Кабардино-Балкарская республика, <br /> г. Баксан, ул. Гагарина 2/7, дом 15, помещение 19
               </div>
             </div>
             <div className={s.topCol}>

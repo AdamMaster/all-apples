@@ -41,3 +41,19 @@
     width: 550px;
   }
 }
+@media (max-width: 767px) {
+  .inner {
+    padding: 30px;
+  }
+  .bg {
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .wrapper {
+    background: var(--c-grey);
+  }
+  .inner {
+    padding: 50px 0;
+  }
+}
