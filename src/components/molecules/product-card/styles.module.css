@@ -41,7 +41,13 @@
   }
 }
 @media (max-width: 575px) {
+  .wrapper {
+    border-radius: 4vw;
+  }
   .body {
     padding: 15px;
+  }
+  .button {
+    height: 38px;
   }
 }

@@ -47,9 +47,15 @@
     display: none;
   }
   .links {
-    display: none;
+    margin-left: auto;
   }
   .wrapper .burger {
     display: flex;
+  }
+}
+
+@media (max-width: 575px) {
+  .links {
+    display: none;
   }
 }

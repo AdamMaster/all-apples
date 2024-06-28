@@ -3,6 +3,7 @@ import localFont from 'next/font/local'
 import './assets/styles/globals.css'
 import { Header } from '@/components/organisms/header'
 import { Footer } from '@/components/organisms/footer'
+import { MobileMenu } from '@/components/organisms/mobile-menu'
 
 const mazzard = localFont({
   src: [
@@ -44,6 +45,7 @@ export default function RootLayout({
     <html lang={'en'}>
       <body className={mazzard.className}>
         <Header />
+        <MobileMenu />
         {children}
         <Footer />
       </body>

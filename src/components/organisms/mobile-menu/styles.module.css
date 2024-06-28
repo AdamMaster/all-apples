@@ -1,0 +1,31 @@
+.wrapper {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--c-grey);
+  translate: 0 -100%;
+  transition: var(--transition);
+}
+.wrapper.active {
+  translate: 0 0;
+}
+.inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  min-height: 100dvh;
+}
+.menu .list {
+  display: none;
+}
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}

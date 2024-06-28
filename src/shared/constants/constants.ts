@@ -3,3 +3,8 @@ export const mail = 'lampezhev86@gmail.com'
 export const links = {
   home: '/'
 }
+export const menuLinks = [
+  { id: 'catalog', text: 'Каталог', href: '#catalog' },
+  { id: 'about', text: 'О нас', href: '#about' },
+  { id: 'contact', text: 'Контакты', href: '#contacts' }
+]

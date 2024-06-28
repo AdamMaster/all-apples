@@ -3,25 +3,32 @@ import Link from 'next/link'
 import s from './styles.module.css'
 import { usePathname } from 'next/navigation'
 import { FC } from 'react'
+import { menuLinks } from '@/shared/constants/constants'
+import { useStoreMobileMenu } from '@/store'
 
 interface Props {
+  mobile?: boolean
   className?: string
 }
 
-export const Navbar: FC<Props> = ({ className }) => {
+export const Navbar: FC<Props> = ({ mobile, className }) => {
   const pathName = usePathname()
-  const links = [
-    { id: 'catalog', text: 'Каталог', href: '#catalog' },
-    { id: 'about', text: 'О нас', href: '#about' },
-    { id: 'contact', text: 'Контакты', href: '#contacts' }
-  ]
+  const { setOpen } = useStoreMobileMenu()
+
+  const onClickLink = () => {
+    setOpen(false)
+  }
 
   return (
-    <nav className={`${s.wrapper} ${className ? className : ''}`}>
+    <nav className={`${s.wrapper} ${className ? className : ''} ${mobile ? s.mobileMenu : ''}`}>
       <ul className={s.list}>
-        {links.map(item => (
+        {menuLinks.map(item => (
           <li className={`${s.item}`} key={item.id}>
-            <Link className={`${s.link} ${pathName == item.href ? s.active : ''}`} href={item.href}>
+            <Link
+              className={`${s.link} ${pathName == item.href ? s.active : ''}`}
+              href={item.href}
+              onClick={() => onClickLink()}
+            >
               {item.text}
             </Link>
           </li>

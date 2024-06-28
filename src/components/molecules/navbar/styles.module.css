@@ -25,3 +25,12 @@
 .link.active {
   background: var(--c-grey);
 }
+
+.mobileMenu .list {
+  flex-direction: column;
+  gap: 0;
+}
+
+.mobileMenu .link:hover {
+  background: transparent;
+}
