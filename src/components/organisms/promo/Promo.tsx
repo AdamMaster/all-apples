@@ -21,7 +21,7 @@ export const Promo: FC<Props> = ({ className }) => {
       <div className={'container'}>
         <div className={s.inner}>
           <h1 className={s.title}>Яблоки оптом</h1>
-          <div className={s.subtitle}>разных соротов и калибров</div>
+          <div className={s.subtitle}>разных сортов и калибров</div>
           <div className={s.devider}></div>
           <div className={s.otherTitle}>От надежных производителей по всей стране</div>
           <div className={s.otherTitle}>
