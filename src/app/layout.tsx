@@ -31,8 +31,9 @@ const mazzard = localFont({
 })
 
 export const metadata: Metadata = {
-  title: 'Опт-Рынок',
+  title: 'Адамово Яблоко | Яблоки оптом',
   description: 'Оптовая продажа овощей и фруктов',
+  keywords: 'оптовая продажа, яблоки оптом, фрукты оптом, Адамово Яблоко, свежие фрукты',
   icons: [{ rel: 'icon', url: '/images/favicon.ico' }]
 }
 

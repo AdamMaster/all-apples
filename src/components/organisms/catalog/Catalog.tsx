@@ -1,9 +1,12 @@
 'use client'
 import s from './styles.module.css'
 import { FC, useState } from 'react'
-import { SearchBar } from '@/components/atoms'
+import { Button, ContactLink, SearchBar } from '@/components/atoms'
 import { Filter, ProductCard } from '@/components/molecules'
 import { useStoreProducts } from '@/store/products/useStoreProducts'
+import { mail, phoneNumbers } from '@/shared/constants/constants'
+import { useStoreModal } from '@/store'
+import { Feedback } from '@/components/modal/contents'
 
 interface Props {
   className?: string
@@ -21,6 +24,11 @@ export const Catalog: FC<Props> = ({ className }) => {
     }
     return 0
   })
+
+  const { setOpen } = useStoreModal()
+  const handleClickButton = () => {
+    setOpen(<Feedback />)
+  }
 
   return (
     <section className={`${s.wrapper} ${className ? className : ''}`} id='catalog'>
@@ -40,6 +48,15 @@ export const Catalog: FC<Props> = ({ className }) => {
               }}
             />
           </div> */}
+          <div className={s.note}>
+            Цены на товары зависят от сезона и других факторов. Для получения актуальной информации, пожалуйста,
+            свяжитесь с нами по телефону{' '}
+            <ContactLink className={s.noteLink} text={phoneNumbers[0]} link={`tel:${phoneNumbers[0]}`} /> или по email{' '}
+            <ContactLink className={s.noteLink} text={mail} link={`mailto:${mail}`} />. Либо оставьте заявку:{' '}
+            <Button className={s.noteButton} color='black' onClick={() => handleClickButton()}>
+              Оставить заявку
+            </Button>
+          </div>
           <div className={s.list}>
             {sortProducts
               .filter(

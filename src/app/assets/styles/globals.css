@@ -5,8 +5,10 @@
   --c-grey: #fafafa;
   --c-red: #f15a24;
   --c-yellow: #ffcb1a;
-  --c-green: #9ada52;
-  --c-green-hover: #b2f16a;
+  --c-green-1: #e7f7d5;
+  --c-green-2: #beed8a;
+  --c-green-3: #3ab549;
+  --c-green-hover: rgb(163, 221, 97);
   --radius-1: 12px;
   --radius-2: 22px;
   --radius-3: 36px;
@@ -95,6 +97,18 @@ input:focus {
 }
 input.not-valid {
   border-color: var(--c-red);
+}
+textarea {
+  background: transparent;
+  border: 0;
+  font-size: 1rem;
+}
+.textarea::placeholder {
+  opacity: 0.6;
+}
+textarea:focus {
+  outline: none;
+  border-color: var(--c-dark);
 }
 * {
   box-sizing: border-box;

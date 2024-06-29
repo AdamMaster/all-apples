@@ -20,6 +20,23 @@
   column-gap: 30px;
   margin-bottom: 30px;
 }
+.note {
+  padding: 30px;
+  border-radius: var(--radius-2);
+  background: var(--c-grey);
+  margin-bottom: 30px;
+  border: 1px solid #ededed;
+  font-size: 1.125rem;
+  line-height: 1.4;
+}
+.noteLink {
+  display: inline-block;
+  font-size: 1.125rem;
+  color: var(--c-green-3);
+}
+.noteButton {
+  margin-top: 15px;
+}
 @media (max-width: 1199px) {
   .list {
     gap: 15px;

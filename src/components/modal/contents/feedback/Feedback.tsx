@@ -1,5 +1,5 @@
 'use client'
-import { Button, Field, Heading } from '@/components/atoms'
+import { Button, Field, Heading, Textarea } from '@/components/atoms'
 import s from './styles.module.css'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { fetchFeedback } from '@/shared/api/fetchFeedback'
@@ -10,6 +10,7 @@ import { Thanks } from '../thanks/Thanks'
 interface FormProps {
   name: string
   phone: string
+  message: string
 }
 
 export const Feedback = () => {
@@ -64,6 +65,13 @@ export const Feedback = () => {
               setValue('phone', value)
             }}
           />
+          <Textarea
+            placeholder='Сообщение'
+            {...register('message')}
+            onChangeValue={value => {
+              setValue('message', value)
+            }}
+          ></Textarea>
         </div>
         <Button className={s.button} type='submit' disabled={isLoading} isLoading={isLoading}>
           Отправить

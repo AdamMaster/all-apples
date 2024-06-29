@@ -41,7 +41,7 @@ export const Order: FC<Props> = ({ productFullName }) => {
   return (
     <div className={s.wrapper}>
       <Heading className={s.title} level='h3'>
-        Оставить заявку
+        Узнать цену
       </Heading>
       <form className={s.form} onSubmit={handleSubmit(submit)}>
         <div className='fields'>
