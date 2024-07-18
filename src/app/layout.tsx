@@ -35,8 +35,7 @@ const mazzard = localFont({
 export const metadata: Metadata = {
   title: 'Адамово Яблоко | Яблоки оптом',
   description: 'Оптовая продажа овощей и фруктов',
-  keywords: 'оптовая продажа, яблоки оптом, фрукты оптом, Адамово Яблоко, свежие фрукты',
-  icons: [{ rel: 'icon', url: '/images/favicon.ico' }]
+  keywords: 'оптовая продажа, яблоки оптом, фрукты оптом, Адамово Яблоко, свежие фрукты'
 }
 
 export default function RootLayout({
@@ -48,6 +47,7 @@ export default function RootLayout({
     <html lang={'en'}>
       <head>
         <meta name='yandex-verification' content='432e46207c298a5e' />
+        <link rel='icon' href='https://adams-apple.ru/images/favicon.ico' type='image/x-icon'></link>
         <YandexMetrica counterId={'97863631'} />
         <GoogleAnalytics />
       </head>
