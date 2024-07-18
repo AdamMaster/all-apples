@@ -19,13 +19,7 @@ export const YandexMetrica = ({ counterId }) => {
    });`}
       </Script>
       <noscript>
-        <div>
-          <img
-            src={`https://mc.yandex.ru/watch/${counterId}`}
-            style={{ position: 'absolute', left: '-9999px' }}
-            alt=''
-          />
-        </div>
+        <img src={`https://mc.yandex.ru/watch/${counterId}`} style={{ position: 'absolute', left: '-9999px' }} alt='' />
       </noscript>
     </Fragment>
   )
