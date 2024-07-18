@@ -1,4 +1,8 @@
 export const phoneNumbers = ['8 (918) 721-70-33']
+export const messengers = {
+  whatsapp: '+79304087971',
+  telegram: 'AdamLampezhev'
+}
 export const mail = 'adamsapple.kbr@gmail.com'
 export const links = {
   home: '/'

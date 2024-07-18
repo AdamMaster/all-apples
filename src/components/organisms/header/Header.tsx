@@ -1,6 +1,6 @@
 'use client'
 import s from './styles.module.css'
-import { mail, phoneNumbers } from '@/shared/constants/constants'
+import { mail, messengers, phoneNumbers } from '@/shared/constants/constants'
 import { Logo, ContactLink, Burger } from '@/components/atoms'
 import { Navbar } from '@/components/molecules'
 import { useStoreMobileMenu } from '@/store'
@@ -18,6 +18,10 @@ export const Header = () => {
           <div className={s.bottomInner}>
             <Logo className={s.logo} color={'default'} />
             <Navbar className={s.navbar} />
+            <div className={s.messengers}>
+              <ContactLink className={s.link} link={`https://wa.me/${messengers.whatsapp}`} iconId={'whatsapp-fill'} />
+              <ContactLink className={s.link} link={`https://t.me/${messengers.telegram}`} iconId={'telegram-fill'} />
+            </div>
             <div className={s.links}>
               <ContactLink text={phoneNumbers[0]} link={`tel:${phoneNumbers[0]}`} />
               <ContactLink link={`mailto:${mail}`} text={mail} />

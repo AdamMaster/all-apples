@@ -24,6 +24,21 @@
   padding: 15px 0;
   column-gap: 30px;
 }
+.messengers {
+  display: flex;
+  gap: 15px;
+  margin-left: auto;
+}
+.messengers svg {
+  width: 23px;
+  height: 23px;
+}
+.messengers a:nth-child(1) svg {
+  fill: #25d366;
+}
+.messengers a:nth-child(2) svg {
+  fill: #34b7f1;
+}
 .links {
   display: flex;
   flex-direction: column;
@@ -37,6 +52,12 @@
 }
 .wrapper .burger {
   display: none;
+}
+
+@media (max-width: 991px) {
+  .messengers {
+    display: none;
+  }
 }
 
 @media (max-width: 767px) {
@@ -57,6 +78,9 @@
 @media (max-width: 575px) {
   .logo img {
     width: 110px;
+  }
+  .messengers {
+    display: flex;
   }
   .links {
     display: none;
