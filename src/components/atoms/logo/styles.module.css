@@ -9,6 +9,10 @@
   width: 150px;
   height: auto;
 }
+.text {
+  font-size: 0.75rem;
+  color: #999999;
+}
 
 @media (max-width: 767px) {
   .img {

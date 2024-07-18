@@ -30,7 +30,7 @@
   line-height: 1.4;
 }
 .noteLink {
-  display: inline-block;
+  display: inline-block !important;
   font-size: 1.125rem;
   color: var(--c-green-3);
 }

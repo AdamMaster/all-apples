@@ -5,6 +5,7 @@ import { Header } from '@/components/organisms/header'
 import { Footer } from '@/components/organisms/footer'
 import { MobileMenu } from '@/components/organisms/mobile-menu'
 import { YandexMetrica } from '@/components/YandexMetrika/YandexMetrika'
+import { GoogleAnalytics } from '@/components/GoogleAnalytics/GoogleAnalytics'
 
 const mazzard = localFont({
   src: [
@@ -47,6 +48,7 @@ export default function RootLayout({
     <html lang={'en'}>
       <head>
         <YandexMetrica counterId={'97863631'} />
+        <GoogleAnalytics />
       </head>
       <body className={mazzard.className}>
         <Header />
