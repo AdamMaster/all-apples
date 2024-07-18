@@ -55,6 +55,9 @@
 }
 
 @media (max-width: 575px) {
+  .logo img {
+    width: 110px;
+  }
   .links {
     display: none;
   }
