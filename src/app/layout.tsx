@@ -47,6 +47,7 @@ export default function RootLayout({
   return (
     <html lang={'en'}>
       <head>
+        <meta name='yandex-verification' content='432e46207c298a5e' />
         <YandexMetrica counterId={'97863631'} />
         <GoogleAnalytics />
       </head>

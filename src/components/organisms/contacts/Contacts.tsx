@@ -51,14 +51,7 @@ export const Contacts: FC<Props> = ({ className }) => {
               </div>
               <div className={s.workSchedule}>Режим работы: Пн-Пт : с 8:00 до 19:00</div>
             </div>
-            <div className={s.map}>
-              <iframe
-                src='https://yandex.ru/map-widget/v1/?um=constructor%3Afbdae73b70e3d55357df04fa8033dd57e5f681ace061953358bfd164ccc2031d&amp;source=constructor'
-                width='100%'
-                height='100%'
-                frameBorder='0'
-              ></iframe>
-            </div>
+            <div className={s.map}></div>
           </div>
         </div>
       </div>
