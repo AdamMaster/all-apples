@@ -60,6 +60,9 @@
   }
 }
 @media (max-width: 575px) {
+  .note {
+    padding: 15px;
+  }
   .list {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
