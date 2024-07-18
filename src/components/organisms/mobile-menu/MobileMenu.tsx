@@ -25,7 +25,7 @@ export const MobileMenu = () => {
         <div className={s.menu}>
           <Navbar mobile className={s.menu} />
           <div className={s.links}>
-            <ContactLink text={phoneNumbers[0]} link={`tel:${phoneNumbers[0]}`} />
+            <ContactLink text={phoneNumbers[0].text} link={`tel:${phoneNumbers[0].link}`} />
             <ContactLink link={`mailto:${mail}`} text={mail} />
           </div>
         </div>

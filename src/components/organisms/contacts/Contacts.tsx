@@ -23,7 +23,7 @@ export const Contacts: FC<Props> = ({ className }) => {
     {
       id: 2,
       label: 'телефон:',
-      children: <ContactLink text={phoneNumbers[0]} link={`tel:${phoneNumbers[0]}`} />
+      children: <ContactLink text={phoneNumbers[0].text} link={`tel:${phoneNumbers[0].link}`} />
     },
     {
       id: 3,

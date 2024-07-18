@@ -51,8 +51,8 @@ export const Catalog: FC<Props> = ({ className }) => {
           <div className={s.note}>
             Цены на товары зависят от сезона и других факторов. Для получения актуальной информации, пожалуйста,
             свяжитесь с нами по телефону{' '}
-            <ContactLink className={s.noteLink} text={phoneNumbers[0]} link={`tel:${phoneNumbers[0]}`} /> или по email{' '}
-            <ContactLink className={s.noteLink} text={mail} link={`mailto:${mail}`} />. Либо оставьте заявку:{' '}
+            <ContactLink className={s.noteLink} text={phoneNumbers[0].text} link={`tel:${phoneNumbers[0].link}`} /> или
+            по email <ContactLink className={s.noteLink} text={mail} link={`mailto:${mail}`} />. Либо оставьте заявку:{' '}
             <Button className={s.noteButton} color='black' onClick={() => handleClickButton()}>
               Оставить заявку
             </Button>
