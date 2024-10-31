@@ -1,9 +1,9 @@
+'use client'
 import { Heading, Icon } from '@/components/atoms'
 import s from './styles.module.css'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay } from 'swiper/modules'
 import { useStoreProducts } from '@/store/products/useStoreProducts'
-import Image from 'next/image'
 import { ProductCard } from '@/components/molecules'
 
 export const Popular = () => {

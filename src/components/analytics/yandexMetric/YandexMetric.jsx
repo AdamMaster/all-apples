@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import Script from 'next/script'
 
-export const YandexMetrica = ({ counterId }) => {
+export const YandexMetric = () => {
   return (
     <Fragment>
       <Script id='metrika-counter' strategy='afterInteractive'>
@@ -11,7 +11,7 @@ export const YandexMetrica = ({ counterId }) => {
    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-   ym(${counterId}, "init", {
+   ym(97863631, "init", {
         clickmap:true,
         trackLinks:true,
         accurateTrackBounce:true,
@@ -19,7 +19,7 @@ export const YandexMetrica = ({ counterId }) => {
    });`}
       </Script>
       <noscript>
-        <img src={`https://mc.yandex.ru/watch/${counterId}`} style={{ position: 'absolute', left: '-9999px' }} alt='' />
+        <img src={`https://mc.yandex.ru/watch/97863631`} style={{ position: 'absolute', left: '-9999px' }} alt='' />
       </noscript>
     </Fragment>
   )

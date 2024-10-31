@@ -1,10 +1,5 @@
-import { About } from '@/components/organisms/about'
+import { About, Catalog, Contacts, Delivery, Popular, Promo } from '@/components/organisms'
 import s from './styles.module.css'
-import { Catalog } from '@/components/organisms/catalog'
-import { Delivery } from '@/components/organisms/delivery'
-import { Promo } from '@/components/organisms/promo'
-import { Popular } from '@/components/organisms/popular'
-import { Contacts } from '@/components/organisms/contacts'
 
 export const HomePage = () => {
   return (

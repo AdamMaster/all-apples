@@ -1,4 +1,3 @@
-'use client'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { HomePage } from '@/components/screens/home'
 import styles from './page.module.css'
@@ -14,11 +13,11 @@ const queryClient = new QueryClient({
 
 export default function Main() {
   return (
-    <QueryClientProvider client={queryClient}>
-      <main className={styles.wrapper}>
-        <HomePage />
-        <Modal />
-      </main>
-    </QueryClientProvider>
+    // <QueryClientProvider client={queryClient}>
+    <main className={styles.wrapper}>
+      <HomePage />
+      <Modal />
+    </main>
+    // </QueryClientProvider>
   )
 }
