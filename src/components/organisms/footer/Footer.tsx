@@ -1,6 +1,6 @@
 import { ContactLink, Logo } from '@/components/atoms'
 import s from './styles.module.css'
-import { mail, phoneNumbers } from '@/shared/constants/constants'
+import { address, mail, phoneNumbers } from '@/shared/constants/constants'
 
 export const Footer = () => {
   return (
@@ -14,9 +14,7 @@ export const Footer = () => {
             </div>
             <div className={s.topCol}>
               <div className={s.title}>Адрес:</div>
-              <div className={s.text}>
-                Кабардино-Балкарская республика, <br /> г. Баксан, ул. Гагарина 2/7, дом 15, помещение 19
-              </div>
+              <div className={s.text}>{address}</div>
             </div>
             <div className={s.topCol}>
               <div className={s.title}>Контакты:</div>

@@ -1,7 +1,7 @@
 import { FC, ReactNode } from 'react'
 import s from './styles.module.css'
 import { ContactLink, Heading } from '@/components/atoms'
-import { mail, phoneNumbers } from '@/shared/constants/constants'
+import { address, mail, phoneNumbers } from '@/shared/constants/constants'
 
 interface Props {
   className?: string
@@ -18,7 +18,7 @@ export const Contacts: FC<Props> = ({ className }) => {
     {
       id: 1,
       label: 'юр. адрес:',
-      children: '361531, Россия, Кабардино-Балкарская Республика, г. Баксан, ул. Гагарина 2/7 с.15, помещение 19'
+      children: address
     },
     {
       id: 2,
@@ -51,7 +51,14 @@ export const Contacts: FC<Props> = ({ className }) => {
               </div>
               <div className={s.workSchedule}>Режим работы: Пн-Пт : с 8:00 до 19:00</div>
             </div>
-            <div className={s.map}></div>
+            <div className={s.map}>
+              <iframe
+                id='1'
+                src='https://yandex.ru/map-widget/v1/?um=constructor%3Ae1a9a48b3dfa281d53be18182d9997ac88c4afbded3e9671221a95a99262752f&amp;source=constructor'
+                width='100%'
+                height='400'
+              ></iframe>
+            </div>
           </div>
         </div>
       </div>
