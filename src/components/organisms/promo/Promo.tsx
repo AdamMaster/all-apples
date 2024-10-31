@@ -2,8 +2,6 @@ import Image from 'next/image'
 import s from './styles.module.css'
 import { Button } from '@/components/atoms'
 import { FC } from 'react'
-import { useStoreModal } from '@/store'
-import { Feedback } from '@/components/modal/contents'
 
 interface Props {
   className?: string
@@ -20,11 +18,8 @@ export const Promo: FC<Props> = ({ className }) => {
           <div className={s.devider}></div>
           <div className={s.otherTitle}>От надежных производителей по всей стране</div>
           <div className={s.otherTitle}>
-            Заказы принимаются <span className={'highlight'}>от 20 тон</span>
+            Заказы принимаются <span className={'highlight'}>от 10 тон</span>
           </div>
-          {/* <Button className={s.button} color={'white'} onClick={() => handleClickButton()}>
-            Каталог
-          </Button> */}
           <Button className={s.button} color={'white'} link='#catalog'>
             Перейти в каталог
           </Button>
