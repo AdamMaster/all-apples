@@ -47,6 +47,8 @@ export default function RootLayout({
     <html lang={'en'}>
       <head>
         <meta name='yandex-verification' content='432e46207c298a5e' />
+        <meta name='description' content={`${metadata.description}`} />
+        <meta name='keywords' content={`${metadata.keywords}`} />
         <link rel='icon' href='https://adams-apple.ru/images/favicon.ico' type='image/x-icon'></link>
         <YandexMetrica counterId={'97863631'} />
         <GoogleAnalytics />
