@@ -42,7 +42,7 @@ export const About: FC<Props> = ({ className }) => {
   ]
 
   return (
-    <div className={`${s.wrapper} ${className ? className : ''}`} id='about'>
+    <section className={`${s.wrapper} ${className ? className : ''}`} id='about'>
       <div className={'container'}>
         <div className={s.inner}>
           <div className={s.grid}>
@@ -112,6 +112,6 @@ export const About: FC<Props> = ({ className }) => {
           </div> */}
         </div>
       </div>
-    </div>
+    </section>
   )
 }
