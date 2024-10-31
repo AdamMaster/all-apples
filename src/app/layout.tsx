@@ -63,6 +63,14 @@ export default function RootLayout({
         />
       </head>
       <body className={mazzard.className}>
+        <noscript>
+          <iframe
+            src='https://www.googletagmanager.com/ns.html?id=GTM-KMTJZ6KF'
+            height='0'
+            width='0'
+            style={{ display: 'none', visibility: 'hidden' }}
+          ></iframe>
+        </noscript>
         <Header />
         <MobileMenu />
         {children}
