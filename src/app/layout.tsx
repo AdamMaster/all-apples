@@ -50,6 +50,17 @@ export default function RootLayout({
         <link rel='icon' href='https://adams-apple.ru/images/favicon.ico' type='image/x-icon'></link>
         <YandexMetrica counterId={'97863631'} />
         <GoogleAnalytics />
+        <script async src='https://www.googletagmanager.com/gtag/js?id=G-YXN1Y64N9E'></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-YXN1Y64N9E');
+            `
+          }}
+        />
       </head>
       <body className={mazzard.className}>
         <Header />
