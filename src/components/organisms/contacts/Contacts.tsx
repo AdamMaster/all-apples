@@ -57,6 +57,7 @@ export const Contacts: FC<Props> = ({ className }) => {
                 src='https://yandex.ru/map-widget/v1/?um=constructor%3Ae1a9a48b3dfa281d53be18182d9997ac88c4afbded3e9671221a95a99262752f&amp;source=constructor'
                 width='100%'
                 height='400'
+                loading='lazy'
               ></iframe>
             </div>
           </div>
