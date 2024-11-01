@@ -7,13 +7,12 @@ export async function POST(request: NextRequest) {
 
     const transporter = nodemailer.createTransport({
       host: process.env.HOST,
-      port: 587,
-      secure: false,
+      port: 465,
+      secure: true,
       auth: {
         user: process.env.EMAIL,
         pass: process.env.EMAIL_PASSWORD
-      },
-      logger: true
+      }
     })
 
     const mailOptions = {
