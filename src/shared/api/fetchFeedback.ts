@@ -22,7 +22,11 @@ export const fetchFeedback = async (data: FormData) => {
         message: message
       })
     })
-    console.log('Письмо отправилось')
+    if (response.ok) {
+      console.log('Письмо отправилось успешно')
+    } else {
+      console.error('Ошибка при отправке письма:', response.status, response.statusText)
+    }
   } catch (error) {
     console.log('Письмо не отправилось:', error)
   }
