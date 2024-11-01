@@ -12,12 +12,13 @@ export async function POST(request: NextRequest) {
       auth: {
         user: process.env.EMAIL,
         pass: process.env.EMAIL_PASSWORD
-      }
+      },
+      logger: true
     })
 
     const mailOptions = {
       from: '"AdamsApple" <no-reply@yourdomain.com>',
-      to: 'lampezhev86@gmail.com',
+      to: process.env.EMAIL,
       subject: subject,
       html: message
     }
