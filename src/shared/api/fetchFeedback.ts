@@ -20,10 +20,4 @@ export const fetchFeedback = async (data: FormData) => {
       message: message
     })
   })
-  if (!response.ok) {
-    console.error('Ошибка при отправке:', await response.text())
-  } else {
-    const jsonResponse = await response.json()
-    console.log('Ответ:', jsonResponse)
-  }
 }
