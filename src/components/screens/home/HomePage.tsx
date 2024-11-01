@@ -1,17 +1,5 @@
-import { About, Contacts, Popular, Promo } from '@/components/organisms'
+import { About, Catalog, Contacts, Delivery, Popular, Promo } from '@/components/organisms'
 import s from './styles.module.css'
-import dynamic from 'next/dynamic'
-import type { FC } from 'react'
-
-const Catalog = dynamic(
-  () => import('@/components/organisms/catalog/Catalog').then(mod => mod.Catalog) as unknown as Promise<FC>
-)
-const Delivery = dynamic(
-  () => import('@/components/organisms/delivery/Delivery').then(mod => mod.Delivery) as unknown as Promise<FC>,
-  {
-    ssr: false
-  }
-)
 
 export const HomePage = () => {
   return (
