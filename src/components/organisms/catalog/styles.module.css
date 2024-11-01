@@ -32,7 +32,6 @@
 .noteLink {
   display: inline-block !important;
   font-size: 1.125rem;
-  color: var(--c-green-3);
 }
 .noteButton {
   margin-top: 15px;
