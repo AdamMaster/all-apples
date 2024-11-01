@@ -3,6 +3,7 @@
   align-items: center;
   gap: 10px;
   transition: color 0.1s;
+  padding: 1px 0;
 }
 
 .wrapper:hover {
