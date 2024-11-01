@@ -10,7 +10,7 @@ export const Burger: FC<Props> = ({ className, onClick }) => {
   const classNames = `${s.wrapper} ${className ? className : ''}`
 
   return (
-    <button className={classNames} onClick={onClick}>
+    <button className={classNames} title='Burger' onClick={onClick}>
       <div className={s.line}></div>
       <div className={s.line}></div>
       <div className={s.line}></div>
