@@ -12,7 +12,7 @@ export const Promo: FC<Props> = ({ className }) => {
     <section className={`${s.wrapper} ${className ? className : ''}`}>
       <Image
         className={s.bg}
-        alt={'promo-bg'}
+        alt={'яблоки фура'}
         src={'/images/promo-bg.jpg'}
         layout={'fill'}
         objectFit={'cover'}

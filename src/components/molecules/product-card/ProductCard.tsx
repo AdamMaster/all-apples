@@ -15,7 +15,7 @@ export const ProductCard: FC<ProductCardType> = ({ type, sort, imgUrl }) => {
   return (
     <div className={s.wrapper}>
       <div className={s.head}>
-        <Image className={s.img} alt='card-img' src={imgUrl} layout='fill' objectFit='cover' />
+        <Image className={s.img} alt={sort} src={imgUrl} layout='fill' objectFit='cover' />
       </div>
       <div className={s.body}>
         <div className={s.category}>{type}</div>

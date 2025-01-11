@@ -30,7 +30,13 @@ export const Delivery: FC<Props> = ({ className }) => {
               </div>
             </div>
             <div className={s.illustration}>
-              <Image alt={'promo-bg'} className={s.bg} height={100} width={100} src={'/images/truck-in-map-2.png'} />
+              <Image
+                alt={'Доставка яблок по всей стране'}
+                className={s.bg}
+                height={100}
+                width={100}
+                src={'/images/truck-in-map-2.png'}
+              />
             </div>
           </div>
         </div>

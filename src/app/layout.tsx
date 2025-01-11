@@ -30,7 +30,7 @@ const mazzard = localFont({
 })
 
 export const metadata: Metadata = {
-  title: 'Яблоки оптом | Адамово Яблоко',
+  title: 'Яблоки оптом - купить свежие яблоки оптом',
   description:
     'Яблоки оптом. Любой сорт. Калибры: 55+, 60+, 65+. Фасовка: ящики по 15 кг. Минимальная отгрузка: 10 тонн',
   keywords: 'оптовая продажа, яблоки оптом, фрукты оптом, Адамово Яблоко, свежие фрукты'
@@ -42,7 +42,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang={'en'}>
+    <html lang={'ru'}>
       <head>
         <meta name='yandex-verification' content='432e46207c298a5e' />
         <link rel='icon' href='https://adams-apple.ru/images/favicon.ico' type='image/x-icon'></link>

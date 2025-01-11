@@ -100,7 +100,7 @@ export const About: FC<Props> = ({ className }) => {
               >
                 {galleryItems.map(galleryItem => (
                   <SwiperSlide className={s.galleryItem} key={galleryItem.id}>
-                    <Image src={galleryItem.src} layout={'fill'} objectFit={'cover'} alt={'about-photo'} />
+                    <Image src={galleryItem.src} layout={'fill'} objectFit={'cover'} alt={'яблоки оптом'} />
                   </SwiperSlide>
                 ))}
               </Swiper>
