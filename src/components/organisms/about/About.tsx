@@ -46,25 +46,37 @@ export const About: FC<Props> = ({ className }) => {
     <section className={`${s.wrapper} ${className ? className : ''}`} id='about'>
       <div className={'container'}>
         <div className={s.inner}>
-          <div className={s.grid}>
-            <div className={s.content}>
-              <Heading className={s.title} level={'h2'}>
-                О нас
-              </Heading>
-              <div className={s.description}>
-                <p>
-                  Мы - ведущая компания в сфере поставок свежих яблок, расположенная в Кабардино-Балкарской Республике.
-                  Этот регион славится превосходными садами, где растут лучшие яблоки благодаря уникально плодородной
-                  земле, идеальной для выращивания яблок.
-                </p>
-                <p>
-                  Наша компания устанавливает прямые связи с более чем 40 производителями, что позволяет нам предложить
-                  широкий ассортимент товаров в различных ценовых категориях. Мы гарантируем качественную переработку,
-                  индивидуальную фасовку, упаковку, а также калибровку продукции по весу и размеру.
-                </p>
-              </div>
+          <div className={s.content}>
+            <Heading className={s.bigTitle} level={'h2'}>
+              Оптом, с заботой <br /> и качеством
+            </Heading>
+            <div className={s.grid}>
+              <div></div>
+
+              <Image
+                src={'/images/to-apples.jpg'}
+                width={300}
+                height={300}
+                layout='intrinsic'
+                alt='Яблоки лучших сортов'
+              />
+
+              <div></div>
             </div>
-            <div className={s.gallery}>
+            <div className={s.description}>
+              <p>
+                Мы - ведущая компания в сфере поставок свежих яблок, расположенная в Кабардино-Балкарской Республике.
+                Этот регион славится превосходными садами, где растут лучшие яблоки благодаря уникально плодородной
+                земле, идеальной для выращивания яблок.
+              </p>
+              <p>
+                Наша компания устанавливает прямые связи с более чем 40 производителями, что позволяет нам предложить
+                широкий ассортимент товаров в различных ценовых категориях. Мы гарантируем качественную переработку,
+                индивидуальную фасовку, упаковку, а также калибровку продукции по весу и размеру.
+              </p>
+            </div>
+          </div>
+          {/* <div className={s.gallery}>
               <Swiper
                 modules={[Autoplay]}
                 speed={1000}
@@ -104,14 +116,13 @@ export const About: FC<Props> = ({ className }) => {
                   </SwiperSlide>
                 ))}
               </Swiper>
-            </div>
-          </div>
-          {/* <div className={s.advantages}>
+            </div> */}
+        </div>
+        {/* <div className={s.advantages}>
             {advantageItems.map(advantageItem => (
               <Advantage title={advantageItem.title} text={advantageItem.text} key={advantageItem.id} />
             ))}
           </div> */}
-        </div>
       </div>
     </section>
   )

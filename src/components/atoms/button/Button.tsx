@@ -4,7 +4,8 @@ import Image from 'next/image'
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: string
-  color?: 'green' | 'white' | 'grey' | 'black'
+  color?: 'green' | 'yellow' | 'white' | 'grey' | 'black'
+  stroked?: boolean
   size?: 'l' | 's'
   className?: string
   isLoading?: boolean
@@ -13,7 +14,8 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 export const Button: FC<Props> = ({
   children,
-  color = 'green',
+  color = 'yellow',
+  stroked,
   size = 'l',
   className,
   isLoading,
@@ -23,6 +25,7 @@ export const Button: FC<Props> = ({
 }) => {
   const colors = {
     green: s.green,
+    yellow: s.yellow,
     white: s.white,
     grey: s.grey,
     black: s.black
@@ -32,7 +35,7 @@ export const Button: FC<Props> = ({
     l: s.l,
     s: s.s
   }[size]
-  const classNames = `${s.wrapper} ${colors} ${className ? className : ''} ${sizes}`
+  const classNames = `${s.wrapper} ${colors} ${className ? className : ''} ${sizes} ${stroked ? s.stroked : ''}`
 
   if (link) {
     return (

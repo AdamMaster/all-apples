@@ -4,6 +4,8 @@
   margin-bottom: 30px;
 }
 .title {
+  margin-bottom: 30px;
+  font-weight: 700;
 }
 .list {
   display: grid;
@@ -22,10 +24,9 @@
 }
 .note {
   padding: 30px;
-  border-radius: var(--radius-2);
+  margin-top: 30px;
   background: var(--c-grey);
-  margin-bottom: 30px;
-  border: 1px solid #ededed;
+  border: 1px solid #e5e5e5;
   font-size: 1.125rem;
   line-height: 1.4;
 }

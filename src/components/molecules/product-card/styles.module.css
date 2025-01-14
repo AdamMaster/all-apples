@@ -2,11 +2,15 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  border-radius: var(--radius-2);
+  border: 1px solid #e5e5e5;
+  transition: 0.2s;
+}
+.wrapper:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 .head {
   position: relative;
-  aspect-ratio: 1.4;
+  aspect-ratio: 1.1;
 }
 .img {
   position: absolute;
@@ -22,7 +26,7 @@
   flex-direction: column;
   align-items: center;
   padding: 20px 15px;
-  background: var(--c-grey);
+  border-top: 0;
 }
 .sort {
   font-size: 1.125rem;

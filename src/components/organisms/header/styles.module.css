@@ -1,8 +1,14 @@
 .wrapper {
-  position: relative;
+  position: absolute;
   z-index: 100;
-  background: var(--c-white);
-  border-bottom: 1px solid var(--c-grey);
+  width: 100%;
+  color: #fff;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .top {
@@ -32,13 +38,14 @@
 .messengers svg {
   width: 23px;
   height: 23px;
+  fill: #fff;
 }
-.messengers a:nth-child(1) svg {
+/* .messengers a:nth-child(1) svg {
   fill: #25d366;
 }
 .messengers a:nth-child(2) svg {
   fill: #34b7f1;
-}
+} */
 .links {
   display: flex;
   flex-direction: column;

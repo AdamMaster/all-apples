@@ -133,7 +133,7 @@ export const data = [
     type: 'Яблоки',
     sort: 'Гала',
     month: 'сентябрь',
-    imgUrl: '/images/products/gala.jpg'
+    imgUrl: '/images/apples/gala.jpg'
   },
   {
     id: '17',
@@ -141,7 +141,7 @@ export const data = [
     type: 'Яблоки',
     sort: 'Гренни Смит',
     month: 'сентябрь',
-    imgUrl: '/images/products/greni.jpg'
+    imgUrl: '/images/apples/grenny-smit.jpg'
   },
   {
     id: '18',
@@ -149,7 +149,7 @@ export const data = [
     type: 'Яблоки',
     sort: 'Либерти',
     month: 'сентябрь',
-    imgUrl: '/images/products/liberty.jpg'
+    imgUrl: '/images/apples/liberty.jpg'
   },
   {
     id: '19',
@@ -157,7 +157,7 @@ export const data = [
     type: 'Яблоки',
     sort: 'Айдаред',
     month: 'сентябрь',
-    imgUrl: '/images/products/aydared.jpg'
+    imgUrl: '/images/apples/aydared.jpg'
   },
   {
     id: '20',
@@ -165,7 +165,7 @@ export const data = [
     type: 'Яблоки',
     sort: 'Рэд Делишес',
     month: 'сентябрь',
-    imgUrl: '/images/products/red-delishes.jpg'
+    imgUrl: '/images/apples/red-d.jpg'
   },
   {
     id: '21',
@@ -173,7 +173,7 @@ export const data = [
     type: 'Яблоки',
     sort: 'Рэд Чиф',
     month: 'сентябрь',
-    imgUrl: '/images/products/red-cheef.jpg'
+    imgUrl: '/images/apples/red-chif.jpg'
   },
   {
     id: '22',
@@ -181,7 +181,7 @@ export const data = [
     type: 'Яблоки',
     sort: 'Семеренко',
     month: 'сентябрь',
-    imgUrl: '/images/products/semerenko.jpg'
+    imgUrl: '/images/apples/semerenko.jpg'
   },
   {
     id: '23',
@@ -189,7 +189,7 @@ export const data = [
     type: 'Яблоки',
     sort: 'Флорина',
     month: 'сентябрь',
-    imgUrl: '/images/products/florina.jpg'
+    imgUrl: '/images/apples/florina.jpg'
   },
   {
     id: '24',
@@ -197,15 +197,7 @@ export const data = [
     type: 'Яблоки',
     sort: 'Моди',
     month: 'сентябрь',
-    imgUrl: '/images/products/modi.jpg'
-  },
-  {
-    id: '25',
-    category: 'fruits',
-    type: 'Яблоки',
-    sort: 'Грин Пинк',
-    month: 'сентябрь',
-    imgUrl: '/images/products/green-pink.jpg'
+    imgUrl: '/images/apples/modi.jpg'
   },
   {
     id: '26',
@@ -213,7 +205,7 @@ export const data = [
     type: 'Яблоки',
     sort: 'Голден',
     month: 'сентябрь',
-    imgUrl: '/images/products/goldin.jpg'
+    imgUrl: '/images/apples/golden-d.jpg'
   },
   {
     id: '27',
@@ -221,22 +213,6 @@ export const data = [
     type: 'Яблоки',
     sort: 'Чемпион',
     month: 'сентябрь',
-    imgUrl: '/images/products/chempion.jpg'
+    imgUrl: '/images/apples/champion.jpg'
   }
-  // {
-  //   id: '28',
-  //   category: 'fruits',
-  //   type: 'Слива',
-  //   sort: 'Анжелина',
-  //   month: 'сентябрь',
-  //   imgUrl: '/images/products/anjelina.jpg'
-  // },
-  // {
-  //   id: '29',
-  //   category: 'fruits',
-  //   type: 'Слива',
-  //   sort: 'Кабардинка',
-  //   month: 'сентябрь',
-  //   imgUrl: '/images/products/kabardinka.jpg'
-  // }
 ]

@@ -2,20 +2,30 @@
 }
 .inner {
 }
-.grid {
+.content {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  align-items: center;
+  padding: 120px 50px;
 }
-.content {
-  padding: 50px 50px;
-  background: var(--c-grey);
-  border-radius: var(--radius-2);
-}
-.title {
+.bigTitle {
   display: flex;
   gap: 12px;
-  margin-bottom: 15px;
+  width: max-content;
+  margin-bottom: 60px;
+  background-image: url(https://ninetheme.com/themes/agro/wp-content/uploads/2019/02/special_offer_text_bg.jpg);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-clip: text;
+  font-size: 4.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: transparent;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
 }
 .description {
   font-size: 1.125rem;

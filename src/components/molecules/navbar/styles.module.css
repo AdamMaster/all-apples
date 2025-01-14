@@ -19,12 +19,12 @@
 }
 
 .link:hover {
-  background: var(--c-grey);
+  color: var(--c-yellow);
 }
 
-.link.active {
-  background: var(--c-grey);
-}
+/* .link.active {
+  color: var(--c-yellow);
+} */
 
 .mobileMenu .list {
   flex-direction: column;

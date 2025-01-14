@@ -13,7 +13,7 @@ export const Promo: FC<Props> = ({ className }) => {
       <Image
         className={s.bg}
         alt={'яблоки фура'}
-        src={'/images/promo-bg.jpg'}
+        src={'/images/promo-bg-3.jpg'}
         layout={'fill'}
         objectFit={'cover'}
         loading='eager'
@@ -22,15 +22,17 @@ export const Promo: FC<Props> = ({ className }) => {
         <div className={s.inner}>
           <h1 className={s.title}>Яблоки оптом</h1>
           <div className={s.subtitle}>разных сортов и калибров</div>
-          <div className={s.devider}></div>
-          <div className={s.otherTitle}>От надежных производителей по всей стране</div>
-          <div className={s.otherTitle}>
-            Заказы принимаются <span className={'highlight'}>от 10 тон</span>
-          </div>
-          <Button className={s.button} color={'white'} link='#catalog'>
+          <div className={s.otherTitle}>От надежных производителей Кабарлино-Балкарской Республики</div>
+          <div className={s.otherTitle}>Заказы принимаются от 10 тон</div>
+          <div className={s.otherTitle}>Доставка по всей стране</div>
+          <Button className={s.button} color={'yellow'} link='#catalog' size='l'>
             Перейти в каталог
           </Button>
         </div>
+      </div>
+      <div className={s.scrollDiscover}>
+        <span></span>
+        <span></span>
       </div>
     </section>
   )
