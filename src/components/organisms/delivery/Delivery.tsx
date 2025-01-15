@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import s from './styles.module.css'
-import { Button, Heading } from '@/components/atoms'
 import Image from 'next/image'
+import { Heading } from '@/components/ui'
 
 interface Props {
   className?: string

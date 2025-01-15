@@ -1,7 +1,7 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { HomePage } from '@/components/screens/home'
 import styles from './page.module.css'
-import { Modal } from '@/components/modal'
+import { Modal } from '@/components'
 
 const queryClient = new QueryClient({
   defaultOptions: {

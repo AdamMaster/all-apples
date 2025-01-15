@@ -1,8 +1,8 @@
 'use client'
 import { useStoreModal } from '@/store'
 import s from './styles.module.css'
-import { Icon } from '../atoms'
 import { useEffect, useRef } from 'react'
+import { Icon } from '../ui'
 
 export const Modal = () => {
   const { isOpen, children, setClose } = useStoreModal()

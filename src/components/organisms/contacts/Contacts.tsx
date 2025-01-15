@@ -1,7 +1,7 @@
 import { FC, ReactNode } from 'react'
 import s from './styles.module.css'
-import { ContactLink, Heading } from '@/components/atoms'
 import { address, mail, phoneNumbers } from '@/shared/constants/constants'
+import { ContactLink, Heading } from '@/components/ui'
 
 interface Props {
   className?: string

@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import s from './styles.module.css'
-import { Button } from '@/components/atoms'
 import { FC } from 'react'
+import { Button } from '@/components/ui'
 
 interface Props {
   className?: string

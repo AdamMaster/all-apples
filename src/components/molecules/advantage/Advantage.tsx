@@ -1,6 +1,6 @@
 import { FC } from 'react'
-import { Heading } from '@/components/atoms'
 import s from './styles.module.css'
+import { Heading } from '@/components/ui'
 
 interface Props {
   title: string

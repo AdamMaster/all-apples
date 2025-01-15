@@ -1,12 +1,20 @@
 import { FC } from 'react'
 import Image from 'next/image'
 import s from './styles.module.css'
-import { ProductCardType } from './types/types'
-import { Button } from '@/components/atoms'
+import { ProductCardType, ProductWithRelations } from './types/types'
 import { useStoreModal } from '@/store'
 import { Order } from '@/components/modal/contents'
+import { Button } from '@/components/ui'
 
-export const ProductCard: FC<ProductCardType> = ({ type, sort, imgUrl }) => {
+export const ProductCard: FC<ProductWithRelations> = ({
+  name,
+  category,
+  type,
+  sort,
+  ripeningPeriod,
+  tastingEvaluation,
+  imageUrl
+}) => {
   const { setOpen } = useStoreModal()
   const onClickButton = () => {
     setOpen(<Order productFullName={`${type} ${sort}`} />)
@@ -15,11 +23,11 @@ export const ProductCard: FC<ProductCardType> = ({ type, sort, imgUrl }) => {
   return (
     <div className={s.wrapper}>
       <div className={s.head}>
-        <Image className={s.img} alt={sort} src={imgUrl} layout='fill' objectFit='cover' />
+        <Image className={s.img} alt={sort} src={imageUrl} layout='fill' objectFit='cover' />
       </div>
       <div className={s.body}>
         {/* <div className={s.category}>{type}</div> */}
-        <div className={s.sort}>{sort}</div>
+        <div className={s.sort}>{name}</div>
         <Button className={s.button} color='yellow' stroked onClick={() => onClickButton()}>
           Узнать цену
         </Button>

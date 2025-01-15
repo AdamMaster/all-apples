@@ -1,7 +1,7 @@
 'use client'
+import { ButtonControl } from '@/components/ui'
 import s from './styles.module.css'
 import { FC, useState } from 'react'
-import { ButtonControl } from '@/components/atoms'
 
 interface Props {
   className?: string

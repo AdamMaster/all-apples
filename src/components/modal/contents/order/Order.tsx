@@ -1,11 +1,11 @@
 'use client'
-import { Button, Field, Heading } from '@/components/atoms'
 import s from './styles.module.css'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { FC, useEffect, useState } from 'react'
 import { useStoreModal } from '@/store'
 import { fetchOrder } from '@/shared/api/fetchOrder'
 import { Thanks } from '../thanks/Thanks'
+import { Button, Field, Heading } from '@/components/ui'
 
 interface FormProps {
   name?: string

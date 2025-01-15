@@ -3,8 +3,8 @@ import { Navbar } from '@/components/molecules'
 import s from './styles.module.css'
 import { useStoreMobileMenu } from '@/store'
 import { useEffect } from 'react'
-import { ContactLink } from '@/components/atoms'
 import { mail, phoneNumbers } from '@/shared/constants/constants'
+import { ContactLink } from '@/components/ui'
 
 export const MobileMenu = () => {
   const { isOpen } = useStoreMobileMenu()

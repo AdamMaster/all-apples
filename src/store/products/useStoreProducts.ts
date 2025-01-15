@@ -1,19 +1,20 @@
 import { data } from '@/app/data'
-import { ProductCardType } from '@/components/molecules'
+import { Product } from '@prisma/client'
 import { create } from 'zustand'
+import { products } from '../../../prisma/constants'
+import { getProducts } from '@/shared/api/fetchProducts'
 
 interface State {
-  products: ProductCardType[]
-  setFilter: (category: string) => void
+  products: Product[]
+  getProducts: (value: string) => Promise<void>
 }
 
 export const useStoreProducts = create<State>(set => ({
-  products: data,
-  setFilter: (category: string) =>
-    set(() => {
-      const filteredProducts = data.filter(item => item.category === category)
-      return {
-        products: filteredProducts.length ? filteredProducts : data
-      }
-    })
+  products: [],
+  getProducts: async (value: string) => {
+    const products = await getProducts(value)
+    set(() => ({
+      products
+    }))
+  }
 }))

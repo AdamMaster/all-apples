@@ -1,9 +1,9 @@
 'use client'
 import s from './styles.module.css'
 import { mail, messengers, phoneNumbers } from '@/shared/constants/constants'
-import { Logo, ContactLink, Burger } from '@/components/atoms'
 import { Navbar } from '@/components/molecules'
 import { useStoreMobileMenu } from '@/store'
+import { Burger, ContactLink, Logo } from '@/components/ui'
 
 export const Header = () => {
   const { isOpen, setOpen } = useStoreMobileMenu()

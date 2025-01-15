@@ -1,5 +1,5 @@
 'use client'
-import { Heading } from '@/components/atoms'
+import { Heading } from '@/components/ui'
 import s from './styles.module.css'
 
 export const Thanks = () => {

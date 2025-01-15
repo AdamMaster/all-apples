@@ -1,12 +1,12 @@
 'use client'
 import { FC } from 'react'
 import s from './styles.module.css'
-import { Heading } from '@/components/atoms'
 import Image from 'next/image'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import { Advantage } from '@/components/molecules'
 import { Autoplay } from 'swiper/modules'
+import { Heading } from '@/components/ui'
 
 interface Props {
   className?: string

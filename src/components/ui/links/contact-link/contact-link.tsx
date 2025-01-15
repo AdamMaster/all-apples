@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import s from './styles.module.css'
-import { Icon } from '..'
+import { Icon } from '../../icon/icon'
 
 interface Props {
   link: string

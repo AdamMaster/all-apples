@@ -1,6 +1,6 @@
-import { ContactLink, Logo } from '@/components/atoms'
 import s from './styles.module.css'
 import { address, mail, phoneNumbers } from '@/shared/constants/constants'
+import { ContactLink, Logo } from '@/components/ui'
 
 export const Footer = () => {
   return (

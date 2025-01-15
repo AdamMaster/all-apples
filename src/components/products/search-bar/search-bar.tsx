@@ -1,7 +1,9 @@
 'use client'
-import { FC, InputHTMLAttributes, useState } from 'react'
+import { FC, InputHTMLAttributes, useRef, useState } from 'react'
 import s from './styles.module.css'
-import { Icon } from '../icon/Icon'
+import { Product } from '@prisma/client'
+import { useStoreProducts } from '@/store/products/useStoreProducts'
+import { Icon } from '@/components/ui'
 
 interface Props extends InputHTMLAttributes<HTMLInputElement> {
   className?: string
@@ -10,6 +12,12 @@ interface Props extends InputHTMLAttributes<HTMLInputElement> {
 
 export const SearchBar: FC<Props> = ({ className, value, setValue, placeholder }) => {
   const [isActive, setIsActive] = useState<boolean>(false)
+  const { getProducts } = useStoreProducts()
+
+  const handleCHangeInput = (value: string) => {
+    setValue(value)
+    getProducts(value)
+  }
 
   return (
     <div
@@ -25,7 +33,7 @@ export const SearchBar: FC<Props> = ({ className, value, setValue, placeholder }
         value={value}
         type={'text'}
         placeholder={placeholder}
-        onChange={e => setValue(e.target.value)}
+        onChange={e => handleCHangeInput(e.target.value)}
       />
     </div>
   )

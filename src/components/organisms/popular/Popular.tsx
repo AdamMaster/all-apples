@@ -1,10 +1,10 @@
 'use client'
-import { Heading, Icon } from '@/components/atoms'
 import s from './styles.module.css'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay } from 'swiper/modules'
 import { useStoreProducts } from '@/store/products/useStoreProducts'
 import { ProductCard } from '@/components/molecules'
+import { Heading, Icon } from '@/components/ui'
 
 export const Popular = () => {
   const products = useStoreProducts().products.filter(item => item.type === 'Яблоки')

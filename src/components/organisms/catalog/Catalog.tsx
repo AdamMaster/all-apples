@@ -1,29 +1,22 @@
 'use client'
 import s from './styles.module.css'
 import { FC, useState } from 'react'
-import { Button, ContactLink, Heading, SearchBar } from '@/components/atoms'
 import { Filter, ProductCard } from '@/components/molecules'
 import { useStoreProducts } from '@/store/products/useStoreProducts'
 import { mail, phoneNumbers } from '@/shared/constants/constants'
 import { useStoreModal } from '@/store'
 import { Feedback } from '@/components/modal/contents'
+import { getProducts } from '@/shared/api/fetchProducts'
+import { Button, ContactLink, Heading } from '@/components/ui'
+import { SearchBar } from '@/components/products'
 
 interface Props {
   className?: string
 }
 
 export const Catalog: FC<Props> = ({ className }) => {
-  const { products, setFilter } = useStoreProducts()
+  const { products } = useStoreProducts()
   const [searchBarValue, setSearchBarValue] = useState<string>('')
-  const sortProducts = products.sort((a, b) => {
-    if (a.sort < b.sort) {
-      return -1
-    }
-    if (a.sort > b.sort) {
-      return 1
-    }
-    return 0
-  })
 
   const { setOpen } = useStoreModal()
   const handleClickButton = () => {
@@ -49,16 +42,20 @@ export const Catalog: FC<Props> = ({ className }) => {
             />
           </div>
           <div className={s.list}>
-            {sortProducts
-              .filter(
-                product =>
-                  product.type.toLowerCase().includes(searchBarValue.toLowerCase()) ||
-                  product.sort.toLowerCase().includes(searchBarValue.toLowerCase()) ||
-                  product.category.toLowerCase().includes(searchBarValue.toLowerCase())
-              )
-              .map(product => (
-                <ProductCard {...product} key={product.id} />
-              ))}
+            {/* {products.map(product => (
+              <ProductCard
+                name={product.name}
+                categoryId={1}
+                typeId={1}
+                imageUrl={product.imageUrl}
+                category={product.category || ''}
+                type={product.type || ''}
+                sort={product.sort || ''}
+                ripeningPeriod={product.ripeningPeriod}
+                tastingEvaluation={product.tastingEvaluation}
+                key={product.id}
+              />
+            ))} */}
           </div>
           <div className={s.note}>
             Цены на товары зависят от сезона и других факторов. Для получения актуальной информации, пожалуйста,
