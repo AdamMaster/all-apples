@@ -5,8 +5,12 @@
   width: 100%;
 }
 .title {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   text-align: center;
+}
+.subtitle {
+  margin-bottom: 30px;
+  font-size: 1.125rem;
 }
 .form {
   max-width: 260px;
@@ -15,4 +19,7 @@
 .button {
   width: 100%;
   margin-top: 20px;
+}
+.agreement {
+  margin-top: 15px;
 }

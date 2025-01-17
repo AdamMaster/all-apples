@@ -1,1 +1,5 @@
+export { Filter } from './filter/filter'
+export { ProductCard } from './product-card/product-card'
+export { ProductsGroupList } from './products-group-list/products-group-list'
 export { SearchBar } from './search-bar/search-bar'
+export { type ProductCardType } from './product-card/types/types'

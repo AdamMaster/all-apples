@@ -1,6 +1,7 @@
 export { Burger } from './burger/burger'
 export { Button } from './buttons/button/button'
 export { ButtonControl } from './buttons/button-control/button-control'
+export { Checkbox } from './froms/checkbox/checkbox'
 export { ContactLink } from './links/contact-link/contact-link'
 export { Field } from './froms/field/field'
 export { Heading } from './heading/heading'

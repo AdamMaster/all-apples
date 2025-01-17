@@ -11,8 +11,8 @@ interface Props extends InputHTMLAttributes<HTMLInputElement> {
   onChangeValue?: (value: string) => void
 }
 
-export const Field = forwardRef<ElementRef<'input'>, Props>((props, ref) => {
-  const { mode, name, placeholder, id, value, defaultValue, label, className, onChangeValue } = props
+export const Field = forwardRef<HTMLInputElement, Props>((props, ref) => {
+  const { mode, name, placeholder, id, value, defaultValue, label, readOnly, className, onChangeValue } = props
   const [inputValue, setInputValue] = useState<string>(value ? value : '')
 
   const renderInput = () => {
@@ -42,6 +42,7 @@ export const Field = forwardRef<ElementRef<'input'>, Props>((props, ref) => {
               ref={ref}
               onChange={(e: ChangeEvent<HTMLInputElement>) => onChangeValue && onChangeValue(e.target.value)}
               autoComplete='off'
+              readOnly={readOnly}
             />
           </div>
         )

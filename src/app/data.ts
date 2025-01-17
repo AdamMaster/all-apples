@@ -163,7 +163,7 @@ export const data = [
     id: '20',
     category: 'fruits',
     type: 'Яблоки',
-    sort: 'Рэд Делишес',
+    sort: 'Ред Делишес',
     month: 'сентябрь',
     imgUrl: '/images/apples/red-d.jpg'
   },
@@ -171,7 +171,7 @@ export const data = [
     id: '21',
     category: 'fruits',
     type: 'Яблоки',
-    sort: 'Рэд Чиф',
+    sort: 'Ред Чиф',
     month: 'сентябрь',
     imgUrl: '/images/apples/red-chif.jpg'
   },
@@ -206,13 +206,5 @@ export const data = [
     sort: 'Голден',
     month: 'сентябрь',
     imgUrl: '/images/apples/golden-d.jpg'
-  },
-  {
-    id: '27',
-    category: 'fruits',
-    type: 'Яблоки',
-    sort: 'Чемпион',
-    month: 'сентябрь',
-    imgUrl: '/images/apples/champion.jpg'
   }
 ]

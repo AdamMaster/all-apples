@@ -38,10 +38,10 @@ model Product {
   type   Type @relation(fields: [typeId], references: [id])
   typeId Int
 
-  sort String
+  ripeningPeriod    String
+  tastingEvaluation String
 
-  ripeningPeriod    String?
-  tastingEvaluation String?
+  description String
 
   createdAt DateTime? @default(now())
   updatedAt DateTime? @updatedAt

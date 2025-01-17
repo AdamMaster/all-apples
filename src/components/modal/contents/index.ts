@@ -1,4 +1,4 @@
-import { Thanks } from './thanks/Thanks'
-import { Feedback } from './feedback/Feedback'
-import { Order } from './order/Order'
-export { Feedback, Order, Thanks }
+export { Thanks } from './thanks/Thanks'
+export { Feedback } from './feedback/Feedback'
+export { Order } from './order/order'
+export { ProductDetails } from './product-details/product-details'

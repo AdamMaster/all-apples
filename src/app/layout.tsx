@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import { GoogleAnalytics, GoogleAnalyticsNoScript, GoogleTagManager, YandexMetric } from '@/components/analytics'
-import { Footer, Header, MobileMenu } from '@/components/organisms'
 import './assets/styles/globals.css'
+import { Footer, Header, MobileMenu } from '@/components'
 
 const mazzard = localFont({
   src: [

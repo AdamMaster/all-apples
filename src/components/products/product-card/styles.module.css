@@ -1,0 +1,72 @@
+.wrapper {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e5e5e5;
+  transition: 0.2s;
+}
+.wrapper:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+.tastingEvaluation {
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: url(/images/star.svg);
+  font-weight: 500;
+}
+.head {
+  position: relative;
+  aspect-ratio: 1.1;
+}
+.img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 15px;
+  border-top: 0;
+}
+.sort {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+.category {
+  opacity: 0.8;
+  font-size: 0.875rem;
+}
+.button {
+  margin-top: 15px;
+}
+@media (max-width: 991px) {
+  .sort {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 575px) {
+  .wrapper {
+    border-radius: 4vw;
+  }
+  .body {
+    padding: 15px;
+  }
+  .button {
+    height: 38px;
+  }
+}

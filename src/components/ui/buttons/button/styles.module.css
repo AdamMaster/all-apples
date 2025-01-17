@@ -27,7 +27,7 @@
 }
 .wrapper.yellow:hover {
   background: transparent;
-  color: #fff;
+  color: var(--c-dark);
 }
 .wrapper.yellow.stroked {
   background: transparent;
