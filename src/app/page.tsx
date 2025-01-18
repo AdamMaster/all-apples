@@ -1,6 +1,6 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import s from './page.module.css'
-import { About, Catalog, Contacts, Delivery, Modal, ProductsGroupList, Promo } from '@/components'
+import { About, Catalog, Contacts, Delivery, Modal, News, ProductsGroupList, Promo } from '@/components'
 import { prisma } from '../../prisma/prisma-client'
 
 const queryClient = new QueryClient({
@@ -31,6 +31,7 @@ export default async function Home() {
 
       <Catalog className={s.catalog} categories={categories} />
       <About className={s.about} />
+      <News className={s.news} />
       <Delivery className={s.delivery} />
       <Contacts />
       <Modal />

@@ -1,4 +1,4 @@
 export { Thanks } from './thanks/Thanks'
-export { Feedback } from './feedback/Feedback'
+export { Feedback } from './feedback/feedback'
 export { Order } from './order/order'
 export { ProductDetails } from './product-details/product-details'

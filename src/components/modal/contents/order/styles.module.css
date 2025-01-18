@@ -5,12 +5,8 @@
   width: 100%;
 }
 .title {
-  margin-bottom: 10px;
-  text-align: center;
-}
-.subtitle {
   margin-bottom: 30px;
-  font-size: 1.125rem;
+  text-align: center;
 }
 .form {
   max-width: 260px;

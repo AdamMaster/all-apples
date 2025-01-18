@@ -1,0 +1,23 @@
+.wrapper {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+.item {
+  display: flex;
+  align-items: start;
+  gap: 20px;
+}
+.itemIcon {
+}
+.itemContent {
+}
+.itemTitle {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+.itemDescription {
+  line-height: 1.5;
+  color: #666;
+}

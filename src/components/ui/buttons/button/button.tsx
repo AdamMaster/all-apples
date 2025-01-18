@@ -16,7 +16,7 @@ export const Button: FC<Props> = ({
   children,
   color = 'yellow',
   stroked,
-  size = 'l',
+  size,
   className,
   isLoading,
   disabled,
@@ -34,7 +34,7 @@ export const Button: FC<Props> = ({
   const sizes = {
     l: s.l,
     s: s.s
-  }[size]
+  }[size!]
   const classNames = `${s.wrapper} ${colors} ${className ? className : ''} ${sizes} ${stroked ? s.stroked : ''}`
 
   if (link) {

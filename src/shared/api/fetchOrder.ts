@@ -2,7 +2,7 @@ interface FormData {
   name?: string
   phone?: string
   city?: string
-  productName: string
+  agreement: boolean
 }
 
 export const fetchOrder = async (data: FormData) => {
@@ -10,7 +10,6 @@ export const fetchOrder = async (data: FormData) => {
       Имя: ${data.name} <br>
       Телефон: ${data.phone}<br>
       Город: ${data.city}<br>
-      Наименование товара: ${data.productName}
     `
 
   try {

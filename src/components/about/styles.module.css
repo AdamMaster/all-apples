@@ -1,36 +1,55 @@
 .wrapper {
+  position: relative;
+  background: #f5f4f5;
+}
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
 }
 .inner {
+  position: relative;
+  padding: 110px 0;
+}
+.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.logo img {
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
 }
 .content {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 120px 50px;
 }
-.bigTitle {
-  display: flex;
-  gap: 12px;
-  width: max-content;
-  margin-bottom: 60px;
-  background-image: url(https://ninetheme.com/themes/agro/wp-content/uploads/2019/02/special_offer_text_bg.jpg);
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-clip: text;
-  font-size: 4.75rem;
+.contentHead {
+  margin-bottom: 30px;
+}
+.title {
+  margin-bottom: 10px;
   font-weight: 700;
-  text-transform: uppercase;
-  color: transparent;
 }
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+.subtitle {
+  font-size: 1.65rem;
+  font-weight: 300;
+}
+.title span {
+  color: var(--c-green-2);
 }
 .description {
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 1.5;
-  font-style: italic;
+  color: #666;
+}
+.button {
+  margin-top: 40px;
 }
 .gallery {
 }
@@ -40,12 +59,7 @@
   aspect-ratio: 1.4;
   border-radius: var(--radius-2);
 }
-.advantages {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-  margin-top: 15px;
-}
+
 @media (max-width: 1199px) {
   .galleryItem {
     overflow: hidden;

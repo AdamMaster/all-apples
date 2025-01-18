@@ -32,16 +32,6 @@ export const Modal = () => {
     }
   }, [])
 
-  // useEffect(() => {
-  //   if (isOpen) {
-  //     document.documentElement.style.scrollbarGutter = 'stable'
-  //     document.body.style.overflow = 'hidden'
-  //   } else {
-  //     document.documentElement.style.scrollbarGutter = ''
-  //     document.body.style.overflow = ''
-  //   }
-  // }, [isOpen])
-
   return (
     <div className={wrapperClassNames} ref={wrapper}>
       <div className={containerClassNames}>

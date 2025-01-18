@@ -6,7 +6,7 @@ import { mail, phoneNumbers } from '@/shared/constants/constants'
 import { useStoreModal } from '@/store'
 import { Feedback } from '@/components/modal/contents'
 import { getProducts } from '@/shared/api/fetchProducts'
-import { Button, ContactLink, Heading } from '@/components/ui'
+import { Button, ContactLink, Heading, Logo } from '@/components/ui'
 import { ProductsGroupList, SearchBar } from '@/components/products'
 import { Category, Product } from '@prisma/client'
 import { CategoryWithRelations } from '../products/product-card/types/types'
@@ -53,7 +53,7 @@ export const Catalog: FC<Props> = ({ className, categories }) => {
                 />
               )
           )}
-          <div className={s.note}>
+          {/* <div className={s.note}>
             Цены на товары зависят от сезона и других факторов. Для получения актуальной информации, пожалуйста,
             свяжитесь с нами по телефону{' '}
             <ContactLink className={s.noteLink} text={phoneNumbers[0].text} link={`tel:${phoneNumbers[0].link}`} /> или
@@ -61,7 +61,7 @@ export const Catalog: FC<Props> = ({ className, categories }) => {
             <Button className={s.noteButton} color='black' onClick={() => handleClickButton()}>
               Оставить заявку
             </Button>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

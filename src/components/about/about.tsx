@@ -5,76 +5,83 @@ import Image from 'next/image'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import { Autoplay } from 'swiper/modules'
-import { Heading } from '@/components/ui'
+import { Button, Heading, Logo } from '@/components/ui'
+import { AdvantageItems, Advantages } from './advantages/advantages'
+import { useStoreModal } from '@/store'
+import { Feedback } from '../modal/contents'
 
 interface Props {
   className?: string
 }
 
 export const About: FC<Props> = ({ className }) => {
-  const galleryItems = [
-    { id: '1', src: '/images/about-gallery/1.jpg' },
-    { id: '2', src: '/images/about-gallery/2.jpg' },
-    { id: '3', src: '/images/about-gallery/3.jpg' },
-    { id: '4', src: '/images/about-gallery/4.jpg' },
-    { id: '6', src: '/images/about-gallery/5.jpg' },
-    { id: '7', src: '/images/about-gallery/6.jpg' },
-    { id: '8', src: '/images/about-gallery/7.jpg' },
-    { id: '9', src: '/images/about-gallery/8.jpg' }
-  ]
+  const { setOpen, setClose } = useStoreModal()
+  const onClickButton = () => {
+    setOpen(<Feedback />)
+  }
 
-  const advantageItems = [
+  const advantageItems: AdvantageItems[] = [
     {
-      id: '1',
+      id: 1,
       title: 'Прямые поставки от производителей',
-      text: 'Мы работаем с более чем 50 проверенными производителями, что позволяет нам обеспечивать наших клиентов высококачественными овощами и фруктами по выгодным ценам'
+      description:
+        'Мы работаем с более чем 20 проверенными производителями, что позволяет нам обеспечивать наших клиентов высококачественными овощами и фруктами по выгодным ценам',
+      icon: '/images/connect-icon.svg'
     },
     {
-      id: '2',
+      id: 2,
       title: 'Выгодные цены',
-      text: 'Наш сервис гарантирует самые выгодные цены для наших клиентов. Мы понимаем, насколько важно для вас получать качественную услугу или товар по доступной стоимости'
+      description:
+        'Наш сервис гарантирует самые выгодные цены для наших клиентов. Мы понимаем, насколько важно для вас получать качественную услугу или товар по доступной стоимости',
+      icon: '/images/money-icon-2.svg'
     },
     {
-      id: '3',
+      id: 3,
       title: 'Гарантированная свежесть',
-      text: 'Наши продукты собираются и упаковываются непосредственно перед отправкой, гарантируя максимальную свежесть и длительный срок годности при доставке на ваш склад'
+      description:
+        'Наши продукты собираются и упаковываются непосредственно перед отправкой, гарантируя максимальную свежесть и длительный срок годности при доставке на ваш склад',
+      icon: '/images/fruits-icon.svg'
     }
   ]
 
   return (
     <section className={`${s.wrapper} ${className ? className : ''}`} id='about'>
+      {/* <Image
+        className={s.bg}
+        src='/images/apples-bg.png'
+        alt='зеленые яблоки'
+        width={300}
+        height={300}
+        layout='intrinsic'
+      /> */}
       <div className={'container'}>
         <div className={s.inner}>
-          <div className={s.content}>
-            <Heading className={s.bigTitle} level={'h2'}>
-              Оптом, с заботой <br /> и качеством
-            </Heading>
-            <div className={s.grid}>
-              <div></div>
-
-              <Image
-                src={'/images/to-apples.jpg'}
-                width={300}
-                height={300}
-                layout='intrinsic'
-                alt='Яблоки лучших сортов'
-              />
-
-              <div></div>
+          <Logo className={s.logo} text={false} color='default' />
+          <div className={s.grid}>
+            <div className={s.content}>
+              <div className={s.contentHead}>
+                <Heading className={s.title} level={'h2'}>
+                  Kavkaz<span>Market</span>
+                </Heading>
+                <div className={s.subtitle}>Сочные плоды для вашего бизнеса</div>
+              </div>
+              <div className={s.description}>
+                <p>
+                  Наша компания занимается оптовой продажей свежих яблок по всей России. Мы находимся в
+                  Кабардино-Балкарии — одном из крупнейших регионов по выращиванию яблок. Наши партнеры — лучшие сады и
+                  плодопитомники, что позволяет нам предлагать только качественные и экологически чистые фрукты.
+                  Гарантируем индивидуальный подход, выгодные условия сотрудничества и оперативную доставку.
+                </p>
+              </div>
+              <Button className={s.button} size='l' onClick={() => onClickButton()}>
+                Оставить заявку
+              </Button>
             </div>
-            <div className={s.description}>
-              <p>
-                Мы - ведущая компания в сфере поставок свежих яблок, расположенная в Кабардино-Балкарской Республике.
-                Этот регион славится превосходными садами, где растут лучшие яблоки благодаря уникально плодородной
-                земле, идеальной для выращивания яблок.
-              </p>
-              <p>
-                Наша компания устанавливает прямые связи с более чем 40 производителями, что позволяет нам предложить
-                широкий ассортимент товаров в различных ценовых категориях. Мы гарантируем качественную переработку,
-                индивидуальную фасовку, упаковку, а также калибровку продукции по весу и размеру.
-              </p>
+            <div className={s.advantages}>
+              <Advantages items={advantageItems} />
             </div>
           </div>
+
           {/* <div className={s.gallery}>
               <Swiper
                 modules={[Autoplay]}
@@ -117,11 +124,6 @@ export const About: FC<Props> = ({ className }) => {
               </Swiper>
             </div> */}
         </div>
-        {/* <div className={s.advantages}>
-            {advantageItems.map(advantageItem => (
-              <Advantage title={advantageItem.title} text={advantageItem.text} key={advantageItem.id} />
-            ))}
-          </div> */}
       </div>
     </section>
   )

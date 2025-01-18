@@ -26,7 +26,7 @@
   color: var(--c-black);
 }
 .wrapper.yellow:hover {
-  background: transparent;
+  background: #fff;
   color: var(--c-dark);
 }
 .wrapper.yellow.stroked {
@@ -57,6 +57,10 @@
 }
 .wrapper.black:hover {
   background: var(--c-black);
+}
+.wrapper.l {
+  height: 55px;
+  font-size: 0.875rem;
 }
 .wrapper.s {
   height: 30px;

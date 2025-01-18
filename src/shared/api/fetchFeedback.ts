@@ -1,6 +1,7 @@
 interface FormData {
   name: string
   phone: string
+  email: string
   message: string
 }
 
@@ -8,6 +9,7 @@ export const fetchFeedback = async (data: FormData) => {
   const message = `
       Имя: ${data.name} <br>
       Телефон: ${data.phone} <br>
+      Email: ${data.email} <br>
       Сообщение: ${data.message}
     `
 

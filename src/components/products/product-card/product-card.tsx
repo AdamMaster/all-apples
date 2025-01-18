@@ -5,7 +5,7 @@ import Image from 'next/image'
 import s from './styles.module.css'
 import { useStoreModal } from '@/store'
 import { Order, ProductDetails } from '@/components/modal/contents'
-import { Button } from '@/components/ui'
+import { Button, Tooltip } from '@/components/ui'
 
 interface Props {
   id: number
@@ -48,7 +48,9 @@ export const ProductCard: FC<Props> = ({
 
   return (
     <div className={s.wrapper} onClick={() => onClickButton()}>
-      <div className={s.tastingEvaluation}>{tastingEvaluation}</div>
+      <Tooltip className={s.tooltip} text='Вкусовая оценка'>
+        <div className={s.tastingEvaluation}>{tastingEvaluation}</div>
+      </Tooltip>
       <div className={s.head}>
         <Image className={s.img} alt={name} src={imageUrl} layout='fill' objectFit='cover' />
       </div>

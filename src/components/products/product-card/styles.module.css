@@ -1,20 +1,21 @@
 .wrapper {
   cursor: pointer;
   position: relative;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   border: 1px solid #e5e5e5;
   transition: 0.2s;
 }
 .wrapper:hover {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow);
 }
-.tastingEvaluation {
+.tooltip {
   position: absolute;
   z-index: 1;
   top: 10px;
   left: 10px;
+}
+.tastingEvaluation {
   display: flex;
   align-items: center;
   justify-content: center;
