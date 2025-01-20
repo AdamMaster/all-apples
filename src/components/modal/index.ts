@@ -1,5 +1,5 @@
 export { Thanks } from './contents/thanks/Thanks'
-export { Feedback } from './contents/feedback/feedback'
+export { Feedback } from './contents/feedback/Feedback'
 export { Order } from './contents/order/Order'
 export { ProductDetails } from './contents/product-details/product-details'
 export { Modal } from './Modal'
