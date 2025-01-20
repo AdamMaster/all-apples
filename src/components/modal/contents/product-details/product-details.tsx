@@ -4,7 +4,7 @@ import { FC } from 'react'
 import { Button, Heading } from '@/components/ui'
 import Image from 'next/image'
 import { useStoreModal } from '@/store'
-import { Order } from '../order/order'
+import { Order } from '../order/Order'
 
 interface Props {
   name: string
