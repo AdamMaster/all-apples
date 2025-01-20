@@ -4,8 +4,8 @@ import { FC } from 'react'
 import Image from 'next/image'
 import s from './styles.module.css'
 import { useStoreModal } from '@/store'
-import { ProductDetails } from '@/components/modal/contents'
 import { Button, Tooltip } from '@/components/ui'
+import { ProductDetails } from '@/components/modal'
 
 interface Props {
   id: number

@@ -1,1 +1,5 @@
+export { Thanks } from './contents/thanks/Thanks'
+export { Feedback } from './contents/feedback/feedback'
+export { Order } from './contents/order/order'
+export { ProductDetails } from './contents/product-details/product-details'
 export { Modal } from './Modal'

@@ -5,7 +5,7 @@ import 'swiper/css'
 import { Button, Heading, Logo } from '@/components/ui'
 import { AdvantageItems, Advantages } from './advantages/advantages'
 import { useStoreModal } from '@/store'
-import { Feedback } from '../modal/contents'
+import { Feedback } from '../modal'
 
 interface Props {
   className?: string

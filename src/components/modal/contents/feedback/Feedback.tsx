@@ -5,10 +5,10 @@ import { FormProvider, useForm } from 'react-hook-form'
 import { fetchFeedback } from '@/shared/api/fetchFeedback'
 import { useStoreModal } from '@/store'
 import React, { useState } from 'react'
-import { Thanks } from '../thanks/Thanks'
 import { Button, Checkbox, Field, Heading, Textarea } from '@/components/ui'
-import { feedbackFormSchema, FeedbackFormValues } from './feedback-form-schema'
 import { zodResolver } from '@hookform/resolvers/zod'
+import { Thanks } from '../thanks/Thanks'
+import { feedbackFormSchema, FeedbackFormValues } from './feedback-form-schema'
 
 export const Feedback = () => {
   const form = useForm<FeedbackFormValues>({
