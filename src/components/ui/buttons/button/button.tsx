@@ -1,9 +1,10 @@
-import { FC, ButtonHTMLAttributes } from 'react'
+import React, { FC, ButtonHTMLAttributes, ReactNode } from 'react'
 import s from './styles.module.css'
 import Image from 'next/image'
+import Link from 'next/link'
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
-  children: string
+  children: ReactNode
   color?: 'green' | 'yellow' | 'white' | 'grey' | 'black'
   stroked?: boolean
   size?: 'l' | 's'
@@ -39,10 +40,10 @@ export const Button: FC<Props> = ({
 
   if (link) {
     return (
-      <a className={classNames} href={link}>
+      <Link className={classNames} href={link}>
         {children}
         {isLoading && <Image className={s.loader} src={'/images/loader.gif'} alt='loader' width={30} height={30} />}
-      </a>
+      </Link>
     )
   }
 

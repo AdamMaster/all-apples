@@ -1,0 +1,46 @@
+.wrapper {
+  margin-bottom: 140px;
+}
+.promo {
+  position: relative;
+  background: var(--c-dark);
+}
+.promoBg {
+  object-fit: cover;
+  opacity: 0.4;
+}
+.promoInner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+}
+.promoTitle {
+  max-width: 800px;
+  font-size: 3rem;
+  line-height: 1.3;
+}
+.content {
+}
+.container {
+}
+.contentInner {
+  position: relative;
+  padding-top: 110px;
+}
+.contentText {
+  padding: 30px 30px;
+  border: 1px solid var(--c-grey-2);
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+.backLink {
+  position: absolute;
+  top: 15px;
+  left: 0;
+}

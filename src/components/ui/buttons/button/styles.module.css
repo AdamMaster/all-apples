@@ -3,6 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 10px;
   width: max-content;
   height: 45px;
   padding: 0 25px;
@@ -45,11 +46,11 @@
   color: var(--c-white);
 }
 .wrapper.grey {
+  border: 1px solid #e5e5e5;
   background: var(--c-grey);
 }
 .wrapper.grey:hover {
-  background: var(--c-black);
-  color: var(--c-white);
+  background: #f3f3f3;
 }
 .wrapper.black {
   background: var(--c-dark);

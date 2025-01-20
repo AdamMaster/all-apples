@@ -1,5 +1,5 @@
 import { prisma } from './prisma-client'
-import { categories, products, types } from './constants'
+import { categories, news, products, types } from './constants'
 
 async function up() {
   await prisma.category.createMany({
@@ -12,6 +12,10 @@ async function up() {
 
   await prisma.product.createMany({
     data: products
+  })
+
+  await prisma.newsItem.createMany({
+    data: news
   })
 }
 

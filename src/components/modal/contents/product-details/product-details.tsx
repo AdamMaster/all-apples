@@ -27,7 +27,7 @@ export const ProductDetails: FC<Props> = ({ name, ripeningPeriod, tastingEvaluat
   return (
     <div className={s.wrapper}>
       <div className={s.imgWrapper}>
-        <Image src={imageUrl} alt={name} layout={'fill'} objectFit={'cover'} />
+        <Image src={imageUrl} alt={name} fill />
       </div>
       <div className={s.content}>
         <Heading className={s.title} level='h3'>

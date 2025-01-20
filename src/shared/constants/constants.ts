@@ -12,5 +12,6 @@ export const menuLinks = [
   { id: 'home', text: 'Главная', href: '/' },
   { id: 'catalog', text: 'Каталог', href: '#catalog' },
   { id: 'about', text: 'О нас', href: '#about' },
+  { id: 'news', text: 'Новости', href: '' },
   { id: 'contact', text: 'Контакты', href: '#contacts' }
 ]

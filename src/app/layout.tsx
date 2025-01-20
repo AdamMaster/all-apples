@@ -58,7 +58,8 @@ export default function RootLayout({
         <GoogleAnalyticsNoScript />
         <Header />
         <MobileMenu />
-        {children}
+        <main>{children}</main>
+
         <Footer />
       </body>
     </html>

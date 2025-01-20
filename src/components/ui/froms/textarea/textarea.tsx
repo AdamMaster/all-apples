@@ -1,3 +1,5 @@
+'use client'
+
 import { ChangeEvent, ElementRef, FC, TextareaHTMLAttributes, forwardRef } from 'react'
 import s from './styles.module.css'
 import { useFormContext } from 'react-hook-form'

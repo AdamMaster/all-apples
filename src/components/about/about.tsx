@@ -46,14 +46,6 @@ export const About: FC<Props> = ({ className }) => {
 
   return (
     <section className={`${s.wrapper} ${className ? className : ''}`} id='about'>
-      {/* <Image
-        className={s.bg}
-        src='/images/apples-bg.png'
-        alt='зеленые яблоки'
-        width={300}
-        height={300}
-        layout='intrinsic'
-      /> */}
       <div className={'container'}>
         <div className={s.inner}>
           <Logo className={s.logo} text={false} color='default' />
@@ -118,7 +110,7 @@ export const About: FC<Props> = ({ className }) => {
               >
                 {galleryItems.map(galleryItem => (
                   <SwiperSlide className={s.galleryItem} key={galleryItem.id}>
-                    <Image src={galleryItem.src} layout={'fill'} objectFit={'cover'} alt={'яблоки оптом'} />
+                    <Image src={galleryItem.src} fill  alt={'яблоки оптом'} />
                   </SwiperSlide>
                 ))}
               </Swiper>

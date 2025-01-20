@@ -1,6 +1,6 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import s from './page.module.css'
-import { About, Catalog, Contacts, Delivery, Modal, News, ProductsGroupList, Promo } from '@/components'
+import { About, Catalog, Contacts, Delivery, Modal, NewsSlider, ProductsGroupList, Promo } from '@/components'
 import { prisma } from '../../prisma/prisma-client'
 
 const queryClient = new QueryClient({
@@ -23,19 +23,26 @@ export default async function Home() {
     }
   })
 
+  const newsItems = await prisma.newsItem.findMany({
+    take: 5,
+    orderBy: {
+      createdAt: 'desc' // или 'asc'
+    }
+  })
+
   return (
     // <QueryClientProvider client={queryClient}>
-    <main className={s.wrapper}>
+    <div className={s.wrapper}>
       <Promo className={s.promo} />
       {/* <Popular /> */}
 
       <Catalog className={s.catalog} categories={categories} />
       <About className={s.about} />
-      <News className={s.news} />
+      <NewsSlider className={s.news} newsItems={newsItems} />
       <Delivery className={s.delivery} />
       <Contacts />
       <Modal />
-    </main>
+    </div>
     // </QueryClientProvider>
   )
 }

@@ -59,6 +59,10 @@
 .wrapper .burger {
   display: none;
 }
+.wrapper.white {
+  position: fixed;
+  background: var(--c-dark);
+}
 
 @media (max-width: 991px) {
   .messengers {

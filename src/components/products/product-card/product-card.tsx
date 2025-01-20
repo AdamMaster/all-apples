@@ -52,7 +52,7 @@ export const ProductCard: FC<Props> = ({
         <div className={s.tastingEvaluation}>{tastingEvaluation}</div>
       </Tooltip>
       <div className={s.head}>
-        <Image className={s.img} alt={name} src={imageUrl} layout='fill' objectFit='cover' />
+        <Image className={s.img} alt={name} src={imageUrl} fill />
       </div>
       <div className={s.body}>
         {/* <div className={s.category}>{type}</div> */}

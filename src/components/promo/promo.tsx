@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import s from './styles.module.css'
 import { FC } from 'react'
-import { Button } from '@/components/ui'
+import { Button, LinesDecorate } from '@/components/ui'
 
 interface Props {
   className?: string
@@ -10,14 +10,7 @@ interface Props {
 export const Promo: FC<Props> = ({ className }) => {
   return (
     <section className={`${s.wrapper} ${className ? className : ''}`}>
-      <Image
-        className={s.bg}
-        alt={'яблоки фура'}
-        src={'/images/promo-bg-3.jpg'}
-        layout={'fill'}
-        objectFit={'cover'}
-        loading='eager'
-      />
+      <Image className={s.bg} alt={'яблоки фура'} src={'/images/promo-bg-3.jpg'} fill loading='eager' />
       <div className={'container'}>
         <div className={s.inner}>
           <h1 className={s.title}>Яблоки оптом</h1>
@@ -30,10 +23,7 @@ export const Promo: FC<Props> = ({ className }) => {
           </Button>
         </div>
       </div>
-      <div className={s.scrollDiscover}>
-        <span></span>
-        <span></span>
-      </div>
+      <LinesDecorate />
     </section>
   )
 }

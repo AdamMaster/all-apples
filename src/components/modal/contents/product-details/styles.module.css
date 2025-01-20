@@ -10,6 +10,9 @@
   margin-top: -50px;
   aspect-ratio: 1.2;
 }
+.imgWrapper img {
+  object-fit: cover;
+}
 .title {
   margin-bottom: 30px;
   text-align: center;
