@@ -1,5 +1,9 @@
+# *
 User-agent: *
 Allow: /
 
+# Host
 Host: https://adams-apple.ru
+
+# Sitemaps
 Sitemap: https://adams-apple.ru/sitemap.xml

@@ -1,6 +1,6 @@
 'use client'
 
-import { ChangeEvent, ElementRef, FC, TextareaHTMLAttributes, forwardRef } from 'react'
+import { FC, TextareaHTMLAttributes } from 'react'
 import s from './styles.module.css'
 import { useFormContext } from 'react-hook-form'
 
@@ -11,12 +11,7 @@ interface Props extends TextareaHTMLAttributes<HTMLTextAreaElement> {
 }
 
 export const Textarea: FC<Props> = ({ name, placeholder, label, className }) => {
-  const {
-    register,
-    formState: { errors },
-    watch,
-    setValue
-  } = useFormContext()
+  const { register, watch } = useFormContext()
 
   const value = watch(name)
 

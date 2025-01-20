@@ -4,7 +4,7 @@ import { FC } from 'react'
 import Image from 'next/image'
 import s from './styles.module.css'
 import { useStoreModal } from '@/store'
-import { Order, ProductDetails } from '@/components/modal/contents'
+import { ProductDetails } from '@/components/modal/contents'
 import { Button, Tooltip } from '@/components/ui'
 
 interface Props {
@@ -25,8 +25,6 @@ export const ProductCard: FC<Props> = ({
   name,
   type,
   imageUrl,
-  price,
-  sort,
   ripeningPeriod,
   tastingEvaluation,
   description,
@@ -47,7 +45,7 @@ export const ProductCard: FC<Props> = ({
   }
 
   return (
-    <div className={s.wrapper} onClick={() => onClickButton()}>
+    <div className={`${s.wrapper} ${className ? className : ''}`} onClick={() => onClickButton()}>
       <Tooltip className={s.tooltip} text='Вкусовая оценка'>
         <div className={s.tastingEvaluation}>{tastingEvaluation}</div>
       </Tooltip>

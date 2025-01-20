@@ -1,7 +1,6 @@
 import React from 'react'
 import s from './styles.module.css'
 import Image from 'next/image'
-import { title } from 'process'
 
 export interface AdvantageItems {
   id: number

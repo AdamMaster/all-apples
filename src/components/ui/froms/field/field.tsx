@@ -1,5 +1,5 @@
 'use client'
-import { ChangeEvent, ElementRef, FC, Fragment, InputHTMLAttributes, forwardRef, useState } from 'react'
+import { Fragment, InputHTMLAttributes } from 'react'
 import InputMask from 'react-input-mask'
 import s from './styles.module.css'
 import { useFormContext } from 'react-hook-form'
@@ -17,8 +17,7 @@ export const Field: React.FC<Props> = ({ mode, name, placeholder, label, readOnl
   const {
     register,
     formState: { errors },
-    watch,
-    setValue
+    watch
   } = useFormContext()
 
   const value = watch(name)

@@ -1,4 +1,4 @@
-import React, { FC, ButtonHTMLAttributes, ReactNode } from 'react'
+import { FC, ButtonHTMLAttributes, ReactNode } from 'react'
 import s from './styles.module.css'
 import Image from 'next/image'
 import Link from 'next/link'

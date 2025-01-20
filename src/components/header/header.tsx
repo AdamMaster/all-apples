@@ -20,10 +20,8 @@ export const Header = () => {
       if (ref.current) {
         if (scrollY >= 80) {
           setIsScroll(true)
-          console.log(isScroll, scrollY)
         } else {
           setIsScroll(false)
-          console.log(isScroll, scrollY)
         }
       }
     }

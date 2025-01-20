@@ -1,7 +1,6 @@
 'use client'
-import { FC, InputHTMLAttributes, useRef, useState } from 'react'
+import { FC, InputHTMLAttributes, useState } from 'react'
 import s from './styles.module.css'
-import { Product } from '@prisma/client'
 import { useStoreProducts } from '@/store/products/useStoreProducts'
 import { Icon } from '@/components/ui'
 

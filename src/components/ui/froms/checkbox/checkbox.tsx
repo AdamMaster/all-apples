@@ -17,8 +17,7 @@ export const Checkbox: React.FC<Props> = ({ className, name, text, isChecked, ..
   const {
     register,
     formState: { errors },
-    watch,
-    setValue
+    watch
   } = useFormContext()
 
   const value = watch(name)

@@ -2,7 +2,6 @@ import s from './styles.module.css'
 import { ProductWithRelations } from '../product-card/types/types'
 import { Heading } from '@/components/ui'
 import { ProductCard } from '../product-card/product-card'
-import { Product } from '@prisma/client'
 
 interface Props {
   title: string
@@ -14,7 +13,7 @@ interface Props {
 
 export const ProductsGroupList: React.FC<Props> = ({ title, products, className }) => {
   return (
-    <div className={s.wrapper} id={title}>
+    <div className={`${s.wrapper} ${className ? className : ''}`} id={title}>
       <Heading className={s.title} level='h2'>
         Яблоки
       </Heading>

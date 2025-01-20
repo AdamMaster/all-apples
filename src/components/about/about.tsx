@@ -1,10 +1,7 @@
 'use client'
 import { FC } from 'react'
 import s from './styles.module.css'
-import Image from 'next/image'
-import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
-import { Autoplay } from 'swiper/modules'
 import { Button, Heading, Logo } from '@/components/ui'
 import { AdvantageItems, Advantages } from './advantages/advantages'
 import { useStoreModal } from '@/store'
@@ -15,7 +12,7 @@ interface Props {
 }
 
 export const About: FC<Props> = ({ className }) => {
-  const { setOpen, setClose } = useStoreModal()
+  const { setOpen } = useStoreModal()
   const onClickButton = () => {
     setOpen(<Feedback />)
   }
@@ -73,48 +70,6 @@ export const About: FC<Props> = ({ className }) => {
               <Advantages items={advantageItems} />
             </div>
           </div>
-
-          {/* <div className={s.gallery}>
-              <Swiper
-                modules={[Autoplay]}
-                speed={1000}
-                autoplay={{
-                  delay: 2500,
-                  disableOnInteraction: false
-                }}
-                loop={true}
-                spaceBetween={0}
-                slidesPerView={1}
-                breakpoints={{
-                  320: {
-                    slidesPerView: 2,
-                    spaceBetween: 10
-                  },
-                  576: {
-                    slidesPerView: 3,
-                    spaceBetween: 10
-                  },
-                  768: {
-                    slidesPerView: 3.5,
-                    spaceBetween: 10
-                  },
-                  992: {
-                    slidesPerView: 4,
-                    spaceBetween: 10
-                  },
-                  1200: {
-                    slidesPerView: 4.5,
-                    spaceBetween: 10
-                  }
-                }}
-              >
-                {galleryItems.map(galleryItem => (
-                  <SwiperSlide className={s.galleryItem} key={galleryItem.id}>
-                    <Image src={galleryItem.src} fill  alt={'яблоки оптом'} />
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-            </div> */}
         </div>
       </div>
     </section>

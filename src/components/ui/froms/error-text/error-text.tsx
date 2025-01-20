@@ -7,5 +7,5 @@ interface Props {
 }
 
 export const ErrorText: React.FC<Props> = ({ text, className }) => {
-  return <p className={s.wrapper}>{text}</p>
+  return <p className={`${s.wrapper} ${className ? className : ''}`}>{text}</p>
 }

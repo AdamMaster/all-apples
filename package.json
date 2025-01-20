@@ -12,7 +12,8 @@
     "prisma:push": "prisma db push",
     "prisma:migrate:dev": "prisma migrate dev",
     "prisma:reset": "prisma migrate reset",
-    "prisma:seed": "prisma db seed"
+    "prisma:seed": "prisma db seed",
+    "postinstall": "prisma generate"
   },
   "prisma": {
     "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
@@ -48,7 +49,7 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@types/react-input-mask": "^3.0.5",
-    "eslint": "^8",
+    "eslint": "^8.57.1",
     "eslint-config-next": "14.1.0",
     "eslint-config-prettier": "^9.1.0",
     "typescript": "^5"

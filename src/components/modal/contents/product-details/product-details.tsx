@@ -15,12 +15,12 @@ interface Props {
   imageUrl: string
 }
 
-export const ProductDetails: FC<Props> = ({ name, ripeningPeriod, tastingEvaluation, description, type, imageUrl }) => {
+export const ProductDetails: FC<Props> = ({ name, ripeningPeriod, tastingEvaluation, description, imageUrl }) => {
   const { setOpen, setClose } = useStoreModal()
   const onClickButton = () => {
     setClose()
     setTimeout(() => {
-      setOpen(<Order productFullName={`${type} ${name}`} />)
+      setOpen(<Order />)
     }, 200)
   }
 

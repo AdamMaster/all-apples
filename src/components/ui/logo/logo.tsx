@@ -9,12 +9,7 @@ interface Props {
   className?: string
 }
 
-export const Logo: FC<Props> = ({ text = true, color, className }) => {
-  const colors = {
-    default: 'logo-3.svg',
-    white: 'logo-white.svg'
-  }[color]
-
+export const Logo: FC<Props> = ({ text = true, className }) => {
   return (
     <Link className={`${s.wrapper} ${className ? className : ''}`} href={'/'}>
       <Image className={s.img} src={'/images/logo-km.svg'} alt={'logo'} width={170} height={50} />

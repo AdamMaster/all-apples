@@ -1,29 +1,16 @@
 'use client'
 import s from './styles.module.css'
-import { FormProvider, SubmitHandler, useForm } from 'react-hook-form'
-import React, { FC, useEffect, useState } from 'react'
+import { FormProvider, useForm } from 'react-hook-form'
+import React, { useState } from 'react'
 import { useStoreModal } from '@/store'
 import { fetchOrder } from '@/shared/api/fetchOrder'
 import { Thanks } from '../thanks/Thanks'
-import { Button, Checkbox, Field, Heading, Logo } from '@/components/ui'
+import { Button, Checkbox, Field, Heading } from '@/components/ui'
 import { orderFormSchema, OrderFormValues } from './order-form-schema'
 import { zodResolver } from '@hookform/resolvers/zod'
 
-interface FormProps {
-  name?: string
-  phone?: string
-  city?: string
-  productName: string
-  agreement: string
-}
-
-interface Props {
-  productFullName: string
-}
-
-export const Order: FC<Props> = ({ productFullName }) => {
+export const Order = () => {
   const { setOpen, setClose } = useStoreModal()
-  const { register, setValue, formState, handleSubmit } = useForm<OrderFormValues>({})
   const form = useForm<OrderFormValues>({
     resolver: zodResolver(orderFormSchema),
     defaultValues: {

@@ -1,7 +1,7 @@
 'use client'
 
 import s from './styles.module.css'
-import { FormProvider, SubmitHandler, useForm } from 'react-hook-form'
+import { FormProvider, useForm } from 'react-hook-form'
 import { fetchFeedback } from '@/shared/api/fetchFeedback'
 import { useStoreModal } from '@/store'
 import React, { useState } from 'react'

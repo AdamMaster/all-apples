@@ -49,7 +49,7 @@ export default function RootLayout({
     <html lang={'ru'}>
       <head>
         <meta name='yandex-verification' content='432e46207c298a5e' />
-        <link rel='icon' href='https://adams-apple.ru/images/favicon.ico' type='image/x-icon'></link>
+        <link rel='icon' href='/images/favicon.ico' type='image/x-icon'></link>
         <YandexMetric />
         <GoogleTagManager />
         <GoogleAnalytics />
