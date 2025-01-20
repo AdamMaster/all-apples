@@ -24,6 +24,8 @@ export const Feedback = () => {
   const { setOpen, setClose } = useStoreModal()
   const [isLoading, setIsLoading] = useState(false)
 
+  console.log('')
+
   const onSubmit = async (data: FeedbackFormValues) => {
     setIsLoading(true)
     fetchFeedback(data).then(() => {
