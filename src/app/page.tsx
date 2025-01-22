@@ -1,6 +1,7 @@
 import s from './page.module.css'
 import { About, Catalog, Contacts, Delivery, Modal, NewsSlider, Promo } from '@/components'
 import { prisma } from '../../prisma/prisma-client'
+import { Suspense } from 'react'
 
 export default async function Home() {
   const categories = await prisma.category.findMany({
@@ -24,8 +25,9 @@ export default async function Home() {
   return (
     <div className={s.wrapper}>
       <Promo className={s.promo} />
-
-      <Catalog className={s.catalog} categories={categories} />
+      <Suspense>
+        <Catalog className={s.catalog} categories={categories} />
+      </Suspense>
       <About className={s.about} />
       <NewsSlider className={s.news} newsItems={newsItems} />
       <Delivery className={s.delivery} />
