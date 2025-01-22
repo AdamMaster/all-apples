@@ -21,8 +21,6 @@ export default async function Home() {
     }
   })
 
-  console.log('хуй')
-
   return (
     <div className={s.wrapper}>
       <Promo className={s.promo} />
