@@ -3,9 +3,10 @@ import { useStoreModal } from '@/store'
 import s from './styles.module.css'
 import { useEffect, useRef } from 'react'
 import { Icon } from '../ui'
+import { useRouter } from 'next/navigation'
 
 export const Modal = () => {
-  const { isOpen, children, setClose } = useStoreModal()
+  const { isOpen, content, setClose } = useStoreModal()
   const wrapperClassNames = `${s.wrapper} ${isOpen ? s.show : ''}`
   const containerClassNames = `${s.container} ${isOpen ? s.smooth : ''}`
   const wrapper = useRef(null)
@@ -14,12 +15,14 @@ export const Modal = () => {
     const onClickDocument = (e: MouseEvent) => {
       if (wrapper.current && e.target === wrapper.current) {
         setClose()
+        router.push(`/`, { scroll: false })
       }
     }
 
     const onEscapeKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         setClose()
+        router.push(`/`, { scroll: false })
       }
     }
 
@@ -32,13 +35,19 @@ export const Modal = () => {
     }
   }, [])
 
+  const router = useRouter()
+  const onClickCloseButton = () => {
+    setClose()
+    router.push(`/`, { scroll: false })
+  }
+
   return (
     <div className={wrapperClassNames} ref={wrapper}>
       <div className={containerClassNames}>
-        <button className={s.closeButton} onClick={() => setClose()}>
+        <button className={s.closeButton} onClick={() => onClickCloseButton()}>
           <Icon id='close' />
         </button>
-        {children}
+        {content}
       </div>
     </div>
   )

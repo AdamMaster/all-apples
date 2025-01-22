@@ -20,7 +20,7 @@ export const ProductsGroupList: React.FC<Props> = ({ title, products, className 
       <div className={s.list}>
         {products.map(product => (
           <ProductCard
-            id={1}
+            id={product.id}
             category={product.category?.name}
             name={product.name}
             type={product.type?.name}

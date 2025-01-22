@@ -17,9 +17,11 @@ export default async function Home() {
   const newsItems = await prisma.newsItem.findMany({
     take: 5,
     orderBy: {
-      createdAt: 'desc' // или 'asc'
+      createdAt: 'desc'
     }
   })
+
+  console.log('хуй')
 
   return (
     <div className={s.wrapper}>

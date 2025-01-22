@@ -1,3 +1,3 @@
 export enum ApiRoutes {
-  GET_PRODUCTS = 'products'
+  GET_CATEGORIES = 'categories'
 }

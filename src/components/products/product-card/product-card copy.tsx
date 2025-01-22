@@ -32,10 +32,10 @@ export const ProductCard: FC<Props> = ({
   description,
   className
 }) => {
-  const { setOpen, checkAndOpen } = useStoreModal()
-
   const router = useRouter()
   const searchParams = useSearchParams()
+
+  const { setOpen, checkAndOpen } = useStoreModal()
 
   const onClickButton = () => {
     setOpen(
@@ -46,8 +46,7 @@ export const ProductCard: FC<Props> = ({
         description={description}
         type={type}
         imageUrl={imageUrl}
-      />,
-      String(id)
+      />
     )
 
     router.push(`?product=${id}`, { scroll: false })

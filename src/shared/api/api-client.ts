@@ -1,1 +1,1 @@
-export { getProducts } from './fetchProducts'
+export { getProducts } from './fetchCategories'

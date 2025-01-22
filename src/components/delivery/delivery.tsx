@@ -33,8 +33,8 @@ export const Delivery: FC<Props> = ({ className }) => {
               <Image
                 alt={'Доставка яблок по всей стране'}
                 className={s.bg}
-                height={100}
-                width={100}
+                height={1000}
+                width={1000}
                 src={'/images/truck-in-map-2.png'}
               />
             </div>

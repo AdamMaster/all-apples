@@ -78,3 +78,6 @@
   right: 15px;
   translate: 0 -50%;
 }
+.wrapper:active {
+  translate: 0 -1px;
+}
