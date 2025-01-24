@@ -15,14 +15,14 @@ export const useStoreCategories = create<State>(set => ({
   categories: [],
   isLoading: false,
   getCategories: async () => {
-    set(() => ({ isLoading: true })) // Устанавливаем загрузку в true
+    set(() => ({ isLoading: true }))
     try {
       const categories = await getCategories()
       set(() => ({ categories }))
     } catch (error) {
       console.error('Ошибка при загрузке категорий:', error)
     } finally {
-      set(() => ({ isLoading: false })) // Сбрасываем флаг загрузки
+      set(() => ({ isLoading: false }))
     }
   }
 }))

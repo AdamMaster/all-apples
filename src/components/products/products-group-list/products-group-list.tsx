@@ -4,7 +4,7 @@ import { Heading } from '@/components/ui'
 import { ProductCard } from '../product-card/product-card'
 
 interface Props {
-  title: string
+  title?: string
   products: ProductWithRelations[]
   categoryId: number
   className?: string
@@ -14,9 +14,9 @@ interface Props {
 export const ProductsGroupList: React.FC<Props> = ({ title, products, className }) => {
   return (
     <div className={`${s.wrapper} ${className ? className : ''}`} id={title}>
-      <Heading className={s.title} level='h2'>
+      {/* <Heading className={s.title} level='h2'>
         Яблоки
-      </Heading>
+      </Heading> */}
       <div className={s.list}>
         {products.map(product => (
           <ProductCard

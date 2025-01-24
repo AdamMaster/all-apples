@@ -33,7 +33,7 @@ export const Contacts: FC<Props> = ({ className }) => {
   ]
 
   return (
-    <div className={`${s.wrapper} ${className ? className : ''}`} id='contacts'>
+    <section className={`${s.wrapper} ${className ? className : ''}`} id='contacts'>
       <div className='container'>
         <div className={s.inner}>
           <div className={s.grid}>
@@ -63,6 +63,6 @@ export const Contacts: FC<Props> = ({ className }) => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }

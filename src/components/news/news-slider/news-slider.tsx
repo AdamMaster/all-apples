@@ -15,7 +15,7 @@ interface Props {
 
 export const NewsSlider: React.FC<Props> = ({ className, newsItems }) => {
   return (
-    <div className={`${s.wrapper} ${className ? className : ''}`} id='news'>
+    <section className={`${s.wrapper} ${className ? className : ''}`} id='news'>
       <div className='container'>
         <div className={s.inner}>
           <div className={s.head}>
@@ -54,6 +54,6 @@ export const NewsSlider: React.FC<Props> = ({ className, newsItems }) => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
