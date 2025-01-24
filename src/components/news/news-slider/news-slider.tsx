@@ -3,6 +3,7 @@
 import React from 'react'
 import s from './styles.module.css'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import { Autoplay, Pagination, Navigation } from 'swiper/modules'
 import 'swiper/css'
 import { Heading } from '@/components/ui'
 import { NewsCard } from '../news-card/news-card'
@@ -20,7 +21,7 @@ export const NewsSlider: React.FC<Props> = ({ className, newsItems }) => {
         <div className={s.inner}>
           <div className={s.head}>
             <Heading className={s.title} level='h2'>
-              Новости
+              Статьи
             </Heading>
             <Heading className={s.subtitle} level='h3'>
               Расскажем о том, что важно
@@ -38,6 +39,7 @@ export const NewsSlider: React.FC<Props> = ({ className, newsItems }) => {
                 delay: 2500,
                 disableOnInteraction: false
               }}
+              modules={[Autoplay, Pagination, Navigation]}
             >
               {newsItems.length > 0 &&
                 newsItems.map(newsItem => (
