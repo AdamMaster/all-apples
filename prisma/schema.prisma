@@ -51,10 +51,20 @@ model Product {
 model NewsItem {
   id Int @id @default(autoincrement())
 
-  title    String
-  text     String
-  imageUrl String
+  title      String
+  paragraphs Paragraph[]
+  imageUrl   String
 
   createdAt DateTime? @default(now())
   updatedAt DateTime? @updatedAt
+}
+
+model Paragraph {
+  id Int @id @default(autoincrement())
+
+  subtitle String
+  text     String
+
+  newsItem   NewsItem @relation(fields: [newsItemId], references: [id])
+  newsItemId Int
 }

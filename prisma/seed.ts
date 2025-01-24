@@ -14,9 +14,20 @@ async function up() {
     data: products
   })
 
-  await prisma.newsItem.createMany({
-    data: news
-  })
+  for (const item of news) {
+    await prisma.newsItem.create({
+      data: {
+        title: item.title,
+        imageUrl: item.imageUrl,
+        paragraphs: {
+          create: item.paragraphs.map(paragraph => ({
+            subtitle: paragraph.subtitle,
+            text: paragraph.text
+          }))
+        }
+      }
+    })
+  }
 }
 
 async function down() {

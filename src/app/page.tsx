@@ -17,6 +17,9 @@ export default async function Home() {
 
   const newsItems = await prisma.newsItem.findMany({
     take: 5,
+    include: {
+      paragraphs: true
+    },
     orderBy: {
       createdAt: 'desc'
     }

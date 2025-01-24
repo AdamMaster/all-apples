@@ -4,13 +4,13 @@ import React from 'react'
 import s from './styles.module.css'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
-import { NewsItem } from '@prisma/client'
 import { Heading } from '@/components/ui'
 import { NewsCard } from '../news-card/news-card'
+import { NewsItemWithRelations } from '../types/types'
 
 interface Props {
   className?: string
-  newsItems: NewsItem[]
+  newsItems: NewsItemWithRelations[]
 }
 
 export const NewsSlider: React.FC<Props> = ({ className, newsItems }) => {
@@ -33,6 +33,7 @@ export const NewsSlider: React.FC<Props> = ({ className, newsItems }) => {
               slidesPerView={3}
               spaceBetween={30}
               speed={1000}
+              loop={true}
               autoplay={{
                 delay: 2500,
                 disableOnInteraction: false
@@ -44,7 +45,7 @@ export const NewsSlider: React.FC<Props> = ({ className, newsItems }) => {
                     <NewsCard
                       id={newsItem.id}
                       title={newsItem.title}
-                      text={newsItem.text}
+                      text={newsItem.paragraphs[0].text}
                       imageUrl={newsItem.imageUrl}
                       date={newsItem.createdAt!}
                     />

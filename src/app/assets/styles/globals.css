@@ -94,6 +94,9 @@ h6 {
 p {
   margin: 0;
 }
+b {
+  font-weight: 600;
+}
 input {
   background: transparent;
   border: 0;
