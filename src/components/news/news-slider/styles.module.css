@@ -12,4 +12,10 @@
 }
 .subtitle {
   font-weight: 300;
+  text-transform: lowercase;
+}
+@media (max-width: 575px) {
+  .subtitle {
+    font-size: 1.125rem;
+  }
 }

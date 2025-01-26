@@ -27,7 +27,7 @@ export const Promo: FC<Props> = ({ className }) => {
           </Button>
         </div>
       </div>
-      <LinesDecorate />
+      <LinesDecorate href='#catalog' />
     </section>
   )
 }

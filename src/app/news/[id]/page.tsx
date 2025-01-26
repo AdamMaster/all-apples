@@ -5,6 +5,7 @@ import { Button, Heading, LinesDecorate } from '@/components/ui'
 import { ArrowLeft } from 'lucide-react'
 import s from './styles.module.css'
 import type { Metadata } from 'next'
+import { PromoOther } from '@/components'
 
 export const metadata: Metadata = {
   title: 'Полезные статьи - Оптовая продажа яблок',
@@ -33,17 +34,7 @@ export default async function NewsPage({ params: { id } }: { params: { id: strin
 
   return (
     <div className={s.wrapper}>
-      <section className={s.promo}>
-        <Image className={s.promoBg} src={newsItem.imageUrl} alt={newsItem.title} fill />
-        <div className='container'>
-          <div className={s.promoInner}>
-            <Heading className={s.promoTitle} level='h1'>
-              {newsItem.title}
-            </Heading>
-          </div>
-        </div>
-        <LinesDecorate />
-      </section>
+      <PromoOther title={newsItem.title} imageUrl={newsItem.imageUrl} />
       <section className={s.content}>
         <div className={`${s.container} container`}>
           <div className={s.contentInner}>
