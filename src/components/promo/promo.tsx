@@ -10,7 +10,7 @@ interface Props {
 export const Promo: FC<Props> = ({ className }) => {
   return (
     <section className={`${s.wrapper} ${className ? className : ''}`}>
-      <Image className={s.bg} alt={'яблоки фура'} src={'/images/promo-bg-3.jpg'} fill loading='eager' />
+      <Image className={s.bg} alt={'яблоки фура'} src={'/images/promo-bg-3.jpg'} fill loading='lazy' />
       <div className={'container'}>
         <div className={s.inner}>
           <h1 className={s.title}>Яблоки оптом</h1>
