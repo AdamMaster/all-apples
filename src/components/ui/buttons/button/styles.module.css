@@ -12,6 +12,7 @@
   transition: 0.1s;
   font-size: 0.75rem;
   font-weight: 500;
+  line-height: normal;
   text-transform: uppercase;
   color: var(--c-dark);
 }
