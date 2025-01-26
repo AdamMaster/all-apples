@@ -4,10 +4,11 @@
 .promo {
 }
 .catalog {
-  padding-top: 60px;
+  padding-top: 100px;
   margin-bottom: 140px;
 }
 .about {
+  padding: 110px 0;
 }
 .news {
   padding-top: 140px;
@@ -17,8 +18,24 @@
   margin-bottom: 80px;
 }
 
+@media (max-width: 1199px) {
+  .catalog {
+    margin-bottom: 100px;
+  }
+  .about {
+    padding: 100px 0;
+  }
+  .news {
+    padding-top: 100px;
+    margin-bottom: 100px;
+  }
+}
+
 @media (max-width: 575px) {
   .catalog {
     padding-top: 50px;
+  }
+  .about {
+    padding: 80px 0;
   }
 }

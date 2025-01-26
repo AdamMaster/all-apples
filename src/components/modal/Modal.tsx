@@ -8,7 +8,7 @@ import { useRouter } from 'next/navigation'
 export const Modal = () => {
   const { isOpen, content, setClose } = useStoreModal()
   const wrapperClassNames = `${s.wrapper} ${isOpen ? s.show : ''}`
-  const containerClassNames = `${s.container} ${isOpen ? s.smooth : ''}`
+  const containerClassNames = `${s.container} ${isOpen ? s.smooth : ''} scrollbar`
   const wrapper = useRef(null)
 
   useEffect(() => {

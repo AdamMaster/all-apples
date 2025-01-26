@@ -40,6 +40,28 @@ export const NewsSlider: React.FC<Props> = ({ className, newsItems }) => {
                 disableOnInteraction: false
               }}
               modules={[Autoplay, Pagination, Navigation]}
+              breakpoints={{
+                320: {
+                  slidesPerView: 1,
+                  spaceBetween: 10
+                },
+                576: {
+                  slidesPerView: 2,
+                  spaceBetween: 15
+                },
+                768: {
+                  slidesPerView: 2,
+                  spaceBetween: 30
+                },
+                992: {
+                  slidesPerView: 3,
+                  spaceBetween: 15
+                },
+                1200: {
+                  slidesPerView: 3,
+                  spaceBetween: 30
+                }
+              }}
             >
               {newsItems.length > 0 &&
                 newsItems.map(newsItem => (

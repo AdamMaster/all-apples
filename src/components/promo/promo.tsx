@@ -15,9 +15,11 @@ export const Promo: FC<Props> = ({ className }) => {
         <div className={s.inner}>
           <h1 className={s.title}>Яблоки оптом</h1>
           <div className={s.subtitle}>разных сортов и калибров</div>
-          <div className={s.otherTitle}>От надежных производителей Кабарлино-Балкарской Республики</div>
-          <div className={s.otherTitle}>Заказы принимаются от 10 тон</div>
-          <div className={s.otherTitle}>Доставка по всей стране</div>
+          <div className={s.text}>
+            <div className={s.otherTitle}>От надежных производителей Кабарлино-Балкарской Республики</div>
+            <div className={s.otherTitle}>Заказы принимаются от 10 тон</div>
+            <div className={s.otherTitle}>Доставка по всей стране</div>
+          </div>
           <Button className={s.button} color={'yellow'} link='#catalog' size='l'>
             Перейти в каталог
           </Button>

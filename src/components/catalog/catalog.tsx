@@ -23,7 +23,6 @@ export const Catalog: FC<Props> = ({ className, categories }) => {
     async () => {
       try {
         const response = await Api.searchProducts(queryString)
-        console.log(response)
         setStateCategory(response)
       } catch (error) {
         console.log(error)

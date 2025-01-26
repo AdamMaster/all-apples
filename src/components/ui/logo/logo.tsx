@@ -5,14 +5,14 @@ import Link from 'next/link'
 
 interface Props {
   text?: boolean
-  color: 'default' | 'white'
+  color?: 'default' | 'white'
   className?: string
 }
 
 export const Logo: FC<Props> = ({ text = true, className }) => {
   return (
     <Link className={`${s.wrapper} ${className ? className : ''}`} href={'/'}>
-      <Image className={s.img} src={'/images/logo-km.svg'} alt={'logo'} width={170} height={50} />
+      {/* <Image className={s.img} src={'/images/logo-km.svg'} alt={'logo'} width={170} height={50} /> */}
       {text && (
         <div className={s.text}>
           <div className={s.name}>

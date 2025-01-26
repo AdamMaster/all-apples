@@ -1,23 +1,26 @@
 .wrapper {
   display: flex;
-  gap: 20px;
-  flex-direction: column;
-}
-.item {
-  display: flex;
   align-items: flex-start;
   gap: 20px;
 }
-.itemIcon {
+.icon {
+  display: flex;
 }
-.itemContent {
+.content {
 }
-.itemTitle {
+.title {
   margin-bottom: 10px;
   font-weight: 700;
   font-size: 1.25rem;
 }
-.itemDescription {
+.description {
   line-height: 1.5;
   color: #666;
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    flex-direction: column;
+    gap: 10px;
+  }
 }

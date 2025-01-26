@@ -3,7 +3,7 @@ import { FC } from 'react'
 import s from './styles.module.css'
 import 'swiper/css'
 import { Button, Heading, Logo } from '@/components/ui'
-import { AdvantageItems, Advantages } from './advantages/advantages'
+import { type AdvantageItemType, Advantages } from '../advantages/advantages'
 import { useStoreModal } from '@/store'
 import { Feedback } from '../modal'
 
@@ -17,7 +17,7 @@ export const About: FC<Props> = ({ className }) => {
     setOpen(<Feedback />)
   }
 
-  const advantageItems: AdvantageItems[] = [
+  const advantageItems: AdvantageItemType[] = [
     {
       id: 1,
       title: 'Прямые поставки от производителей',

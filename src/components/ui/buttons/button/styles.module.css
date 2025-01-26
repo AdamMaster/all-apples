@@ -12,6 +12,7 @@
   transition: 0.1s;
   font-size: 0.75rem;
   font-weight: 500;
+  line-height: normal;
   text-transform: uppercase;
   color: var(--c-dark);
 }
@@ -80,4 +81,9 @@
 }
 .wrapper:active {
   translate: 0 -1px;
+}
+@media (max-width: 767px) {
+  .wrapper.l {
+    height: 45px;
+  }
 }

@@ -63,8 +63,13 @@
   }
 }
 @media (max-width: 575px) {
-  .note {
-    padding: 15px;
+  .head {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .title {
+    margin-bottom: 15px;
   }
   .list {
     grid-template-columns: repeat(2, 1fr);

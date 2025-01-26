@@ -1,8 +1,6 @@
 import React from 'react'
-import { Search } from 'lucide-react'
-import { useDebounce } from 'react-use'
+import { Search, X } from 'lucide-react'
 import s from './styles.module.css'
-import { Api } from '@/shared/api/api-client'
 import { useStoreQueryString } from '@/store'
 
 interface Props {
@@ -12,11 +10,16 @@ interface Props {
 export const SearchBar: React.FC<Props> = ({ className }) => {
   const [value, setValue] = React.useState('')
   const [isActive, setIsActive] = React.useState(false)
-  const { queryString, setQueryString } = useStoreQueryString()
+  const { setQueryString } = useStoreQueryString()
 
   const onChangeInput = (value: string) => {
     setValue(value)
     setQueryString(value)
+  }
+
+  const onClickDelete = () => {
+    setValue('')
+    setQueryString('')
   }
 
   return (
@@ -26,10 +29,12 @@ export const SearchBar: React.FC<Props> = ({ className }) => {
         className={s.input}
         type='text'
         value={value}
+        placeholder={!isActive ? 'Введите название сорта' : ''}
         onChange={e => onChangeInput(e.target.value)}
         onFocus={() => setIsActive(true)}
         onBlur={() => setIsActive(false)}
       />
+      {value !== '' && <X className={s.deleteButton} width={18} height={18} onClick={() => onClickDelete()} />}
     </div>
   )
 }

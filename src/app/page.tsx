@@ -33,8 +33,8 @@ export default async function Home() {
       </Suspense>
       <About className={s.about} />
       <NewsSlider className={s.news} newsItems={newsItems} />
-      <Delivery className={s.delivery} />
-      <Contacts />
+      {/* <Delivery className={s.delivery} />
+      <Contacts /> */}
       <Modal />
     </div>
   )

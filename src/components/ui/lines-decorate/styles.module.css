@@ -3,22 +3,35 @@
   z-index: 2;
   left: 50%;
   translate: -50% 0;
-  bottom: -65px;
+  bottom: -45px;
   display: flex;
   align-items: center;
   gap: 6px;
 }
 .wrapper span {
   width: 5px;
-  height: 130px;
+  height: 110px;
   background: var(--c-yellow);
   border-radius: 5px;
 }
 .wrapper span:nth-child(1) {
-  height: 80px;
-}
-.wrapper span:nth-child(2) {
+  height: 60px;
 }
 .wrapper span:nth-child(3) {
-  height: 80px;
+  height: 60px;
+}
+
+@media (max-width: 767px) {
+  .wrapper {
+    display: none;
+  }
+  .wrapper span {
+    height: 90px;
+  }
+  .wrapper span:nth-child(1) {
+    height: 40px;
+  }
+  .wrapper span:nth-child(3) {
+    height: 40px;
+  }
 }

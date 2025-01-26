@@ -1,0 +1,24 @@
+.wrapper {
+  position: relative;
+  background: var(--c-dark);
+}
+.bg {
+  object-fit: cover;
+  opacity: 0.4;
+}
+.inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+}
+.title {
+  max-width: 800px;
+  font-size: 3rem;
+  line-height: 1.3;
+}

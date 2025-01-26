@@ -50,6 +50,19 @@ li {
   margin: 0 auto;
 }
 
+.scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.scrollbar::-webkit-scrollbar-track {
+  background: #ededed;
+}
+
+/* Стили для ползунка (двигающейся части) */
+.scrollbar::-webkit-scrollbar-thumb {
+  background: #c4c4c4;
+}
+
 button {
   cursor: pointer;
   padding: 0;

@@ -8,7 +8,13 @@
   top: 50%;
   left: 10px;
   translate: 0 -50%;
-  color: #e5e5e5;
+  color: #cfcfcf;
+}
+.icon {
+  transition: 0.2s;
+}
+.active .icon {
+  color: var(--c-dark);
 }
 .input {
   width: 100%;
@@ -18,7 +24,21 @@
   border-radius: 50px;
   border: 1px solid #e5e5e5;
   background: var(--c-grey);
+  font-family: inherit;
+  transition: 0.2s;
 }
-.active .icon {
+.input::placeholder {
+  color: #adadad;
+}
+.deleteButton {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  translate: 0 -50%;
+  opacity: 0.5;
+  transition: 0.2s;
   color: var(--c-dark);
+}
+.deleteButton:hover {
+  opacity: 1;
 }
