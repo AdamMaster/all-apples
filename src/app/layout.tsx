@@ -30,7 +30,8 @@ const mazzard = localFont({
       path: '../../public/fonts/MazzardH-Bold.woff',
       weight: '700'
     }
-  ]
+  ],
+  display: 'swap'
 })
 
 export const metadata: Metadata = {
