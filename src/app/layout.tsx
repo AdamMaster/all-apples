@@ -51,7 +51,7 @@ export default function RootLayout({
       <head>
         <meta name='yandex-verification' content='432e46207c298a5e' />
         <link rel='icon' href='/images/favicon.ico' type='image/x-icon'></link>
-        <YandexMetric />
+        {/* <YandexMetric /> */}
         <GoogleTagManager />
         <GoogleAnalytics />
       </head>
