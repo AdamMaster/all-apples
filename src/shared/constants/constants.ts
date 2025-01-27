@@ -11,5 +11,6 @@ export const address = 'Россия, Кабардино-Балкарская р
 export const menuLinks = [
   { id: 'catalog', text: 'Каталог', href: '#catalog' },
   { id: 'about', text: 'О нас', href: '#about' },
-  { id: 'news', text: 'Статьи', href: '#news' }
+  { id: 'news', text: 'Статьи', href: '#news' },
+  { id: 'partners', text: 'Партнерам', href: '/partners' }
 ]

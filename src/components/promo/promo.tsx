@@ -18,7 +18,7 @@ export const Promo: FC<Props> = ({ className }) => {
           </Heading>
           <div className={s.subtitle}>разных сортов и калибров</div>
           <div className={s.text}>
-            <div className={s.otherTitle}>От надежных производителей Кабарлино-Балкарской Республики</div>
+            <div className={s.otherTitle}>От надежных производителей Кабарлино-Балкарии</div>
             <div className={s.otherTitle}>Заказы принимаются от 10 тон</div>
             <div className={s.otherTitle}>Доставка по всей стране</div>
           </div>

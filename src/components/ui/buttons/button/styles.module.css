@@ -80,7 +80,7 @@
   translate: 0 -50%;
 }
 .wrapper:active {
-  translate: 0 -1px;
+  translate: 0 1px;
 }
 @media (max-width: 767px) {
   .wrapper.l {

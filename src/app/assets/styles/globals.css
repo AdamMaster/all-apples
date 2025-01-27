@@ -142,7 +142,7 @@ textarea:focus {
   box-sizing: border-box;
 }
 .highlight {
-  color: var(--c-yellow);
+  color: var(--c-green-2);
 }
 .box {
   padding: 30px;

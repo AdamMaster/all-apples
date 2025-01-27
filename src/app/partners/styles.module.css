@@ -1,0 +1,35 @@
+.wrapper {
+}
+.promo {
+}
+.content {
+}
+.contentInner {
+  position: relative;
+  padding-top: 140px;
+  padding-bottom: 140px;
+}
+.backLink {
+  position: absolute !important;
+  top: 15px;
+  left: 0;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
+}
+.gridContent {
+  display: flex;
+  flex-direction: column;
+}
+.title {
+}
+.contentText {
+  margin-top: 30px;
+  flex-grow: 1;
+  font-size: 1.25rem;
+}
+.button {
+  margin-top: 50px;
+}
