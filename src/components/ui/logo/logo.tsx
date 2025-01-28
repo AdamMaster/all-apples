@@ -12,11 +12,11 @@ interface Props {
 export const Logo: FC<Props> = ({ text = true, className }) => {
   return (
     <Link className={`${s.wrapper} ${className ? className : ''}`} href={'/'}>
-      {/* <Image className={s.img} src={'/images/logo-km.svg'} alt={'logo'} width={170} height={50} /> */}
+      <Image className={s.img} src={'/images/logo.svg'} alt={'logo'} width={170} height={50} />
       {text && (
         <div className={s.text}>
           <div className={s.name}>
-            Kavkaz<span>Market</span>
+            Apples<span>07</span>
           </div>
           <div className={s.descr}>оптовая продажа яблок</div>
         </div>

@@ -50,7 +50,7 @@ export const About: FC<Props> = ({ className }) => {
             <div className={s.content}>
               <div className={s.contentHead}>
                 <Heading className={s.title} level={'h2'}>
-                  Kavkaz<span>Market</span>
+                  Apples<span>07</span>
                 </Heading>
                 <div className={s.subtitle}>Сочные плоды для вашего бизнеса</div>
               </div>

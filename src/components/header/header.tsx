@@ -15,21 +15,21 @@ export const Header = () => {
     setOpen(!isOpen)
   }
 
-  React.useEffect(() => {
-    const onScroll = () => {
-      if (ref.current) {
-        if (scrollY >= 80) {
-          setIsScroll(true)
-        } else {
-          setIsScroll(false)
-        }
-      }
-    }
+  // React.useEffect(() => {
+  //   const onScroll = () => {
+  //     if (ref.current) {
+  //       if (scrollY >= 80) {
+  //         setIsScroll(true)
+  //       } else {
+  //         setIsScroll(false)
+  //       }
+  //     }
+  //   }
 
-    document.addEventListener('scroll', onScroll)
+  //   document.addEventListener('scroll', onScroll)
 
-    return () => document.removeEventListener('scroll', onScroll)
-  }, [isScroll])
+  //   return () => document.removeEventListener('scroll', onScroll)
+  // }, [isScroll])
 
   return (
     <header className={`${s.wrapper} ${isScroll ? s.white : ''}`} ref={ref}>
