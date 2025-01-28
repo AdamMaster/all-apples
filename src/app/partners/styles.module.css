@@ -33,3 +33,35 @@
 .button {
   margin-top: 50px;
 }
+
+@media (max-width: 1199px) {
+  .inner {
+    padding: 100px 0;
+  }
+  .grid {
+    gap: 30px;
+  }
+}
+@media (max-width: 991px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 80px;
+  }
+}
+@media (max-width: 767px) {
+}
+@media (max-width: 575px) {
+  .inner {
+    padding: 80px 0;
+    padding-top: 100px;
+  }
+  .subtitle {
+    font-size: 1.25rem;
+  }
+  .contentText {
+    font-size: 1.125rem;
+  }
+  .button {
+    margin-top: 30px;
+  }
+}
