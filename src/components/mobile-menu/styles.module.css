@@ -54,3 +54,9 @@
   height: 23px;
   fill: #fff;
 }
+
+@media (max-width: 991px) {
+  .logo img {
+    display: none;
+  }
+}

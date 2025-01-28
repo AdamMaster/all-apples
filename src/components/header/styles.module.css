@@ -64,8 +64,22 @@
   background: var(--c-dark);
 }
 
+@media (max-width: 1199px) {
+  .bottomInner {
+    gap: 15px;
+  }
+}
 @media (max-width: 991px) {
+  .logo {
+    position: relative;
+  }
+  .logo img {
+    display: none;
+  }
   .messengers {
+    display: none;
+  }
+  .linksItem:nth-child(2) {
     display: none;
   }
 }
@@ -81,6 +95,9 @@
     margin-left: auto;
   }
   .wrapper .burger {
+    display: flex;
+  }
+  .linksItem:nth-child(2) {
     display: flex;
   }
 }

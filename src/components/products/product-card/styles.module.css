@@ -61,6 +61,12 @@
   }
 }
 @media (max-width: 575px) {
+  .head {
+    aspect-ratio: 1.3;
+  }
+  .img {
+    object-fit: contain;
+  }
   .body {
     padding: 15px;
   }

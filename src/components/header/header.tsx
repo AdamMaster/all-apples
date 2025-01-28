@@ -42,8 +42,8 @@ export const Header = () => {
             <ContactLink className={s.link} link={`https://t.me/${messengers.telegram}`} iconId={'telegram-fill'} />
           </div>
           <div className={s.links}>
-            <ContactLink text={phoneNumbers[0].text} link={`tel:${phoneNumbers[0].link}`} />
-            <ContactLink link={`mailto:${mail}`} text={mail} />
+            <ContactLink className={s.linksItem} text={phoneNumbers[0].text} link={`tel:${phoneNumbers[0].link}`} />
+            <ContactLink className={s.linksItem} link={`mailto:${mail}`} text={mail} />
           </div>
           <Burger className={s.burger} onClick={() => onClickBurger()} />
         </div>

@@ -56,9 +56,6 @@
   }
 }
 @media (max-width: 767px) {
-  .bg {
-    opacity: 0.5;
-  }
   .title {
     font-size: 3.5rem;
   }

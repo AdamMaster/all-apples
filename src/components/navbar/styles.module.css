@@ -34,3 +34,9 @@
 .mobileMenu .link:hover {
   background: transparent;
 }
+
+@media (max-width: 1199px) {
+  .link {
+    padding: 10px;
+  }
+}
