@@ -33,3 +33,16 @@
     font-size: 2.3rem;
   }
 }
+@media (max-width: 575px) {
+  .inner {
+    height: 350px;
+  }
+  .title {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.6rem;
+  }
+}

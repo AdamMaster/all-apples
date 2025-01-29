@@ -1,0 +1,19 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.item {
+  position: relative;
+  padding-left: 20px;
+}
+.item::before {
+  content: '';
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background: var(--c-green-2);
+  border-radius: 50%;
+}

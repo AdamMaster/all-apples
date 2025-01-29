@@ -5,7 +5,7 @@
 }
 .inner {
 }
-.top {
+.topInner {
   padding: 50px 0;
   display: flex;
   column-gap: 60px;
@@ -28,12 +28,12 @@
   fill: #fff;
 }
 @media (max-width: 991px) {
-  .top {
+  .topInner {
     gap: 20px;
   }
 }
 @media (max-width: 767px) {
-  .top {
+  .topInner {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     row-gap: 30px;
@@ -56,7 +56,7 @@
   .footerLogo img {
     display: none;
   }
-  .top {
+  .topInner {
     row-gap: 40px;
   }
   .topCol:nth-child(1) {
