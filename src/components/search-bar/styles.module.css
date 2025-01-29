@@ -42,3 +42,9 @@
 .deleteButton:hover {
   opacity: 1;
 }
+
+@media (max-width: 575px) {
+  .wrapper {
+    width: 100%;
+  }
+}

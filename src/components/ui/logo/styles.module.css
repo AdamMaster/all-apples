@@ -9,6 +9,9 @@
   width: 70px;
   height: auto;
 }
+.square img {
+  width: 35px;
+}
 .text {
   display: flex;
   flex-direction: column;

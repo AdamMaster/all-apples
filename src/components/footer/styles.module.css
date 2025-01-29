@@ -53,6 +53,9 @@
 }
 
 @media (max-width: 575px) {
+  .footerLogo img {
+    display: none;
+  }
   .top {
     row-gap: 40px;
   }

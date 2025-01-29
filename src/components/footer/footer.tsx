@@ -9,7 +9,7 @@ export const Footer = () => {
         <div className={s.inner}>
           <div className={s.top}>
             <div className={s.topCol}>
-              <Logo className={s.footerLogo} color={'default'} />
+              <Logo className={s.footerLogo} square={false} />
               <div className={s.copyright}>Все права защищены © 2024</div>
             </div>
             <div className={s.topCol}>

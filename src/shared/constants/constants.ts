@@ -9,8 +9,8 @@ export const links = {
 }
 export const address = 'Россия, Кабардино-Балкарская республика,г. Баксан, ул. Черкесская, дом 78'
 export const menuLinks = [
-  { id: 'catalog', text: 'Каталог', href: '#catalog' },
-  { id: 'about', text: 'О нас', href: '#about' },
-  { id: 'news', text: 'Статьи', href: '#news' },
+  { id: 'catalog', text: 'Каталог', href: '/#catalog' },
+  { id: 'about', text: 'О нас', href: '/#about' },
+  { id: 'news', text: 'Статьи', href: '/#news' },
   { id: 'partners', text: 'Партнерам', href: '/partners' }
 ]

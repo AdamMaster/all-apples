@@ -18,6 +18,7 @@
   left: 0;
 }
 .logo img {
+  width: 100px;
 }
 .grid {
   display: grid;
@@ -69,6 +70,9 @@
   }
 }
 @media (max-width: 991px) {
+  .logo img {
+    width: 70px;
+  }
   .grid {
     grid-template-columns: 1fr;
     gap: 80px;

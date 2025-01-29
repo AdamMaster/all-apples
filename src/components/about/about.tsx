@@ -45,7 +45,7 @@ export const About: FC<Props> = ({ className }) => {
     <section className={`${s.wrapper} ${className ? className : ''}`} id='about'>
       <div className={'container'}>
         <div className={s.inner}>
-          <Logo className={s.logo} text={false} color='default' />
+          <Logo className={s.logo} text={false} />
           <div className={s.grid}>
             <div className={s.content}>
               <div className={s.contentHead}>
