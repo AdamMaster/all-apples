@@ -1,7 +1,8 @@
 import { FC, ButtonHTMLAttributes, ReactNode } from 'react'
-import s from './styles.module.css'
+import styles from './button.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
+import clsx from 'clsx'
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode
@@ -25,32 +26,35 @@ export const Button: FC<Props> = ({
   onClick
 }) => {
   const colors = {
-    green: s.green,
-    yellow: s.yellow,
-    white: s.white,
-    grey: s.grey,
-    black: s.black
+    green: styles.green,
+    yellow: styles.yellow,
+    white: styles.white,
+    grey: styles.grey,
+    black: styles.black
   }[color]
 
   const sizes = {
-    l: s.l,
-    s: s.s
+    l: styles.l,
+    s: styles.s
   }[size!]
-  const classNames = ` ${s.wrapper} ${colors} ${sizes} ${stroked ? s.stroked : ''}`
+
+  const classNames = clsx(styles.wrapper, colors, sizes, stroked && styles.stroked, className)
 
   if (link) {
     return (
-      <Link className={`${classNames} ${className ? className : ''}`} href={link}>
+      <Link className={`${classNames}`} href={link}>
         {children}
-        {isLoading && <Image className={s.loader} src={'/images/loader.gif'} alt='loader' width={30} height={30} />}
+        {isLoading && (
+          <Image className={styles.loader} src={'/images/loader.gif'} alt='loader' width={30} height={30} />
+        )}
       </Link>
     )
   }
 
   return (
-    <button className={`${classNames} ${className ? className : ''}`} disabled={disabled} onClick={onClick}>
+    <button className={`${classNames}`} disabled={disabled} onClick={onClick}>
       {children}
-      {isLoading && <Image className={s.loader} src={'/images/loader.gif'} alt='loader' width={30} height={30} />}
+      {isLoading && <Image className={styles.loader} src={'/images/loader.gif'} alt='loader' width={30} height={30} />}
     </button>
   )
 }
