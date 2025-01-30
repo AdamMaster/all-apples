@@ -28,7 +28,7 @@
   flex-grow: 1;
   font-size: 1.25rem;
 }
-.button {
+.buttons {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -50,6 +50,7 @@
   }
   .button {
     position: relative;
+    margin-top: 50px;
   }
 }
 @media (max-width: 767px) {
@@ -63,8 +64,5 @@
   }
   .contentText {
     font-size: 1.125rem;
-  }
-  .button {
-    margin-top: 50px;
   }
 }
