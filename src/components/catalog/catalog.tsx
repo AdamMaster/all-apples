@@ -28,7 +28,7 @@ export const Catalog: FC<Props> = ({ className, categories }) => {
         console.log(error)
       }
     },
-    250,
+    300,
     [queryString]
   )
 
