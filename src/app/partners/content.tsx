@@ -61,7 +61,7 @@ export const Content: React.FC<Props> = ({ className }) => {
               </div>
             </div>
             <div className={s.advantages}>
-              <Advantages items={advantageItems} />
+              <Advantages className={s.advantagess} items={advantageItems} />
             </div>
           </div>
           <Button className={s.button} size='l' onClick={() => onClickButton()}>

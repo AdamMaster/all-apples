@@ -1,5 +1,5 @@
 import { FC, ButtonHTMLAttributes, ReactNode } from 'react'
-import styles from './button.module.css'
+import s from './styles.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
@@ -26,27 +26,25 @@ export const Button: FC<Props> = ({
   onClick
 }) => {
   const colors = {
-    green: styles.green,
-    yellow: styles.yellow,
-    white: styles.white,
-    grey: styles.grey,
-    black: styles.black
+    green: s.green,
+    yellow: s.yellow,
+    white: s.white,
+    grey: s.grey,
+    black: s.black
   }[color]
 
   const sizes = {
-    l: styles.l,
-    s: styles.s
+    l: s.l,
+    s: s.s
   }[size!]
 
-  const classNames = clsx(styles.wrapper, colors, sizes, stroked && styles.stroked, className)
+  const classNames = clsx(className, s.wrapper, colors, sizes, stroked && s.stroked)
 
   if (link) {
     return (
       <Link className={`${classNames}`} href={link}>
         {children}
-        {isLoading && (
-          <Image className={styles.loader} src={'/images/loader.gif'} alt='loader' width={30} height={30} />
-        )}
+        {isLoading && <Image className={s.loader} src={'/images/loader.gif'} alt='loader' width={30} height={30} />}
       </Link>
     )
   }
@@ -54,7 +52,7 @@ export const Button: FC<Props> = ({
   return (
     <button className={`${classNames}`} disabled={disabled} onClick={onClick}>
       {children}
-      {isLoading && <Image className={styles.loader} src={'/images/loader.gif'} alt='loader' width={30} height={30} />}
+      {isLoading && <Image className={s.loader} src={'/images/loader.gif'} alt='loader' width={30} height={30} />}
     </button>
   )
 }
