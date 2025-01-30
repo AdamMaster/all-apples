@@ -36,11 +36,11 @@ export const Button: FC<Props> = ({
     l: s.l,
     s: s.s
   }[size!]
-  const classNames = `${s.wrapper} ${colors} ${className ? className : ''} ${sizes} ${stroked ? s.stroked : ''}`
+  const classNames = ` ${s.wrapper} ${colors} ${sizes} ${stroked ? s.stroked : ''}`
 
   if (link) {
     return (
-      <Link className={classNames} href={link}>
+      <Link className={`${classNames} ${className ? className : ''}`} href={link}>
         {children}
         {isLoading && <Image className={s.loader} src={'/images/loader.gif'} alt='loader' width={30} height={30} />}
       </Link>
@@ -48,7 +48,7 @@ export const Button: FC<Props> = ({
   }
 
   return (
-    <button className={classNames} disabled={disabled} onClick={onClick}>
+    <button className={`${classNames} ${className ? className : ''}`} disabled={disabled} onClick={onClick}>
       {children}
       {isLoading && <Image className={s.loader} src={'/images/loader.gif'} alt='loader' width={30} height={30} />}
     </button>

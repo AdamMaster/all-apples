@@ -28,7 +28,7 @@
   flex-grow: 1;
   font-size: 1.25rem;
 }
-.buttons {
+.button {
   position: absolute;
   left: 0;
   bottom: 0;
