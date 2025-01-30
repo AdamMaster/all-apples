@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import { GoogleAnalytics, GoogleAnalyticsNoScript, GoogleTagManager, YandexMetric } from '@/components/analytics'
 import './assets/styles/globals.css'
-import { Footer, Header, MobileMenu, Modal, Providers } from '@/components'
+import { Footer, Header, MobileMenu, Modal } from '@/components'
 import NextTopLoader from 'nextjs-toploader'
 
 const mazzard = localFont({
