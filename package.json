@@ -30,6 +30,7 @@
     "lucide-react": "^0.473.0",
     "next": "^14.2.3",
     "next-sitemap": "^4.2.3",
+    "nextjs-toploader": "^3.7.15",
     "nodemailer": "^6.9.13",
     "prisma": "^6.2.1",
     "react": "^18",
