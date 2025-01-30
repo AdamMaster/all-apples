@@ -1,5 +1,5 @@
 import s from './page.module.css'
-import { About, Catalog, Contacts, Delivery, Modal, NewsSlider, Promo } from '@/components'
+import { About, Catalog, Contacts, Delivery, NewsSlider, Promo } from '@/components'
 import { prisma } from '../../prisma/prisma-client'
 import { Suspense } from 'react'
 
@@ -35,7 +35,6 @@ export default async function Home() {
       <NewsSlider className={s.news} newsItems={newsItems} />
       {/* <Delivery className={s.delivery} />
       <Contacts /> */}
-      <Modal />
     </div>
   )
 }

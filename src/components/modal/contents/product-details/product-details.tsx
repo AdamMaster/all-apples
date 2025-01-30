@@ -1,10 +1,11 @@
 'use client'
 import s from './styles.module.css'
-import { FC } from 'react'
+import React, { FC } from 'react'
 import { Button, Heading } from '@/components/ui'
 import Image from 'next/image'
 import { useStoreModal } from '@/store'
 import { Order } from '../order/Order'
+import { useRouter } from 'next/navigation'
 
 interface Props {
   name: string
@@ -16,13 +17,20 @@ interface Props {
 }
 
 export const ProductDetails: FC<Props> = ({ name, ripeningPeriod, tastingEvaluation, description, imageUrl }) => {
-  const { setOpen, setClose } = useStoreModal()
+  const router = useRouter()
+  const { isOpen, setOpen, setClose } = useStoreModal()
   const onClickButton = () => {
     setClose()
     setTimeout(() => {
       setOpen(<Order />)
     }, 200)
   }
+
+  React.useEffect(() => {
+    if (!isOpen) {
+      router.push('/', { scroll: false })
+    }
+  }, [isOpen])
 
   return (
     <div className={s.wrapper}>

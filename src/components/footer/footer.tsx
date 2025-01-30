@@ -1,6 +1,7 @@
 import s from './styles.module.css'
 import { address, mail, phoneNumbers } from '@/shared/constants/constants'
 import { ContactLink, Logo } from '@/components/ui'
+import Link from 'next/link'
 
 export const Footer = () => {
   return (
@@ -31,8 +32,12 @@ export const Footer = () => {
           </div>
         </div>
         <div className={s.bottom}>
-          <div className='conteiner'>
-            <div className={s.bottomInner}></div>
+          <div className='container'>
+            <div className={s.bottomInner}>
+              <Link className={s.bottomLink} href='/policy'>
+                Политика конфиденциальности
+              </Link>
+            </div>
           </div>
         </div>
       </div>

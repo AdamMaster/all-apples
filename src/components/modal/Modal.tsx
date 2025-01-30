@@ -15,14 +15,12 @@ export const Modal = () => {
     const onClickDocument = (e: MouseEvent) => {
       if (wrapper.current && e.target === wrapper.current) {
         setClose()
-        router.push(`/`, { scroll: false })
       }
     }
 
     const onEscapeKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         setClose()
-        router.push(`/`, { scroll: false })
       }
     }
 
@@ -38,7 +36,6 @@ export const Modal = () => {
   const router = useRouter()
   const onClickCloseButton = () => {
     setClose()
-    router.push(`/`, { scroll: false })
   }
 
   return (

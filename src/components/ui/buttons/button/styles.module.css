@@ -83,7 +83,7 @@
   translate: 0 1px;
 }
 @media (max-width: 767px) {
-  .wrapper.l {
+  /* .wrapper.l {
     height: 45px;
-  }
+  } */
 }

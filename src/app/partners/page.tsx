@@ -4,6 +4,7 @@ import { Button, Heading } from '@/components/ui'
 import { AdvantageItemType, Advantages } from '@/components/advantages/advantages'
 import { useStoreModal } from '@/store'
 import { ArrowLeft } from 'lucide-react'
+import { Content } from './content'
 
 export default function PartnersPage() {
   const advantageItems: AdvantageItemType[] = [
@@ -29,43 +30,10 @@ export default function PartnersPage() {
     }
   ]
 
-  // const { setOpen } = useStoreModal()
-  const onClickButton = () => {
-    // setOpen(<Feedback />)
-  }
-
   return (
     <div className={s.wrapper}>
       <PromoOther className={s.promo} title='Партнерам' imageUrl='/images/handsnake.jpg' />
-      <section className={s.content}>
-        <div className='container'>
-          <div className={s.contentInner}>
-            <Button className={s.backLink} link='/' color='grey'>
-              <ArrowLeft size={15} />
-              Назад
-            </Button>
-            <div className={s.grid}>
-              <div className={s.gridContent}>
-                <Heading className={s.title} level='h2'>
-                  Почему <span className='highlight'>выгодно</span> работать с нами?
-                </Heading>
-                <div className={s.contentText}>
-                  <p>
-                    Мы стремимся создать комфортные условия для наших партнеров — фермеров и плодопитомников. Вот что вы
-                    получаете:
-                  </p>
-                </div>
-                <Button className={s.button} size='l'>
-                  Узнать подробнее
-                </Button>
-              </div>
-              <div className={s.advantages}>
-                <Advantages items={advantageItems} />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Content className={s.content} />
     </div>
   )
 }

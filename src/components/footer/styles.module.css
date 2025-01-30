@@ -27,6 +27,17 @@
 .link svg {
   fill: #fff;
 }
+.bottom {
+  border-top: 1px solid #ffffff1a;
+  padding: 15px 0;
+}
+.bottomLink {
+  opacity: 0.6;
+}
+.bottomLink:hover {
+  opacity: 1;
+  color: var(--c-yellow);
+}
 @media (max-width: 991px) {
   .topInner {
     gap: 20px;

@@ -37,15 +37,15 @@ export default async function NewsPage({ params: { id } }: { params: { id: strin
       <PromoOther title={newsItem.title} imageUrl={newsItem.imageUrl} />
       <section className={s.content}>
         <div className={`${s.container} container`}>
+          <Button className={s.backLink} link='/#news' color='grey'>
+            <ArrowLeft size={15} />
+            Назад
+          </Button>
           <div className={s.contentInner}>
-            <Button className={s.backLink} link='/#news' color='grey'>
-              <ArrowLeft size={15} />
-              Назад
-            </Button>
             <div className={s.paragraphs}>
               {newsItem.paragraphs.map(paragraph => (
                 <div className={s.paragraph} key={paragraph.id}>
-                  <div className={s.paragraphSubtitle}>{paragraph.subtitle}</div>
+                  {paragraph.subtitle && <div className={s.paragraphSubtitle}>{paragraph.subtitle}</div>}
                   <div className={s.text}>
                     {paragraph.text.split('\n').map((textItem, index) => (
                       <p key={index} dangerouslySetInnerHTML={{ __html: textItem }} />

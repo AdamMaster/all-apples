@@ -33,8 +33,11 @@ body {
 main {
   flex-grow: 1;
 }
-
+button:active {
+  outline: none;
+}
 a {
+  transition: 0.2s;
   color: inherit;
   text-decoration: none;
 }

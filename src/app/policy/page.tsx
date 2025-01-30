@@ -1,16 +1,20 @@
 import { PromoOther } from '@/components'
 import s from './styles.module.css'
 import Link from 'next/link'
-import { ContactLink, Heading, List } from '@/components/ui'
-import { ReactNode } from 'react'
+import { Button, ContactLink, Heading } from '@/components/ui'
 import { mail, phoneNumbers } from '@/shared/constants/constants'
+import { ArrowLeft } from 'lucide-react'
 
 export default function PolicyPage() {
   return (
     <div className={s.wrapper}>
-      <PromoOther title='Политика конфиденциальности' imageUrl='/images/handsnake.jpg' />
+      <PromoOther title='Политика конфиденциальности' imageUrl='/images/policy.jpg' />
       <section className={s.content}>
         <div className='container'>
+          <Button className={s.backLink} link='/' color='grey'>
+            <ArrowLeft size={15} />
+            Назад
+          </Button>
           <div className={s.contentInner}>
             <div className={s.paragraphs}>
               <div className={s.paragraph}>

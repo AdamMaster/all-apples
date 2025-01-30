@@ -5,7 +5,8 @@ export const messengers = {
 }
 export const mail = 'adamsapple.kbr@gmail.com'
 export const links = {
-  home: '/'
+  home: '/',
+  policy: '/policy'
 }
 export const address = 'Россия, Кабардино-Балкарская республика,г. Баксан, ул. Черкесская, дом 78'
 export const menuLinks = [
