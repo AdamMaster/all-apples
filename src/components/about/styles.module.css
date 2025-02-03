@@ -42,7 +42,7 @@
   font-weight: 300;
 }
 .title span {
-  color: var(--c-green-2);
+  color: var(--c-green);
 }
 .description {
   font-size: 1rem;

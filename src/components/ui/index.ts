@@ -1,3 +1,4 @@
+export { Breadcrumbs } from './breadcrumbs/breadcrumbs'
 export { Burger } from './burger/burger'
 export { Button } from './buttons/button/button'
 export { ButtonControl } from './buttons/button-control/button-control'

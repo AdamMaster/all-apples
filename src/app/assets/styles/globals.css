@@ -3,13 +3,11 @@
   --c-dark: #1f1f1f;
   --c-white: #fff;
   --c-grey: #fafafa;
-  --c-grey-2: #e5e5e5;
   --c-grey-3: #f5f4f5;
   --c-red: #f15a24;
   --c-yellow: #fcdb5a;
-  --c-green-1: #e7f7d5;
-  --c-green-2: #abca37;
-  --c-green-3: #2f913a;
+  --c-border: #e5e5e5;
+  --c-green: #abca37;
   --c-green-hover: rgb(163, 221, 97);
   --radius-1: 12px;
   --radius-2: 22px;
@@ -46,6 +44,7 @@ a {
   text-decoration: none;
 }
 ul,
+ol,
 li {
   padding: 0;
   margin: 0;
@@ -150,7 +149,7 @@ textarea:focus {
   box-sizing: border-box;
 }
 .highlight {
-  color: var(--c-green-2);
+  color: var(--c-green);
 }
 .box {
   padding: 30px;

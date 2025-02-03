@@ -27,8 +27,8 @@
   left: 50%;
   translate: -50% 0;
   padding: 5px 10px;
-  background: var(--c-yellow);
-  font-size: 0.875rem;
+  background: var(--c-grey-3);
+  font-size: 0.75rem;
   line-height: 1;
 }
 .title {
@@ -75,5 +75,11 @@
     background: #fff;
     text-align: center;
     border: 1px solid #e5e5e5;
+  }
+}
+
+@media (max-width: 575px) {
+  .imgWrapper {
+    aspect-ratio: 2;
   }
 }

@@ -17,7 +17,7 @@
   color: var(--c-dark);
 }
 .wrapper.green {
-  background: var(--c-green-2);
+  background: var(--c-green);
 }
 .wrapper.green:hover {
   background: var(--c-green-hover);

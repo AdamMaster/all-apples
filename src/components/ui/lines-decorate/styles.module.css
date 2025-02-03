@@ -20,6 +20,37 @@
 .wrapper span:nth-child(3) {
   height: 60px;
 }
+.wrapper.animate span:nth-child(1) {
+  animation: lineAnimate 1s;
+}
+.wrapper.animate span:nth-child(2) {
+  animation: lineAnimate2 1s;
+}
+.wrapper.animate span:nth-child(3) {
+  animation: lineAnimate 1s;
+}
+@keyframes lineAnimate {
+  0% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 20px;
+  }
+  100% {
+    translate: 0 0;
+  }
+}
+@keyframes lineAnimate2 {
+  0% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -20px;
+  }
+  100% {
+    translate: 0 0;
+  }
+}
 
 @media (max-width: 767px) {
   .wrapper {

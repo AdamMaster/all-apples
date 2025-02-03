@@ -2,10 +2,11 @@
 import React from 'react'
 import s from './styles.module.css'
 import { AdvantageItemType, Advantages } from '@/components/advantages/advantages'
-import { Button, Heading } from '@/components/ui'
+import { Breadcrumbs, Button, Heading } from '@/components/ui'
 import { ArrowLeft } from 'lucide-react'
 import { useStoreModal } from '@/store'
 import { Feedback } from '@/components'
+import { usePathname, useRouter } from 'next/navigation'
 
 interface Props {
   className?: string
@@ -43,10 +44,11 @@ export const Content: React.FC<Props> = ({ className }) => {
   return (
     <section className={`${s.content} ${className ? className : ''}`}>
       <div className='container'>
-        <Button className={s.backLink} link='/' color='grey'>
+        <Breadcrumbs />
+        {/* <Button className={s.backLink} link='/' color='grey'>
           <ArrowLeft size={15} />
           Назад
-        </Button>
+        </Button> */}
         <div className={s.contentInner}>
           <div className={s.grid}>
             <div className={s.gridContent}>

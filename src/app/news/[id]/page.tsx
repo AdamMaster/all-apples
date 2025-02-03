@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { prisma } from '../../../../prisma/prisma-client'
 import { notFound } from 'next/navigation'
-import { Button, Heading, LinesDecorate } from '@/components/ui'
+import { Breadcrumbs, Button, Heading, LinesDecorate } from '@/components/ui'
 import { ArrowLeft } from 'lucide-react'
 import s from './styles.module.css'
 import type { Metadata } from 'next'
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   keywords: 'новости, статьи, яблоки оптом, предложения, акции'
 }
 
-export default async function NewsPage({ params: { id } }: { params: { id: string } }) {
+export default async function NewsDetailsPage({ params: { id } }: { params: { id: string } }) {
   if (!id || isNaN(Number(id))) {
     return notFound()
   }
@@ -37,10 +37,11 @@ export default async function NewsPage({ params: { id } }: { params: { id: strin
       <PromoOther title={newsItem.title} imageUrl={newsItem.imageUrl} />
       <section className={s.content}>
         <div className={`${s.container} container`}>
-          <Button className={s.backLink} link='/#news' color='grey'>
+          <Breadcrumbs />
+          {/* <Button className={s.backLink} link='/#news' color='grey'>
             <ArrowLeft size={15} />
             Назад
-          </Button>
+          </Button> */}
           <div className={s.contentInner}>
             <div className={s.paragraphs}>
               {newsItem.paragraphs.map(paragraph => (

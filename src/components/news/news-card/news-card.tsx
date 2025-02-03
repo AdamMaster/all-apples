@@ -24,6 +24,7 @@ export const NewsCard: React.FC<Props> = ({ id, title, text, imageUrl, date }) =
         <Image src={imageUrl} alt={title} fill loading='lazy' />
       </div>
       <div className={s.content}>
+        <div className={s.date}>{formattedDate}</div>
         <div className={s.title}>{title}</div>
         <div className={s.text}>
           <p className={s.text}>{text}</p>

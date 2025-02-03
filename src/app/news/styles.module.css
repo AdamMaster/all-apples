@@ -1,0 +1,28 @@
+.wrapper {
+  margin-bottom: 140px;
+}
+.promo {
+}
+.content {
+}
+.contentInner {
+  padding-top: 60px;
+}
+@media (max-width: 1199px) {
+}
+@media (max-width: 991px) {
+  .wrapper {
+    margin-bottom: 100px;
+  }
+}
+
+@media (max-width: 767px) {
+}
+@media (max-width: 575px) {
+  .wrapper {
+    margin-bottom: 80px;
+  }
+  .contentInner {
+    padding-top: 30px;
+  }
+}

@@ -4,14 +4,28 @@ export const messengers = {
   telegram: 'AdamLampezhev'
 }
 export const mail = 'adamsapple.kbr@gmail.com'
-export const links = {
-  home: '/',
-  policy: '/policy'
-}
+export const links = [
+  {
+    href: '/',
+    text: 'Главная'
+  },
+  {
+    href: '/news',
+    text: 'Статьи'
+  },
+  {
+    href: '/partners',
+    text: 'Партнерам'
+  },
+  {
+    href: '/policy',
+    text: 'Политика конфиденциальности'
+  }
+]
 export const address = 'Россия, Кабардино-Балкарская республика,г. Баксан, ул. Черкесская, дом 78'
 export const menuLinks = [
   { id: 'catalog', text: 'Каталог', href: '/#catalog' },
   { id: 'about', text: 'О нас', href: '/#about' },
-  { id: 'news', text: 'Статьи', href: '/#news' },
+  { id: 'news', text: 'Статьи', href: '/news' },
   { id: 'partners', text: 'Партнерам', href: '/partners' }
 ]

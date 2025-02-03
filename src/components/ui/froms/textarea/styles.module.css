@@ -9,7 +9,7 @@
   padding: 15px;
   background: var(--c-grey);
   border-radius: var(--radius-2);
-  border: 1px solid var(--c-grey-2);
+  border: 1px solid var(--c-border);
   font-family: inherit;
   color: var(--c-dark);
   resize: none;
