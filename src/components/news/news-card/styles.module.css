@@ -4,7 +4,7 @@
 }
 .imgWrapper {
   position: relative;
-  aspect-ratio: 1.3;
+  aspect-ratio: 1.6;
 }
 .imgWrapper img {
   object-fit: cover;
