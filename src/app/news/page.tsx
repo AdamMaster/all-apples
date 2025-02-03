@@ -1,4 +1,3 @@
-import { NextRequest } from 'next/server'
 import s from './styles.module.css'
 import { NewsList, PromoOther } from '@/components'
 import { Breadcrumbs } from '@/components/ui'
@@ -24,7 +23,7 @@ export default async function NewsPage() {
 
   return (
     <div className={s.wrapper}>
-      <PromoOther className={s.promo} title='Статьи' imageUrl='/images/promo-bg-3.jpg' />
+      <PromoOther className={s.promo} title='Статьи' imageUrl='/images/promo-bg-4.jpg' />
       <section className={s.content}>
         <div className='container'>
           <Breadcrumbs />
