@@ -58,7 +58,7 @@ export const Quality: React.FC<Props> = ({ className }) => {
             вид. Современные технологии хранения и строгий контроль качества гарантируют, что вы получите только лучшие
             фрукты.
           </div>
-          <VideoPlayer className={s.videoPlayer} src='/videos/video.mp4' />
+          <VideoPlayer className={s.videoPlayer} src='/videos/video-1.mp4' />
           <Advantages className={s.advantages} items={advantageItems} layout='row' />
         </div>
       </div>
