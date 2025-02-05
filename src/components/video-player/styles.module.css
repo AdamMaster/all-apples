@@ -1,0 +1,44 @@
+.wrapper {
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2;
+}
+.player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.button {
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+.button svg {
+  pointer-events: none;
+}
+.button.show {
+  opacity: 1;
+  visibility: visible;
+}
+.button.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+.poster {
+  pointer-events: none;
+  object-fit: cover;
+}

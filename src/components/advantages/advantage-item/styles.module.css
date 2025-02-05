@@ -3,6 +3,18 @@
   align-items: flex-start;
   gap: 20px;
 }
+.wrapper.column {
+  padding: 30px;
+  background: var(--c-grey);
+}
+.column {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.row {
+  flex-direction: row;
+}
 .icon {
   display: flex;
 }
@@ -13,13 +25,26 @@
   font-weight: 700;
   font-size: 1.25rem;
 }
+.column .title {
+  font-size: 1.125rem;
+}
 .description {
   line-height: 1.5;
   color: #666;
 }
 
+@media (max-width: 1199px) {
+  .column .description {
+    font-size: 0.875rem;
+  }
+}
+@media (max-width: 991px) {
+  .column .description {
+    font-size: 1rem;
+  }
+}
 @media (max-width: 480px) {
-  .wrapper {
+  .row {
     flex-direction: column;
     gap: 10px;
   }

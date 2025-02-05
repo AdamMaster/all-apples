@@ -47,7 +47,7 @@
 .description {
   font-size: 1rem;
   line-height: 1.5;
-  color: #666;
+  color: var(--c-dark);
 }
 .button {
   margin-top: 40px;

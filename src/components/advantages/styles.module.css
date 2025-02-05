@@ -1,11 +1,27 @@
 .wrapper {
-  display: flex;
   gap: 20px;
+}
+.column {
+  display: flex;
   flex-direction: column;
 }
+.row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
 
+@media (max-width: 991px) {
+  .row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 575px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+}
 @media (max-width: 480px) {
-  .wrapper {
+  .column {
     gap: 40px;
   }
 }

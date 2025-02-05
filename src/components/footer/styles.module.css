@@ -16,11 +16,11 @@
 .copyright {
   font-weight: 300;
   font-size: 0.875rem;
-  color: #9b9b9b;
+  color: #aaa;
 }
 .title {
   margin-bottom: 15px;
-  color: #9b9b9b;
+  color: #aaa;
 }
 .text {
 }
@@ -33,7 +33,7 @@
 }
 .bottomLink {
   font-size: 0.875rem;
-  color: #9b9b9b;
+  color: #aaa;
 }
 .bottomLink:hover {
   opacity: 1;

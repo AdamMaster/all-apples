@@ -1,7 +1,7 @@
 import React from 'react'
 import s from './styles.module.css'
-import Image from 'next/image'
 import { AdvantageItem } from './advantage-item/advantage-item'
+import clsx from 'clsx'
 
 export interface AdvantageItemType {
   id: number
@@ -13,13 +13,19 @@ export interface AdvantageItemType {
 interface Props {
   className?: string
   items: AdvantageItemType[]
+  layout?: 'column' | 'row'
 }
 
-export const Advantages: React.FC<Props> = ({ className, items }) => {
+export const Advantages: React.FC<Props> = ({ className, items, layout = 'column' }) => {
+  const layoutClassName = {
+    column: s.column,
+    row: s.row
+  }[layout!]
+
   return (
-    <div className={`${s.wrapper}  ${className ? className : ''}`}>
+    <div className={clsx(s.wrapper, layoutClassName, className)}>
       {items.map(item => (
-        <AdvantageItem className={s.item} {...item} key={item.id} />
+        <AdvantageItem className={clsx(s.item)} layout={layout} {...item} key={item.id} />
       ))}
     </div>
   )
