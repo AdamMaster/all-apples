@@ -31,7 +31,6 @@ export const VideoPlayer: React.FC<Props> = ({ className, src }) => {
       <video
         className={s.player}
         ref={videoRef}
-        poster='/images/poster.jpg'
         controls
         preload='none'
         onPlay={() => setIsPlaying(true)}
@@ -40,7 +39,7 @@ export const VideoPlayer: React.FC<Props> = ({ className, src }) => {
       >
         <source src={src} type='video/mp4' />
       </video>
-      {/* {!isStart && <Image className={s.poster} src='/images/poster.jpg' alt='Видео постер' fill />} */}
+      {!isStart && <Image className={s.poster} src='/images/poster.jpg' alt='Видео постер' fill />}
     </div>
   )
 }
