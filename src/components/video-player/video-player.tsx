@@ -3,7 +3,7 @@
 import React from 'react'
 import clsx from 'clsx'
 import s from './styles.module.css'
-import { PlayIcon } from 'lucide-react'
+import { Pause, PlayIcon } from 'lucide-react'
 import Image from 'next/image'
 
 interface Props {
@@ -17,16 +17,29 @@ export const VideoPlayer: React.FC<Props> = ({ className, src }) => {
   const videoRef = React.useRef<HTMLVideoElement>(null)
 
   const onClick = () => {
-    if (!videoRef.current || isStart) return
+    console.log(isStart)
+    if (!videoRef.current) return
 
-    setIsStart(true)
-    videoRef.current.play()
+    if (videoRef.current.currentTime === 0 && !isStart) {
+      setIsStart(true)
+      videoRef.current.play()
+    } else {
+      if (!videoRef.current.paused) {
+        videoRef.current.pause()
+      } else {
+        videoRef.current.play()
+      }
+    }
   }
 
   return (
     <div className={clsx(s.wrapper, className)}>
-      <button className={clsx(s.button, isPlaying ? s.hide : s.show)}>
-        <PlayIcon width={50} height={50} fill='#fff' stroke='transparent' />
+      <button className={clsx(s.button, isPlaying ? s.hide : s.show)} onClick={onClick}>
+        {!isPlaying ? (
+          <PlayIcon className={s.playIcon} width={50} height={50} fill='#fff' stroke='transparent' />
+        ) : (
+          <Pause className={s.pauseIcon} width={50} height={50} fill='#fff' stroke='transparent' />
+        )}
       </button>
       <video
         className={s.player}
@@ -35,7 +48,6 @@ export const VideoPlayer: React.FC<Props> = ({ className, src }) => {
         preload='none'
         onPlay={() => setIsPlaying(true)}
         onPause={() => setIsPlaying(false)}
-        onClick={onClick}
       >
         <source src={src} type='video/mp4' />
       </video>

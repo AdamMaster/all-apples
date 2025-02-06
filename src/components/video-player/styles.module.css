@@ -13,7 +13,6 @@
   object-fit: cover;
 }
 .button {
-  pointer-events: none;
   position: absolute;
   z-index: 1;
   top: 50%;
@@ -26,19 +25,35 @@
   height: 80px;
   border-radius: 50%;
   transition: 0.3s;
+  background: #ffffff1e;
 }
 .button svg {
   pointer-events: none;
 }
 .button.show {
   opacity: 1;
-  visibility: visible;
 }
 .button.hide {
   opacity: 0;
-  visibility: hidden;
+}
+.playIcon {
+  translate: 2px 0;
 }
 .poster {
   pointer-events: none;
   object-fit: cover;
+}
+.wrapper:hover .button {
+  opacity: 1;
+}
+
+@media (max-width: 575px) {
+  .button {
+    width: 60px;
+    height: 60px;
+  }
+  .button svg {
+    width: 30px;
+    height: 30px;
+  }
 }
