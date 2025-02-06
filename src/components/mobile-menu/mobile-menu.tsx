@@ -2,7 +2,7 @@
 
 import s from './styles.module.css'
 import { useStoreMobileMenu } from '@/store'
-import { useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { mail, messengers, phoneNumbers } from '@/shared/constants/constants'
 import { ContactLink, Logo } from '@/components/ui'
 import { Navbar } from '../navbar/navbar'
@@ -21,8 +21,33 @@ export const MobileMenu = () => {
     }
   }, [isOpen])
 
+  const menuRef = React.useRef<HTMLDivElement>(null)
+
+  const touchStartY = React.useRef(0)
+  const touchEndY = React.useRef(0)
+
+  const onTouchStart = (e: React.TouchEvent) => {
+    touchStartY.current = e.touches[0].clientY
+  }
+
+  const onTouchMove = (e: React.TouchEvent) => {
+    touchEndY.current = e.touches[0].clientY
+  }
+
+  const onTouchEnd = () => {
+    if (touchStartY.current - touchEndY.current > 50) {
+      setOpen(false) // Закрываем меню при свайпе вверх
+    }
+  }
+
   return (
-    <div className={`${s.wrapper} ${isOpen ? s.active : ''}`}>
+    <div
+      className={`${s.wrapper} ${isOpen ? s.active : ''}`}
+      ref={menuRef}
+      onTouchStart={onTouchStart}
+      onTouchMove={onTouchMove}
+      onTouchEnd={onTouchEnd}
+    >
       <Logo className={s.logo} />
       <div className={s.closeButton} onClick={() => setOpen(false)}>
         <X width={30} height={30} />
