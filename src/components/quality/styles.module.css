@@ -79,8 +79,7 @@
   .subtitle {
     font-size: 1rem;
   }
-  .advantages {
+  .wrapper .advantages {
     display: none;
-    margin-top: 60px;
   }
 }
