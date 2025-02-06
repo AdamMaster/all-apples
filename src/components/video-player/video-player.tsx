@@ -36,9 +36,9 @@ export const VideoPlayer: React.FC<Props> = ({ className, src }) => {
     <div className={clsx(s.wrapper, className)}>
       <button className={clsx(s.button, isPlaying ? s.hide : s.show)} onClick={onClick}>
         {!isPlaying ? (
-          <PlayIcon className={s.playIcon} width={50} height={50} fill='#fff' stroke='transparent' />
+          <PlayIcon className={s.playIcon} width={50} height={40} fill='#fff' stroke='transparent' />
         ) : (
-          <Pause className={s.pauseIcon} width={50} height={50} fill='#fff' stroke='transparent' />
+          <Pause className={s.pauseIcon} width={50} height={40} fill='#fff' stroke='transparent' />
         )}
       </button>
       <video

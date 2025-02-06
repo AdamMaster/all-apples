@@ -9,20 +9,23 @@
 }
 .about {
 }
-.news {
-  padding-top: 140px;
+.quality {
   margin-bottom: 140px;
 }
-.quality {
+
+.news {
+  margin-bottom: 140px;
 }
 
 @media (max-width: 1199px) {
   .catalog {
     margin-bottom: 100px;
   }
+  .quality {
+    margin-bottom: 100px;
+  }
 
   .news {
-    padding-top: 100px;
     margin-bottom: 100px;
   }
 }
@@ -30,8 +33,5 @@
 @media (max-width: 575px) {
   .catalog {
     padding-top: 50px;
-  }
-  .news {
-    padding-top: 80px;
   }
 }
