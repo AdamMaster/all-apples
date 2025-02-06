@@ -39,13 +39,15 @@ export const Quality: React.FC<Props> = ({ className }) => {
     }
   ]
 
-  const starsQuantity = () => {
+  const [starsQuantity, setStarsQuantity] = React.useState(3)
+
+  React.useEffect(() => {
     if (window.innerWidth <= 545) {
-      return 5
+      return setStarsQuantity(5)
     } else {
-      return 3
+      return setStarsQuantity(3)
     }
-  }
+  }, [])
 
   return (
     <section className={clsx(s.wrapper, className)}>
@@ -56,11 +58,11 @@ export const Quality: React.FC<Props> = ({ className }) => {
       <div className='container'>
         <div className={s.inner}>
           <div className={s.head}>
-            <Stars className={s.stars} quantity={starsQuantity()} width={20} />
+            <Stars className={s.stars} quantity={starsQuantity} width={20} />
             <Heading className={s.title} level='h2'>
               Наши <span className=''>стандарты</span>
             </Heading>
-            <Stars className={s.stars} quantity={starsQuantity()} width={20} />
+            <Stars className={s.stars} quantity={starsQuantity} width={20} />
           </div>
           <div className={s.subtitle}>
             Мы следим за каждым этапом – от сбора до доставки, чтобы наши яблоки сохраняли свежесть, вкус и товарный
