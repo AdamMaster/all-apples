@@ -6,6 +6,7 @@ export const GoogleAnalytics = () => {
     <Fragment>
       <Script async src={'https://www.googletagmanager.com/gtag/js?id=G-RF2PNCKR4V'} strategy='afterInteractive' />
       <Script
+        async
         id='google-analytics'
         dangerouslySetInnerHTML={{
           __html: `
