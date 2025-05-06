@@ -8,10 +8,6 @@ import NextTopLoader from 'nextjs-toploader'
 const mazzard = localFont({
   src: [
     {
-      path: '../../public/fonts/MazzardH-Thin.woff',
-      weight: '200'
-    },
-    {
       path: '../../public/fonts/MazzardH-Light.woff',
       weight: '300'
     },
