@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://apple07.ru
+Host: https://allapples.ru
 
 # Sitemaps
-Sitemap: https://apple07.ru/sitemap.xml
+Sitemap: https://allapples.ru/sitemap.xml
