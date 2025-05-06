@@ -23,7 +23,7 @@ export const Logo: FC<Props> = ({ text = true, square = true, className }) => {
       {text && (
         <div className={s.text}>
           <div className={s.name}>
-            Apples<span>07</span>
+            All<span>Apples</span>
           </div>
           <div className={s.descr}>оптовая продажа яблок</div>
         </div>

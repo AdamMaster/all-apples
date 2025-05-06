@@ -16,7 +16,7 @@ export async function POST(request: NextRequest) {
     })
 
     const mailOptions = {
-      from: '"Apples07" <no-reply@yourdomain.com>',
+      from: '"AllApples.ru" <no-reply@yourdomain.com>',
       to: process.env.EMAIL,
       subject: subject,
       html: message

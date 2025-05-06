@@ -3,7 +3,7 @@ export const messengers = {
   whatsapp: '+79304087971',
   telegram: 'AdamLampezhev'
 }
-export const mail = 'adamsapple.kbr@gmail.com'
+export const mail = 'lampezhev86@gmail.com'
 export const links = [
   {
     href: '/',
