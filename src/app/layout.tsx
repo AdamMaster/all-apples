@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
-import { GoogleAnalytics, GoogleAnalyticsNoScript, GoogleTagManager, YandexMetric } from '@/components/analytics'
+import { GoogleAnalytics, GoogleAnalyticsNoScript, YandexMetric } from '@/components/analytics'
 import './assets/styles/globals.css'
 import { Footer, Header, MobileMenu, Modal } from '@/components'
 import NextTopLoader from 'nextjs-toploader'
@@ -50,7 +50,6 @@ export default function RootLayout({
         <meta name='color-scheme' content='light' />
         <link rel='icon' href='/images/favicon.ico' type='image/x-icon'></link>
         {/* <YandexMetric /> */}
-        <GoogleTagManager />
         <GoogleAnalytics />
       </head>
       <body className={mazzard.className}>

@@ -21,9 +21,9 @@ export default function PolicyPage() {
               <div className={s.paragraph}>
                 <div className={s.text}>
                   <p>
-                    Компания <b>Apples07</b> уважает конфиденциальность пользователей нашего веб-сайта{' '}
-                    <Link className={s.link} href={'www.apples07.ru'}>
-                      www.apples07.ru
+                    Компания <b>AllApples</b> уважает конфиденциальность пользователей нашего веб-сайта{' '}
+                    <Link className={s.link} href={'www.allapples.ru'}>
+                      www.allapples.ru
                     </Link>{' '}
                     (далее — «Сайт») и стремится защищать персональные данные, которые вы предоставляете. В данной
                     Политике конфиденциальности описывается, какие данные мы собираем, как их используем и какие у вас
@@ -126,7 +126,7 @@ export default function PolicyPage() {
                 <div className={s.text}>
                   <p>Если у вас есть вопросы по поводу обработки данных, вы можете связаться с нами:</p>
                   <p>
-                    <b>Apples07</b> <br />
+                    <b>AllApples</b> <br />
                     Email:
                     <ContactLink className={s.linksItem} link={`mailto:${mail}`} text={mail} />
                     <br />
