@@ -49,7 +49,7 @@ export default function RootLayout({
         {/* <meta name='yandex-verification' content='432e46207c298a5e' /> */}
         <meta name='color-scheme' content='light' />
         <link rel='icon' href='/images/favicon.ico' type='image/x-icon'></link>
-        {/* <YandexMetric /> */}
+        {<YandexMetric />}
         <GoogleAnalytics />
       </head>
       <body className={mazzard.className}>

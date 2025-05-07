@@ -11,7 +11,7 @@ export const YandexMetric = () => {
    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-   ym(97863631, "init", {
+   ym(101671629, "init", {
         clickmap:true,
         trackLinks:true,
         accurateTrackBounce:true,
@@ -19,7 +19,9 @@ export const YandexMetric = () => {
    });`}
       </Script>
       <noscript>
-        <img src={`https://mc.yandex.ru/watch/97863631`} style={{ position: 'absolute', left: '-9999px' }} alt='' />
+        <div>
+          <img src='https://mc.yandex.ru/watch/101671629' style='position:absolute; left:-9999px;' alt='' />
+        </div>
       </noscript>
     </Fragment>
   )
