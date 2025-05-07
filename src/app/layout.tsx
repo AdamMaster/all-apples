@@ -49,6 +49,7 @@ export default function RootLayout({
         {/* <meta name='yandex-verification' content='432e46207c298a5e' /> */}
         <meta name='color-scheme' content='light' />
         <link rel='icon' href='/favicon.ico' type='image/x-icon'></link>
+        <link rel='icon' href='/favicon.svg' type='image/svg+xml'></link>
         <link rel='icon' href='/favicon-32x32.png' type='image/png' sizes='32x32'></link>
         <link rel='icon' href='/favicon-16x16.png' type='image/png' sizes='16x16'></link>
       </head>
