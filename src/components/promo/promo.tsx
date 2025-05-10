@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import s from './styles.module.css'
 import { FC } from 'react'
-import { Button, Heading, LinesDecorate } from '@/components/ui'
+import { Button, LinesDecorate } from '@/components/ui'
 
 interface Props {
   className?: string
@@ -13,9 +13,7 @@ export const Promo: FC<Props> = ({ className }) => {
       {/* <Image className={s.bg} alt={'Яблоки оптом'} src={'/images/promo-bg-3.jpg'} fill loading='eager' /> */}
       <div className={'container'}>
         <div className={s.inner}>
-          <Heading className={s.title} level='h1'>
-            Яблоки оптом
-          </Heading>
+          <h1 className={s.title}>Яблоки оптом</h1>
           <div className={s.subtitle}>разных сортов и калибров</div>
           <div className={s.text}>
             <div className={s.otherTitle}>От надежных производителей Кабарлино-Балкарии</div>
