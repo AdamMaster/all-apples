@@ -1,13 +1,18 @@
 'use client'
 
-import React from 'react'
+import React, { FC } from 'react'
 import s from './styles.module.css'
 import { mail, messengers, phoneNumbers } from '@/shared/constants/constants'
 import { useStoreMobileMenu } from '@/store'
 import { Burger, ContactLink, Logo } from '@/components/ui'
 import { Navbar } from '../navbar/navbar'
+import clsx from 'clsx'
 
-export const Header = () => {
+interface Props {
+  className?: string
+}
+
+export const Header: FC<Props> = ({ className }) => {
   const ref = React.useRef<HTMLDivElement>(null)
   const [isScroll, setIsScroll] = React.useState(false)
   const { isOpen, setOpen } = useStoreMobileMenu()
@@ -32,7 +37,7 @@ export const Header = () => {
   // }, [isScroll])
 
   return (
-    <header className={`${s.wrapper} ${isScroll ? s.white : ''}`} ref={ref}>
+    <header className={clsx(className, s.wrapper, isScroll ? s.white : '')} ref={ref}>
       <div className={'container'}>
         <div className={s.bottomInner}>
           <Logo className={s.logo} color={'default'} />

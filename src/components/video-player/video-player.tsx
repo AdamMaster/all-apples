@@ -51,7 +51,15 @@ export const VideoPlayer: React.FC<Props> = ({ className, src }) => {
       >
         <source src={src} type='video/mp4' />
       </video>
-      {!isStart && <Image className={s.poster} src='/images/poster.jpg' alt='Видео постер' fill />}
+      {!isStart && (
+        <Image
+          className={s.poster}
+          src='/images/poster.jpg'
+          alt='Видео постер'
+          fill
+          sizes='(max-width: 991px) 961px, 605px'
+        />
+      )}
     </div>
   )
 }

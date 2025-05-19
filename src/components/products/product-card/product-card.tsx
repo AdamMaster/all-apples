@@ -75,7 +75,7 @@ export const ProductCard: FC<Props> = ({
         <div className={s.tastingEvaluation}>{tastingEvaluation}</div>
       </Tooltip>
       <div className={s.head}>
-        <Image className={s.img} alt={name} src={imageUrl} fill />
+        <Image className={s.img} alt={name} src={imageUrl} fill sizes='(max-width: 768px) 100vw, 20vw' />
       </div>
       <div className={s.body}>
         {/* <div className={s.category}>{type}</div> */}

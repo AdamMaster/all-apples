@@ -42,7 +42,7 @@ export const Quality: React.FC<Props> = ({ className }) => {
   return (
     <section className={clsx(s.wrapper, className)}>
       <div className={s.imgBox}>
-        <Image className={s.img1} src='/images/tubercle.svg' alt='' width={200} height={200} />
+        <Image className={s.img1} src='/images/tubercle.svg' alt='' width={250} height={200} />
         <Image className={s.img2} src='/images/apples.jpg' alt='' width={200} height={200} />
       </div>
       <div className='container'>

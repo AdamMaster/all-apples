@@ -21,7 +21,7 @@ export const NewsCard: React.FC<Props> = ({ id, title, text, imageUrl, date }) =
   return (
     <Link href={`/news/${id}`} className={s.wrapper}>
       <div className={s.imgWrapper}>
-        <Image src={imageUrl} alt={title} fill loading='lazy' />
+        <Image src={imageUrl} alt={title} fill sizes='(max-width: 768px) 100vw, 410px' loading='lazy' />
       </div>
       <div className={s.content}>
         <div className={s.date}>{formattedDate}</div>

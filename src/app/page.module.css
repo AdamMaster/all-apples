@@ -1,14 +1,16 @@
 .wrapper {
   background: #fff;
 }
-.promo {
-}
+
+.promo {}
+
 .catalog {
   padding-top: 100px;
   margin-bottom: 140px;
 }
-.about {
-}
+
+.about {}
+
 .quality {
   margin-bottom: 140px;
 }
@@ -21,6 +23,7 @@
   .catalog {
     margin-bottom: 100px;
   }
+
   .quality {
     margin-bottom: 100px;
   }
@@ -34,4 +37,12 @@
   .catalog {
     padding-top: 50px;
   }
+}
+
+.notFoundWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
