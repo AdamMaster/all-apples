@@ -12,7 +12,7 @@ interface Props {
 export const PromoOther: FC<Props> = ({ className, title, imageUrl }) => {
   return (
     <section className={`${s.wrapper} ${className ? className : ''}`}>
-      <Image className={s.bg} src={imageUrl} alt={title} fill />
+      <Image className={s.bg} src={imageUrl} alt={title} fill priority />
       <div className='container'>
         <div className={s.inner}>
           <Heading className={s.title} level='h1'>
