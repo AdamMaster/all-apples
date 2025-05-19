@@ -22,8 +22,8 @@ export default function PolicyPage() {
                 <div className={s.text}>
                   <p>
                     Компания <b>AllApples</b> уважает конфиденциальность пользователей нашего веб-сайта{' '}
-                    <Link className={s.link} href={'www.allapples.ru'}>
-                      www.allapples.ru
+                    <Link className={s.link} href={'https://allapples.ru/'}>
+                      allapples.ru
                     </Link>{' '}
                     (далее — «Сайт») и стремится защищать персональные данные, которые вы предоставляете. В данной
                     Политике конфиденциальности описывается, какие данные мы собираем, как их используем и какие у вас
