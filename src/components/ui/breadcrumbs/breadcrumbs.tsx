@@ -18,7 +18,6 @@ interface Props {
 
 export const Breadcrumbs: React.FC<Props> = ({ className }) => {
   const pathname = usePathname()
-  console.log(links)
 
   // Создаем массив хлебных крошек
   const breadcrumbs: Item[] = pathname

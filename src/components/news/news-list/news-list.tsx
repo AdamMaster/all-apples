@@ -10,7 +10,6 @@ interface Props {
 }
 
 export const NewsList: React.FC<Props> = ({ className, items }) => {
-  console.log(items)
   return (
     <div className={clsx(s.wrapper, className)}>
       {items.map(item => (

@@ -14,7 +14,7 @@ interface Props {
 }
 
 export const NewsCard: React.FC<Props> = ({ id, title, text, imageUrl, date }) => {
-  const formattedDate = date.toLocaleDateString('ru-RU')
+  const formattedDate = new Date(date).toLocaleDateString('ru-RU')
   {
     String(formattedDate)
   }

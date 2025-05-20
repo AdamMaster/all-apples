@@ -11,34 +11,34 @@ interface Props {
   className?: string
 }
 
-export const Quality: React.FC<Props> = ({ className }) => {
-  const advantageItems: AdvantageItemType[] = [
-    {
-      id: 1,
-      title: 'Сбор и сортировка',
-      description: 'Ручная проверка и отбор только качественных яблок',
-      icon: '/images/boxes-icon.svg'
-    },
-    {
-      id: 2,
-      title: 'Хранение',
-      description: 'Поддержание оптимальной температуры и влажности',
-      icon: '/images/gradus-icon.svg'
-    },
-    {
-      id: 3,
-      title: 'Газовая среда',
-      description: 'Замедление созревания для продления свежести',
-      icon: '/images/gas-icon.svg'
-    },
-    {
-      id: 4,
-      title: 'Контроль перед отправкой',
-      description: 'Повторная проверка перед отправкой клиенту',
-      icon: '/images/quality-icon.svg'
-    }
-  ]
+const advantageItems: AdvantageItemType[] = [
+  {
+    id: 1,
+    title: 'Сбор и сортировка',
+    description: 'Ручная проверка и отбор только качественных яблок',
+    icon: '/images/boxes-icon.svg'
+  },
+  {
+    id: 2,
+    title: 'Хранение',
+    description: 'Поддержание оптимальной температуры и влажности',
+    icon: '/images/gradus-icon.svg'
+  },
+  {
+    id: 3,
+    title: 'Газовая среда',
+    description: 'Замедление созревания для продления свежести',
+    icon: '/images/gas-icon.svg'
+  },
+  {
+    id: 4,
+    title: 'Контроль перед отправкой',
+    description: 'Повторная проверка перед отправкой клиенту',
+    icon: '/images/quality-icon.svg'
+  }
+]
 
+export const Quality: React.FC<Props> = ({ className }) => {
   return (
     <section className={clsx(s.wrapper, className)}>
       <div className={s.imgBox}>
