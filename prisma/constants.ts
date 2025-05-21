@@ -1,5 +1,3 @@
-import { Product, Type } from '@prisma/client'
-
 export const categories = [
   {
     name: 'Фрукты'
