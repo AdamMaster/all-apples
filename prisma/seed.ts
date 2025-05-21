@@ -3,15 +3,18 @@ import { categories, news, products, types } from './constants'
 
 async function up() {
   await prisma.category.createMany({
-    data: categories
+    data: categories,
+    skipDuplicates: true
   })
 
   await prisma.type.createMany({
-    data: types
+    data: types,
+    skipDuplicates: true
   })
 
   await prisma.product.createMany({
-    data: products
+    data: products,
+    skipDuplicates: true
   })
 
   for (const item of news) {

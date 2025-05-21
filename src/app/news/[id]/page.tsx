@@ -1,11 +1,10 @@
-import Image from 'next/image'
 import { prisma } from '../../../../prisma/prisma-client'
 import { notFound } from 'next/navigation'
-import { Breadcrumbs, Button, Heading, LinesDecorate } from '@/components/ui'
-import { ArrowLeft } from 'lucide-react'
+import { Breadcrumbs } from '@/components/ui'
 import s from './styles.module.css'
 import type { Metadata } from 'next'
 import { PromoOther } from '@/components'
+import parse from 'html-react-parser'
 
 export const metadata: Metadata = {
   title: 'Полезные статьи - Оптовая продажа яблок',
@@ -38,20 +37,12 @@ export default async function NewsDetailsPage({ params: { id } }: { params: { id
       <section className={s.content}>
         <div className={`${s.container} container`}>
           <Breadcrumbs />
-          {/* <Button className={s.backLink} link='/#news' color='grey'>
-            <ArrowLeft size={15} />
-            Назад
-          </Button> */}
           <div className={s.contentInner}>
             <div className={s.paragraphs}>
               {newsItem.paragraphs.map(paragraph => (
                 <div className={s.paragraph} key={paragraph.id}>
                   {paragraph.subtitle && <div className={s.paragraphSubtitle}>{paragraph.subtitle}</div>}
-                  <div className={s.text}>
-                    {paragraph.text.split('\n').map((textItem, index) => (
-                      <p key={index} dangerouslySetInnerHTML={{ __html: textItem }} />
-                    ))}
-                  </div>
+                  <div className={s.text}>{parse(paragraph.text)}</div>
                 </div>
               ))}
             </div>

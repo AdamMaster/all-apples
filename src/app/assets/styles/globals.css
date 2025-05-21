@@ -17,10 +17,12 @@
   scroll-behavior: smooth;
   color-scheme: light;
 }
+
 html {
   scrollbar-gutter: stable;
   background-color: #fff;
 }
+
 body {
   display: flex;
   flex-direction: column;
@@ -32,17 +34,21 @@ body {
   line-height: 1.3;
   color: var(--c-dark);
 }
+
 main {
   flex-grow: 1;
 }
+
 button:active {
   outline: none;
 }
+
 a {
   transition: 0.2s;
   color: inherit;
   text-decoration: none;
 }
+
 ul,
 ol,
 li {
@@ -61,6 +67,7 @@ li {
   width: 4px;
   height: 4px;
 }
+
 .scrollbar::-webkit-scrollbar-track {
   /* background: #ededed; */
 }
@@ -90,100 +97,145 @@ h6 {
   font-weight: 600;
   font-family: inherit;
 }
+
 h1 {
   font-size: 4.3rem;
   font-weight: 700;
   text-transform: uppercase;
 }
+
 h2 {
   font-size: 3rem;
   font-weight: 600;
   line-height: 1;
 }
+
 h3 {
   font-size: 1.5rem;
   font-weight: 500;
 }
+
 h5 {
   font-size: 1.25rem;
   font-weight: 500;
 }
+
 h6 {
   font-size: 1.125rem;
   font-weight: 500;
 }
+
 p {
   margin: 0;
 }
+
 b {
   font-weight: 600;
 }
+
 input {
   background: transparent;
   border: 0;
   font-size: 1rem;
 }
+
 .input::placeholder {
   opacity: 0.6;
 }
+
 input:focus {
   outline: none;
   border-color: var(--c-dark);
 }
+
 input.not-valid {
   border-color: var(--c-red);
 }
+
 textarea {
   background: transparent;
   border: 0;
   font-size: 1rem;
 }
+
 .textarea::placeholder {
   opacity: 0.6;
 }
+
 textarea:focus {
   outline: none;
   border-color: var(--c-dark);
 }
+
 * {
   box-sizing: border-box;
 }
+
 .highlight {
   color: var(--c-green);
 }
+
 .box {
   padding: 30px;
   border-radius: var(--radius-2);
   background: var(--c-grey);
 }
+
 p {
   margin-bottom: 15px;
 }
+
 p:last-child {
   margin-bottom: 0;
 }
+
 .swiper {
   width: 100%;
   height: 100%;
 }
+
 .swiper-wrapper {
   height: 100%;
 }
+
 .swiper-slide {
   height: 100%;
 }
+
 .fields {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
+
 @media (max-width: 767px) {
   h2 {
     font-size: 2.2rem;
   }
 }
+
 @media (max-width: 575px) {
   h2 {
     font-size: 1.8rem;
   }
+}
+
+.list {
+  padding-left: 20px;
+}
+
+.list-item {
+  position: relative;
+
+}
+
+.list-item:before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: -20px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--c-green);
 }

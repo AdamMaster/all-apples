@@ -30,6 +30,7 @@
     "axios": "^1.7.9",
     "clsx": "^2.1.1",
     "dotenv": "^16.4.5",
+    "html-react-parser": "^5.2.5",
     "lucide-react": "^0.473.0",
     "next": "^14.2.3",
     "next-sitemap": "^4.2.3",

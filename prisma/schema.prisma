@@ -51,7 +51,7 @@ model Product {
 model NewsItem {
   id Int @id @default(autoincrement())
 
-  title      String
+  title      String      @unique
   paragraphs Paragraph[]
   imageUrl   String
 
