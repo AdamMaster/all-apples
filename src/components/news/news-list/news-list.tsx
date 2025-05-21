@@ -3,6 +3,7 @@ import s from './styles.module.css'
 import clsx from 'clsx'
 import { NewsItemWithRelations } from '../types/types'
 import { NewsCard } from '../news-card/news-card'
+import parse from 'html-react-parser'
 
 interface Props {
   className?: string
@@ -16,7 +17,7 @@ export const NewsList: React.FC<Props> = ({ className, items }) => {
         <NewsCard
           id={item.id}
           title={item.title}
-          text={item.paragraphs[0].text}
+          text={parse(item.paragraphs[0].text)}
           imageUrl={item.imageUrl}
           date={item.createdAt!}
           key={item.id}

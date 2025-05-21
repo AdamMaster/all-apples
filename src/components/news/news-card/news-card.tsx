@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import s from './styles.module.css'
 import Image from 'next/image'
 import { Button } from '@/components/ui'
@@ -7,7 +7,7 @@ import Link from 'next/link'
 interface Props {
   id: number
   title: string
-  text: string
+  text: ReactNode
   imageUrl: string
   date: Date
   customDate?: string

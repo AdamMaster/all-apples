@@ -8,6 +8,7 @@ import 'swiper/css'
 import { Heading } from '@/components/ui'
 import { NewsCard } from '../news-card/news-card'
 import { NewsItemWithRelations } from '../types/types'
+import parse from 'html-react-parser'
 
 interface Props {
   className?: string
@@ -69,7 +70,7 @@ export const NewsSlider: React.FC<Props> = ({ className, newsItems }) => {
                     <NewsCard
                       id={newsItem.id}
                       title={newsItem.title}
-                      text={newsItem.paragraphs[0].text}
+                      text={parse(newsItem.paragraphs[0].text)}
                       imageUrl={newsItem.imageUrl}
                       date={newsItem.createdAt!}
                     />
