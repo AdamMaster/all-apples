@@ -41,7 +41,7 @@ export const VideoPlayer: React.FC<Props> = ({ className, src }) => {
           <Pause className={s.pauseIcon} width={50} height={40} fill='#fff' stroke='transparent' />
         )}
       </button>
-      <video
+      {/* <video
         className={s.player}
         ref={videoRef}
         controls
@@ -50,7 +50,7 @@ export const VideoPlayer: React.FC<Props> = ({ className, src }) => {
         onPause={() => setIsPlaying(false)}
       >
         <source src={src} type='video/mp4' />
-      </video>
+      </video> */}
       {!isStart && (
         <Image
           className={s.poster}
