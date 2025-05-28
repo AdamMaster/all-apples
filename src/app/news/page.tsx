@@ -8,7 +8,10 @@ export const metadata: Metadata = {
   title: 'Полезные статьи - Оптовая продажа яблок',
   description:
     'Читай подробности о новых поступлениях, предложениях и акциях на оптовую продажу яблок. Следи за новыми событиями на нашем сайте.',
-  keywords: 'новости, статьи, яблоки оптом, предложения, акции'
+  keywords: 'новости, статьи, яблоки оптом, предложения, акции',
+  alternates: {
+    canonical: 'https://allapples.ru/news'
+  }
 }
 
 export default async function NewsPage() {

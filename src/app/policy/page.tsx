@@ -1,9 +1,18 @@
 import { PromoOther } from '@/components'
 import s from './styles.module.css'
 import Link from 'next/link'
-import { Breadcrumbs, Button, ContactLink, Heading } from '@/components/ui'
+import { Breadcrumbs, ContactLink, Heading } from '@/components/ui'
 import { mail, phoneNumbers } from '@/shared/constants/constants'
-import { ArrowLeft } from 'lucide-react'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Политика конфиденциальности — allapples.ru',
+  description:
+    'Ознакомьтесь с нашей политикой конфиденциальности, чтобы узнать, как мы защищаем и используем ваши персональные данные.',
+  alternates: {
+    canonical: 'https://allapples.ru/privacy-policy'
+  }
+}
 
 export default function PolicyPage() {
   return (

@@ -1,10 +1,17 @@
-import { Feedback, PromoOther } from '@/components'
+import { PromoOther } from '@/components'
 import s from './styles.module.css'
-import { Button, Heading } from '@/components/ui'
 import { AdvantageItemType, Advantages } from '@/components/advantages/advantages'
-import { useStoreModal } from '@/store'
-import { ArrowLeft } from 'lucide-react'
 import { Content } from './content'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Станьте партнером allapples.ru',
+  description:
+    'Станьте партнёром allapples.ru — расширьте свой бизнес, сотрудничая с надёжным поставщиком яблок оптом из Кабардино-Балкарии. Выгодные условия, стабильные поставки и поддержка партнёров.',
+  alternates: {
+    canonical: 'https://allapples.ru/partners'
+  }
+}
 
 export default function PartnersPage() {
   const advantageItems: AdvantageItemType[] = [

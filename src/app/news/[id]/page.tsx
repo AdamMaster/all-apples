@@ -7,7 +7,7 @@ import { PromoOther } from '@/components'
 import parse from 'html-react-parser'
 
 export const metadata: Metadata = {
-  title: 'Полезные статьи - Оптовая продажа яблок',
+  title: 'Полезные статьи - Яблоки оптом',
   description:
     'Читай подробности о новых поступлениях, предложениях и акциях на оптовую продажу яблок. Следи за новыми событиями на нашем сайте.',
   keywords: 'новости, статьи, яблоки оптом, предложения, акции'
