@@ -37,7 +37,7 @@ export const NewsSlider: React.FC<Props> = ({ className, newsItems }) => {
               speed={1000}
               loop={true}
               autoplay={{
-                delay: 2500,
+                delay: 4000,
                 disableOnInteraction: false
               }}
               modules={[Autoplay, Pagination, Navigation]}
