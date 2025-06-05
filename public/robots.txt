@@ -7,4 +7,3 @@ Host: https://allapples.ru
 
 # Sitemaps
 Sitemap: https://allapples.ru/sitemap.xml
-Sitemap: https://allapples.ru/sitemap-0.xml
