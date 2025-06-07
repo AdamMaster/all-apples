@@ -2,6 +2,17 @@ import s from './page.module.css'
 import { About, Catalog, Contacts, Delivery, NewsSlider, Promo, Quality } from '@/components'
 import { prisma } from '../../prisma/prisma-client'
 import { Suspense } from 'react'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Яблоки оптом - оптовая продажа свежих яблок',
+  description:
+    'Купить яблоки оптом по всей Стране. Свежие сорта: Фуджи, Гала, Гренни Смит, Ред Делишес и другие. Разные калибры. Оперативная доставка в любой регион России.',
+  keywords: 'яблоки оптом, оптовая продажа яблок, купить яблоки оптом, свежие фрукты оптом, доставка яблок по России',
+  alternates: {
+    canonical: 'https://allapples.ru/'
+  }
+}
 
 export default async function Home() {
   const categories = await prisma.category.findMany({

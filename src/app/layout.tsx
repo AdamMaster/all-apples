@@ -32,16 +32,6 @@ const mazzard = localFont({
   display: 'swap'
 })
 
-export const metadata: Metadata = {
-  title: 'Яблоки оптом - оптовая продажа свежих яблок',
-  description:
-    'Купить яблоки оптом по всей Стране. Свежие сорта: Фуджи, Гала, Гренни Смит, Ред Делишес и другие. Разные калибры. Оперативная доставка в любой регион России.',
-  keywords: 'яблоки оптом, оптовая продажа яблок, купить яблоки оптом, свежие фрукты оптом, доставка яблок по России',
-  alternates: {
-    canonical: 'https://allapples.ru/'
-  }
-}
-
 export default function RootLayout({
   children
 }: Readonly<{
