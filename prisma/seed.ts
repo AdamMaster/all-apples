@@ -18,18 +18,24 @@ async function up() {
   })
 
   for (const item of news) {
-    await prisma.newsItem.create({
-      data: {
-        title: item.title,
-        imageUrl: item.imageUrl,
-        paragraphs: {
-          create: item.paragraphs.map(paragraph => ({
-            subtitle: paragraph.subtitle,
-            text: paragraph.text
-          }))
-        }
-      }
+    const existing = await prisma.newsItem.findUnique({
+      where: { title: item.title }
     })
+
+    if (!existing) {
+      await prisma.newsItem.create({
+        data: {
+          title: item.title,
+          imageUrl: item.imageUrl,
+          paragraphs: {
+            create: item.paragraphs.map(paragraph => ({
+              subtitle: paragraph.subtitle,
+              text: paragraph.text
+            }))
+          }
+        }
+      })
+    }
   }
 }
 
