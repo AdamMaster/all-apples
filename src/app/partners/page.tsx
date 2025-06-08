@@ -7,7 +7,7 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Станьте партнером allapples.ru',
   description:
-    'Станьте партнёром allapples.ru — расширьте свой бизнес, сотрудничая с надёжным поставщиком яблок оптом из Кабардино-Балкарии. Выгодные условия, стабильные поставки и поддержка партнёров.',
+    'Станьте партнёром allapples.ru — расширьте свой бизнес, сотрудничая с надёжным поставщиком яблок оптом из Кабардино-Балкарии.',
   alternates: {
     canonical: 'https://allapples.ru/partners'
   }
