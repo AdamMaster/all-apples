@@ -6,11 +6,27 @@ import type { Metadata } from 'next'
 import { PromoOther } from '@/components'
 import parse from 'html-react-parser'
 
-export const metadata: Metadata = {
-  title: 'Полезные статьи - Яблоки оптом',
-  description:
-    'Читай подробности о новых поступлениях, предложениях и акциях на оптовую продажу яблок. Следи за новыми событиями на нашем сайте.',
-  keywords: 'новости, статьи, яблоки оптом, предложения, акции'
+export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
+  const id = Number(params.id)
+  if (isNaN(id)) {
+    return {
+      title: 'Новость не найдена'
+    }
+  }
+
+  const newsItem = await prisma.newsItem.findFirst({
+    where: { id }
+  })
+
+  if (!newsItem) {
+    return {
+      title: 'Новость не найдена'
+    }
+  }
+
+  return {
+    title: newsItem.title
+  }
 }
 
 export default async function NewsDetailsPage({ params: { id } }: { params: { id: string } }) {
