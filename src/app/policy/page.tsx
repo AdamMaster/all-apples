@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     'Ознакомьтесь с нашей политикой конфиденциальности, чтобы узнать, как мы защищаем и используем ваши персональные данные.',
   alternates: {
-    canonical: 'https://allapples.ru/privacy-policy'
+    canonical: 'https://allapples.ru/policy'
   }
 }
 
