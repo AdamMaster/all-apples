@@ -79,7 +79,7 @@ export const ProductCard: FC<Props> = ({
       </div>
       <div className={s.body}>
         {/* <div className={s.category}>{type}</div> */}
-        <div className={s.sort}>{name}</div>
+        <h3 className={s.sort}>{name}</h3>
         <Button className={s.button} color='yellow' stroked>
           Подробнее
         </Button>
