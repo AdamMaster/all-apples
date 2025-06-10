@@ -58,7 +58,7 @@ export const Quality: React.FC<Props> = ({ className }) => {
           <div className={s.subtitle}>
             Мы следим за каждым этапом – от сбора до доставки, чтобы наши яблоки сохраняли свежесть, вкус и товарный
             вид. Современные технологии хранения и строгий контроль качества гарантируют, что вы получите только лучшие
-            фрукты.
+            яблоки.
           </div>
           <div className={s.grid}>
             <VideoPlayer className={s.videoPlayer} src='/videos/video-1.mp4' />
