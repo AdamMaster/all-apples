@@ -1,0 +1,19 @@
+{
+  "redirects": [
+    {
+      "source": "http://www.allapples.ru",
+      "destination": "https://allapples.ru",
+      "permanent": true
+    },
+    {
+      "source": "https://www.allapples.ru",
+      "destination": "https://allapples.ru",
+      "permanent": true
+    },
+    {
+      "source": "http://allapples.ru",
+      "destination": "https://allapples.ru",
+      "permanent": true
+    }
+  ]
+}
