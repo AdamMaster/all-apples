@@ -22,7 +22,7 @@ export const links = [
     text: 'Политика конфиденциальности'
   }
 ]
-export const address = 'Россия, Кабардино-Балкарская республика,г. Баксан, ул. Черкесская, дом 78'
+export const address = 'Россия, Кабардино-Балкарская республика,г. Нальчик, ул. Кирова, дом 1'
 export const menuLinks = [
   { id: 'catalog', text: 'Каталог', href: '/#catalog' },
   { id: 'about', text: 'О нас', href: '/#about' },
