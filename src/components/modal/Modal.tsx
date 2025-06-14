@@ -33,7 +33,6 @@ export const Modal = () => {
     }
   }, [])
 
-  const router = useRouter()
   const onClickCloseButton = () => {
     setClose()
   }

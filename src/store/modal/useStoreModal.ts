@@ -20,6 +20,11 @@ export const useStoreModal = create<State>(set => ({
     setTimeout(() => {
       set(() => ({ content: null }))
     }, 200)
+    if (typeof window !== 'undefined') {
+      const url = new URL(window.location.href)
+      url.searchParams.delete('product')
+      window.history.pushState({}, '', url.pathname + url.search)
+    }
   },
   checkAndOpen: (query, getContent) => {
     if (query) {

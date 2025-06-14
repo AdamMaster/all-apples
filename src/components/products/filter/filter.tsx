@@ -8,12 +8,13 @@ interface Props {
   onClick: (value: string) => void
 }
 
+const buttons = [
+  { id: 'all', name: 'Весь каталог' },
+  { id: 'vegetables', name: 'Овощи' },
+  { id: 'fruits', name: 'Фрукты' }
+]
+
 export const Filter: FC<Props> = ({ className, onClick }) => {
-  const buttons = [
-    { id: 'all', name: 'Весь каталог' },
-    { id: 'vegetables', name: 'Овощи' },
-    { id: 'fruits', name: 'Фрукты' }
-  ]
   const [activeClass, setActiveClass] = useState('all')
 
   const handleClickButton = (id: string) => {

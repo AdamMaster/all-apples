@@ -1,4 +1,3 @@
-import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import { GoogleAnalytics, YandexMetric } from '@/components/analytics'
 import './assets/styles/globals.css'
@@ -40,7 +39,6 @@ export default function RootLayout({
   return (
     <html lang={'ru'}>
       <head>
-        {/* <meta name='yandex-verification' content='432e46207c298a5e' /> */}
         <meta name='color-scheme' content='light' />
         <link rel='icon' href='/favicon.ico' type='image/x-icon' />
         <link rel='shortcut icon' href='/favicon.ico' type='image/x-icon' />

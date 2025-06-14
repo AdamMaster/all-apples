@@ -16,7 +16,7 @@ interface Props {
 }
 
 export const Catalog: FC<Props> = ({ className, categories }) => {
-  const { queryString } = useStoreQueryString()
+  const queryString = useStoreQueryString(state => state.queryString)
   const [stateCategory, setStateCategory] = React.useState<CategoryWithRelations[]>()
 
   useDebounce(

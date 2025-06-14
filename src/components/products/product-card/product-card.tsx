@@ -50,7 +50,7 @@ export const ProductCard: FC<Props> = ({
       String(id)
     )
 
-    router.push(`?product=${id}`, { scroll: false })
+    window.history.pushState({}, '', `?product=${id}`)
   }
 
   React.useEffect(() => {
