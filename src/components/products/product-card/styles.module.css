@@ -7,15 +7,18 @@
   background: #fff;
   transition: 0.2s;
 }
+
 .wrapper:hover {
-  box-shadow: var(--shadow);
+  border-color: var(--c-green);
 }
+
 .tooltip {
   position: absolute;
   z-index: 1;
   top: 10px;
   left: 10px;
 }
+
 .tastingEvaluation {
   display: flex;
   align-items: center;
@@ -25,10 +28,12 @@
   background: url(/images/star.svg);
   font-weight: 500;
 }
+
 .head {
   position: relative;
   aspect-ratio: 1.1;
 }
+
 .img {
   position: absolute;
   top: 0;
@@ -37,6 +42,7 @@
   height: 100%;
   object-fit: cover;
 }
+
 .body {
   flex-grow: 1;
   display: flex;
@@ -45,32 +51,40 @@
   padding: 20px 15px;
   border-top: 0;
 }
+
 .sort {
   font-size: 1.125rem;
   font-weight: 500;
 }
+
 .category {
   opacity: 0.8;
   font-size: 0.875rem;
 }
+
 .button {
   margin-top: 15px;
 }
+
 @media (max-width: 991px) {
   .sort {
     font-size: 1rem;
   }
 }
+
 @media (max-width: 575px) {
   .head {
     aspect-ratio: 1.3;
   }
+
   .img {
     object-fit: contain;
   }
+
   .body {
     padding: 15px;
   }
+
   .button {
     height: 38px;
   }
