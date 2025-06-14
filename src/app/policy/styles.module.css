@@ -1,13 +1,15 @@
 .wrapper {
   margin-bottom: 140px;
 }
-.promo {
-}
-.content {
-}
+
+.promo {}
+
+.content {}
+
 .contentInner {
   padding-top: 60px;
 }
+
 .paragraphs {
   display: flex;
   flex-direction: column;
@@ -17,35 +19,43 @@
   font-size: 1rem;
   line-height: 1.5;
 }
+
 .title {
   margin-bottom: 15px;
   font-size: 1.25rem;
   font-weight: 600;
 }
-.textItem {
-}
+
+.textItem {}
+
 .backLink {
   margin-top: 15px;
 }
+
 .strong {
   font-weight: 600;
 }
+
 .link {
-  transition: 0.2s;
+  transition: color var(--transition);
   font-weight: 600;
 }
+
 .link:hover {
   color: var(--c-yellow);
 }
+
 .list {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
+
 .listItem {
   position: relative;
   padding-left: 20px;
 }
+
 .listItem::before {
   content: '';
   position: absolute;
@@ -72,9 +82,11 @@
   .wrapper {
     margin-bottom: 80px;
   }
+
   .contentInner {
     padding-top: 30px;
   }
+
   .paragraphs {
     padding: 0;
     border: 0;
