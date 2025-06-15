@@ -13,7 +13,7 @@
     "prisma:migrate:dev": "prisma migrate dev",
     "prisma:reset": "prisma migrate reset",
     "prisma:seed": "prisma db seed",
-    "postinstall": "prisma generate",
+    "postinstall": "prisma generate --schema=./prisma/schema.prisma",
     "sitemap": "next-sitemap"
   },
   "prisma": {
