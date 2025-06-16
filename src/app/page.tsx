@@ -39,6 +39,7 @@ export default async function Home() {
   return (
     <div className={s.wrapper}>
       <Promo className={s.promo} />
+      Тестус
       <Suspense>
         <Catalog className={s.catalog} categories={categories} />
       </Suspense>
