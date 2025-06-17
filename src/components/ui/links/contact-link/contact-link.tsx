@@ -1,7 +1,6 @@
 import { FC } from 'react'
 import s from './styles.module.css'
 import { Icon } from '../../icon/icon'
-import { Phone } from 'lucide-react'
 
 interface Props {
   link: string

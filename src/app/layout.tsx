@@ -2,7 +2,6 @@ import localFont from 'next/font/local'
 import { GoogleAnalytics, YandexMetric } from '@/components/analytics'
 import './assets/styles/globals.css'
 import { Footer, Header, MobileMenu, Modal } from '@/components'
-import { SpeedInsights } from '@vercel/speed-insights/next'
 import NextTopLoader from 'nextjs-toploader'
 
 const mazzard = localFont({
@@ -46,7 +45,6 @@ export default function RootLayout({
       </head>
       <body className={mazzard.className}>
         <NextTopLoader color='var(--c-yellow)' />
-        <SpeedInsights />
         <YandexMetric />
         <GoogleAnalytics />
         <Header />
