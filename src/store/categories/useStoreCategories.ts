@@ -1,7 +1,4 @@
-import { data } from '@/app/data'
-import { Category, Product } from '@prisma/client'
 import { create } from 'zustand'
-import { products } from '../../../prisma/constants'
 import { getCategories } from '@/shared/api/fetchCategories'
 import { CategoryWithRelations } from '@/components/products/product-card/types/types'
 

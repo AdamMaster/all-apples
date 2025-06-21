@@ -1,6 +1,6 @@
+# *
 User-agent: *
-Disallow: /api/
-Disallow: /_next/static/media/
+Allow: /
 
 # Host
 Host: https://allapples.ru
