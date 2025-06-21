@@ -1,7 +1,6 @@
 import localFont from 'next/font/local'
 import { GoogleAnalytics, YandexMetric } from '@/components/analytics'
-import './assets/styles/globals.css'
-import { Footer, Header, MobileMenu, Modal } from '@/components'
+import './globals.css'
 import NextTopLoader from 'nextjs-toploader'
 
 const mazzard = localFont({
@@ -47,11 +46,7 @@ export default function RootLayout({
         <NextTopLoader color='var(--c-yellow)' />
         <YandexMetric />
         <GoogleAnalytics />
-        <Header />
-        <MobileMenu />
-        <main>{children}</main>
-        <Modal />
-        <Footer />
+        {children}
       </body>
     </html>
   )

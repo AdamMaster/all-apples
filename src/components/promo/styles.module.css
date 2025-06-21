@@ -3,15 +3,6 @@
   background: var(--c-black);
 }
 
-/* .wrapper::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: url('/images/promo-bg-3.jpg');
-  background-size: cover;
-  background-position: center;
-  opacity: 0.5;
-} */
 .bg {
   position: absolute;
   top: 0;

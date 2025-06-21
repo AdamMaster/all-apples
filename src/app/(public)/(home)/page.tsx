@@ -1,6 +1,6 @@
 import s from './page.module.css'
 import { About, Catalog, NewsSlider, Promo, Quality } from '@/components'
-import { prisma } from '../../prisma/prisma-client'
+import { prisma } from '../../../../prisma/prisma-client'
 import { Suspense } from 'react'
 import { Metadata } from 'next'
 
@@ -39,7 +39,6 @@ export default async function Home() {
   return (
     <div className={s.wrapper}>
       <Promo className={s.promo} />
-      Тестус
       <Suspense>
         <Catalog className={s.catalog} categories={categories} />
       </Suspense>

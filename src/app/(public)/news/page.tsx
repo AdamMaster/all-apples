@@ -1,7 +1,7 @@
 import s from './styles.module.css'
 import { NewsList, PromoOther } from '@/components'
 import { Breadcrumbs } from '@/components/ui'
-import { prisma } from '../../../prisma/prisma-client'
+import { prisma } from '../../../../prisma/prisma-client'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {

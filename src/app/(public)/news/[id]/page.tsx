@@ -1,4 +1,4 @@
-import { prisma } from '../../../../prisma/prisma-client'
+import { prisma } from '../../../../../prisma/prisma-client'
 import { notFound } from 'next/navigation'
 import { Breadcrumbs } from '@/components/ui'
 import s from './styles.module.css'
