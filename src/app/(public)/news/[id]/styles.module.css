@@ -63,6 +63,12 @@
   font-weight: 600;
 }
 
+.paragraphs a {}
+
+.paragraphs a:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 575px) {
   .wrapper {
     margin-bottom: 80px;
