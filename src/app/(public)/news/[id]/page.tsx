@@ -57,7 +57,7 @@ export default async function NewsDetailsPage({ params: { id } }: { params: { id
             <div className={s.paragraphs}>
               {newsItem.paragraphs.map(paragraph => (
                 <div className={s.paragraph} key={paragraph.id}>
-                  {paragraph.subtitle && <div className={s.paragraphSubtitle}>{paragraph.subtitle}</div>}
+                  {paragraph.subtitle && <h3 className={s.paragraphSubtitle}>{paragraph.subtitle}</h3>}
                   <div className={s.text}>{parse(paragraph.text)}</div>
                 </div>
               ))}
