@@ -43,8 +43,8 @@ export const Header: FC<Props> = ({ className }) => {
           <Logo className={s.logo} color={'default'} />
           <Navbar className={s.navbar} />
           <div className={s.messengers}>
-            <ContactLink className={s.link} link={`https://wa.me/${messengers.whatsapp}`} iconId={'whatsapp-fill'} />
-            <ContactLink className={s.link} link={`https://t.me/${messengers.telegram}`} iconId={'telegram-fill'} />
+            <ContactLink className={s.link} link={`https://wa.me/${messengers.whatsapp}`} iconId={'whatsapp'} />
+            <ContactLink className={s.link} link={`https://t.me/${messengers.telegram}`} iconId={'telegram'} />
           </div>
           <div className={s.links}>
             <ContactLink className={s.linksItem} text={phoneNumbers[0].text} link={`tel:${phoneNumbers[0].link}`} />

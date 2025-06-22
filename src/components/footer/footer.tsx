@@ -26,7 +26,7 @@ export const Footer = () => {
                   link={`tel:${phoneNumbers[0].link}`}
                   iconId={'phone'}
                 />
-                <ContactLink className={s.link} link={`mailto:${mail}`} text={mail} iconId={'mail'} />
+                <ContactLink className={s.link} link={`mailto:${mail}`} text={mail} iconId={'email'} />
               </div>
             </div>
           </div>
