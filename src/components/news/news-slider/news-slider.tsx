@@ -5,6 +5,7 @@ import s from './styles.module.css'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Pagination, Navigation } from 'swiper/modules'
 import 'swiper/css'
+import 'swiper/css/pagination'
 import { Heading } from '@/components/ui'
 import { NewsCard } from '../news-card/news-card'
 import { NewsItemWithRelations } from '../types/types'
@@ -34,13 +35,17 @@ export const NewsSlider: React.FC<Props> = ({ className, newsItems }) => {
               className={s.swiper}
               slidesPerView={3}
               spaceBetween={30}
-              speed={1000}
+              speed={500}
               loop={true}
-              autoplay={{
-                delay: 4000,
-                disableOnInteraction: false
-              }}
+              // autoplay={{
+              //   delay: 4000,
+              //   disableOnInteraction: false
+              // }}
               modules={[Autoplay, Pagination, Navigation]}
+              pagination={{
+                el: '.custom-swiper-pagination',
+                clickable: true
+              }}
               breakpoints={{
                 320: {
                   slidesPerView: 1,
@@ -77,6 +82,7 @@ export const NewsSlider: React.FC<Props> = ({ className, newsItems }) => {
                   </SwiperSlide>
                 ))}
             </Swiper>
+            <div className='custom-swiper-pagination' />
           </div>
         </div>
       </div>
