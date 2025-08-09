@@ -4,6 +4,7 @@ import s from './styles.module.css'
 import { useEffect, useRef } from 'react'
 import { Icon } from '../ui'
 import { useRouter } from 'next/navigation'
+import { X } from 'lucide-react'
 
 export const Modal = () => {
   const { isOpen, content, setClose } = useStoreModal()
@@ -41,7 +42,7 @@ export const Modal = () => {
     <div className={wrapperClassNames} ref={wrapper}>
       <div className={containerClassNames}>
         <button className={s.closeButton} onClick={() => onClickCloseButton()}>
-          <Icon id='close' />
+          <X />
         </button>
         {content}
       </div>
