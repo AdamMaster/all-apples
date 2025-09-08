@@ -42,7 +42,8 @@ model Product {
   ripeningPeriod    String
   tastingEvaluation String
 
-  description String
+  description     String
+  fullDescription Paragraph[]
 
   createdAt DateTime? @default(now())
   updatedAt DateTime? @updatedAt
@@ -64,6 +65,9 @@ model Paragraph {
 
   subtitle String
   text     String
+
+  product   Product? @relation(fields: [productId], references: [id])
+  productId Int?
 
   newsItem   NewsItem @relation(fields: [newsItemId], references: [id])
   newsItemId Int
